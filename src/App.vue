@@ -1,7 +1,7 @@
 <template>
-  <div id="app" class="main-landing">
+  <section id="app" class="main-landing">
     <router-view></router-view>
-  </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>
