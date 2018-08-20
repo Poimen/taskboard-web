@@ -1,27 +1,32 @@
 <template>
   <section>
-    <section class="navbar-container">
-      <navbar></navbar>
-    </section>
+    <navbar class="navbar-container"></navbar>
     <section class="content-container">
-      <section class="side-bar-container"></section>
+      <sidebar class="side-bar-container"></sidebar>
       <section class="main-content-container"></section>
     </section>
   </section>
 </template>
 
 <style lang="scss" scoped>
+.navbar-container {
+  background-color: lightcyan;
+}
 
+.side-bar-container {
+  background-color: lightgray;
+}
 </style>
-
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import NavBar from '@/components/Navbar/Navbar.vue';
+import SideBar from '@/components/Sidebar/Sidebar.vue';
 
 @Component({
   components: {
-    navbar: NavBar
+    navbar: NavBar,
+    sidebar: SideBar
   }
 })
 export default class Home extends Vue {
