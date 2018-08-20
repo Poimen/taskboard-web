@@ -3,7 +3,9 @@
     <navbar class="navbar-container"></navbar>
     <section class="content-container">
       <sidebar class="side-bar-container"></sidebar>
-      <section class="main-content-container"></section>
+      <section class="main-content-container">
+        <router-view></router-view>
+      </section>
     </section>
   </section>
 </template>

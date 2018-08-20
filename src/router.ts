@@ -2,11 +2,14 @@ import Vue from 'vue';
 import Router from 'vue-router';
 
 import Home from '@/pages/Home.vue';
+import Dashboard from '@/pages/Home/Dashboard.vue';
 
 Vue.use(Router);
 
 const routes = [
-  { name: 'home', path: '/home', component: Home, children: [] },
+  { name: 'home', path: '/home', component: Home, children: [
+    { name: 'dashboard', path: 'dashboard', component: Dashboard, meta: { breadcrumb: 'Dashboard' } },
+  ] },
   // { name: 'login', path: '/login', component: Login, meta: { breadcrumb: 'Login' } },
   { path: '*', redirect: '/home' }
 ];
