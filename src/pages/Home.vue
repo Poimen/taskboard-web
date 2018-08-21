@@ -18,6 +18,10 @@
 .side-bar-container {
   background-color: lightgray;
 }
+
+.main-content-container {
+  background: whitesmoke;
+}
 </style>
 
 <script lang="ts">
