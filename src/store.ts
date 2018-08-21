@@ -1,16 +1,33 @@
 import Vue from 'vue';
-import Vuex from 'vuex';
+import Vuex, { StoreOptions } from 'vuex';
+
+import { sidebarState } from '@/components/Sidebar/store/store';
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
+export interface IRootState {
+  version: string;
+}
+
+const store: StoreOptions<IRootState> = {
   state: {
-
+    version: '0.0.1'
   },
-  mutations: {
+  modules: {
+    sidebarState
+  }
+};
 
-  },
-  actions: {
+export default new Vuex.Store<IRootState>(store);
 
-  },
-});
+// export default new Vuex.Store({
+//   state: {
+
+//   },
+//   mutations: {
+
+//   },
+//   actions: {
+
+//   },
+// });

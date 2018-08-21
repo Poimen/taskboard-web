@@ -1,6 +1,20 @@
 <template>
   <aside class="menu">
-    <ul class="menu-list">
+    <ul class="menu-list" v-for="section in menus" :key="section.id">
+      <p class="menu-label">
+        {{section.name}}
+      </p>
+      <ul class="menu-list">
+        <li v-for="item in section.items" :key="item.id">
+          <router-link :to="{ name: item.routeTo }">
+            <span class="icon on-left"><i :class="item.icon"></i></span>
+            {{item.name}}
+          </router-link>
+        </li>
+      </ul>
+    </ul>
+
+    <!-- <ul class="menu-list">
       <li><a>Dashboard</a></li>
     </ul>
     <p class="menu-label">
@@ -27,7 +41,7 @@
       <li><a>Notifications</a></li>
       <li><a>Administration</a></li>
       <li><a>User</a></li>
-    </ul>
+    </ul> -->
   </aside>
 </template>
 
@@ -37,8 +51,17 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import { State, Getter, namespace } from 'vuex-class';
+import { MenuSection } from '@/components/Sidebar/store/models';
+
+const menuStore = namespace('sidebarState');
 
 @Component
 export default class Sidebar extends Vue {
+  @menuStore.Getter('menus') sidebarMenus!: MenuSection[];
+
+  get menus(): MenuSection[] {
+    return this.sidebarMenus;
+  }
 }
 </script>

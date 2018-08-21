@@ -2,8 +2,10 @@ import Vue from 'vue';
 import Router from 'vue-router';
 
 import Home from '@/pages/Home.vue';
+import Admin from '@/pages/Home/Administration.vue';
 import Dashboard from '@/pages/Home/Dashboard.vue';
 import Calendar from '@/pages/Home/Calendar.vue';
+import Day from '@/pages/Home/Day.vue';
 import Chat from '@/pages/Home/Chat.vue';
 import KnowledgeBoard from '@/pages/Home/KnowledgeBoard.vue';
 import Reports from '@/pages/Home/Reports.vue';
@@ -16,12 +18,15 @@ Vue.use(Router);
 const routes = [
   { name: 'home', path: '/home', component: Home, children: [
     { name: 'dashboard', path: 'dashboard', component: Dashboard, meta: { breadcrumb: 'Dashboard' } },
-    { name: 'caledar', path: 'calendar', component: Calendar, meta: { breadcrumb: 'Calendar' } },
+    { name: 'clients', path: 'client', component: Calendar, meta: { breadcrumb: 'Clients' } },
+    { name: 'calendar', path: 'calendar', component: Calendar, meta: { breadcrumb: 'Calendar' } },
+    { name: 'day', path: 'day', component: Day, meta: { breadcrumb: 'Calendar' } },
     { name: 'chat', path: 'chat', component: Chat, meta: { breadcrumb: 'Char' } },
     { name: 'knowledgeboard', path: 'knowledge', component: KnowledgeBoard, meta: { breadcrumb: 'Knowledge Board' } },
-    { name: 'reports', path: 'reports', component: Reports, meta: { breadcrumb: 'Reports' } },
+    { name: 'reports', path: 'report', component: Reports, meta: { breadcrumb: 'Reports' } },
     { name: 'settings', path: 'settings', component: Settings, meta: { breadcrumb: 'Dashboard' } },
     { name: 'tasks', path: 'tasks', component: Tasks, meta: { breadcrumb: 'Tasks' } },
+    { name: 'admin', path: 'admin', component: Admin, meta: { breadcrumb: 'Administration' } },
     { name: 'userprofile', path: 'userprofile', component: UserProfile, meta: { breadcrumb: 'Profile' } },
   ]},
   // { name: 'login', path: '/login', component: Login, meta: { breadcrumb: 'Login' } },
