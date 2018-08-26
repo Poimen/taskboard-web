@@ -14,7 +14,7 @@
 @import "../styles/variables/variables";
 
 .navbar-container {
-  // background-color: lightcyan;
+  background-color: lightcyan;
 }
 
 .content-container {
@@ -22,7 +22,7 @@
 }
 
 .side-bar-container {
-  // background-color: lightgray;
+  background-color: olivedrab;
   height: 100%;
   position: fixed;
   right: 0px;

@@ -6,14 +6,15 @@
       </p>
       <ul class="menu-list">
         <li v-for="item in section.items" :key="item.id">
-          <router-link :to="{ name: item.routeTo }">
-            <span class="icon on-left"><i :class="item.icon"></i></span>
-            {{item.name}}
-          </router-link>
+          <b-tooltip :label="item.tooltip" position="is-right">
+            <router-link :to="{ name: item.routeTo }">
+              <span class="icon on-left"><i :class="item.icon"></i></span>
+              {{item.name}}
+            </router-link>
+          </b-tooltip>
         </li>
       </ul>
     </ul>
-
     <!-- <ul class="menu-list">
       <li><a>Dashboard</a></li>
     </ul>

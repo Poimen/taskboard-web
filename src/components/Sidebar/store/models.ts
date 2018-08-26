@@ -1,5 +1,5 @@
 export class MenuItem {
-  constructor(public name: string, public icon: string, public tooltop: string, public routeTo: string) {
+  constructor(public name: string, public icon: string, public tooltip: string, public routeTo: string) {
   }
 }
 

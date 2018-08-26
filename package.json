@@ -21,6 +21,7 @@
   "author": "Richard Shephard",
   "license": "MIT",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.2.0",
     "axios": "^0.18.0",
     "buefy": "^0.6.5",
     "vue": "^2.5.17",
