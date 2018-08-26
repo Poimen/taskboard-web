@@ -11,16 +11,32 @@
 </template>
 
 <style lang="scss" scoped>
+@import "../styles/variables/variables";
+
 .navbar-container {
-  background-color: lightcyan;
+  // background-color: lightcyan;
+}
+
+.content-container {
+  height: 100%;
 }
 
 .side-bar-container {
-  background-color: lightgray;
+  // background-color: lightgray;
+  height: 100%;
+  position: fixed;
+  right: 0px;
+  left: 0px;
+  top: $navbar-height;
+  width: $aside-bar-width;
 }
 
 .main-content-container {
-  background: whitesmoke;
+  // background: whitesmoke;
+  height: 100%;
+  // margin: 25px;
+  margin-left: $aside-bar-width + $main-content-margin-offset;
+  margin-top: $main-content-margin-offset;
 }
 </style>
 
