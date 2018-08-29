@@ -4,6 +4,7 @@
     <section class="content-container">
       <sidebar class="side-bar-container"></sidebar>
       <section class="main-content-container">
+        <contextbar class="main-content-context-bar-container"></contextbar>
         <router-view></router-view>
       </section>
     </section>
@@ -20,7 +21,7 @@
 .content-container {
   height: 100%;
   margin-left: $aside-bar-width + $main-content-margin-offset;
-  margin-top: $main-content-margin-offset;
+  // margin-top: $main-content-margin-offset;
   background-color: aquamarine;
 }
 
@@ -39,17 +40,24 @@
   height: 100%;
   // margin: 25px;
 }
+
+.main-content-context-bar-container {
+  height: 3.25rem;
+  background-color: beige;
+}
 </style>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import NavBar from '@/components/Navbar/Navbar.vue';
 import SideBar from '@/components/Sidebar/Sidebar.vue';
+import ContextBar from '@/components/Navbar/Contextbar.vue';
 
 @Component({
   components: {
     navbar: NavBar,
-    sidebar: SideBar
+    sidebar: SideBar,
+    contextbar: ContextBar
   }
 })
 export default class Home extends Vue {

@@ -13,6 +13,9 @@
       <div class="navbar-start">
         <div class="navbar-item">
           START MENU SIDE
+          <button class="button is-medium" @click="snackbar">
+            Launch snackbar (default)
+          </button>
         </div>
       </div>
       <div class="navbar-end">
@@ -33,5 +36,8 @@ import { Component, Vue } from 'vue-property-decorator';
 
 @Component
 export default class Navbar extends Vue {
+  snackbar() {
+    this.$snackbar.open(`Default, positioned bottom-right with a green 'OK' button`);
+  }
 }
 </script>
