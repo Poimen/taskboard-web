@@ -1,9 +1,9 @@
 <template>
   <aside class="menu">
     <ul class="menu-list" v-for="section in menus" :key="section.id">
-      <p class="menu-label">
+      <!-- <p class="menu-label">
         {{section.name}}
-      </p>
+      </p> -->
       <ul class="menu-list">
         <li v-for="item in section.items" :key="item.id">
           <b-tooltip :label="item.tooltip" position="is-right">

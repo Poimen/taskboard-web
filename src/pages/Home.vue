@@ -19,6 +19,9 @@
 
 .content-container {
   height: 100%;
+  margin-left: $aside-bar-width + $main-content-margin-offset;
+  margin-top: $main-content-margin-offset;
+  background-color: aquamarine;
 }
 
 .side-bar-container {
@@ -32,11 +35,9 @@
 }
 
 .main-content-container {
-  // background: whitesmoke;
+  background: whitesmoke;
   height: 100%;
   // margin: 25px;
-  margin-left: $aside-bar-width + $main-content-margin-offset;
-  margin-top: $main-content-margin-offset;
 }
 </style>
 
