@@ -2,16 +2,16 @@ import Vue from 'vue';
 import Router from 'vue-router';
 
 import Home from '@/pages/Home.vue';
-import Admin from '@/pages/Home/Administration.vue';
-import Dashboard from '@/pages/Home/Dashboard.vue';
-import Calendar from '@/pages/Home/Calendar.vue';
-import Day from '@/pages/Home/Day.vue';
-import Chat from '@/pages/Home/Chat.vue';
-import KnowledgeBoard from '@/pages/Home/KnowledgeBoard.vue';
-import Reports from '@/pages/Home/Reports.vue';
-import Settings from '@/pages/Home/Settings.vue';
-import Tasks from '@/pages/Home/Tasks.vue';
-import UserProfile from '@/pages/Home/UserProfile.vue';
+import Admin from '@/pages/home/Administration.vue';
+import Dashboard from '@/pages/home/Dashboard.vue';
+import Calendar from '@/pages/home/Calendar.vue';
+import Day from '@/pages/home/Day.vue';
+import Chat from '@/pages/home/Chat.vue';
+import KnowledgeBoard from '@/pages/home/KnowledgeBoard.vue';
+import Reports from '@/pages/home/Reports.vue';
+import Settings from '@/pages/home/Settings.vue';
+import Tasks from '@/pages/home/Tasks.vue';
+import UserProfile from '@/pages/home/UserProfile.vue';
 
 Vue.use(Router);
 
