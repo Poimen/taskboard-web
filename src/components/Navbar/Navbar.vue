@@ -13,9 +13,9 @@
       <div class="navbar-start">
         <div class="navbar-item">
           START MENU SIDE
-          <button class="button is-medium" @click="snackbar">
+          <!-- <button class="button is-medium" @click="snackbar">
             Launch snackbar (default)
-          </button>
+          </button> -->
         </div>
       </div>
       <div class="navbar-end">

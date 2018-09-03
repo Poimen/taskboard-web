@@ -42,7 +42,7 @@
 }
 
 .main-content-context-bar-container {
-  height: 3.25rem;
+  height: 31px;
   background-color: beige;
 }
 </style>

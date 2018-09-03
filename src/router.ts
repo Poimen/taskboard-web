@@ -4,6 +4,7 @@ import Router from 'vue-router';
 import Home from '@/pages/Home.vue';
 import Admin from '@/pages/home/Administration.vue';
 import Dashboard from '@/pages/home/Dashboard.vue';
+import Clients from '@/pages/home/Clients.vue';
 import Calendar from '@/pages/home/Calendar.vue';
 import Day from '@/pages/home/Day.vue';
 import Chat from '@/pages/home/Chat.vue';
@@ -18,7 +19,7 @@ Vue.use(Router);
 const routes = [
   { name: 'home', path: '/home', component: Home, children: [
     { name: 'dashboard', path: 'dashboard', component: Dashboard, meta: { breadcrumb: 'Dashboard' } },
-    { name: 'clients', path: 'client', component: Calendar, meta: { breadcrumb: 'Clients' } },
+    { name: 'clients', path: 'client', component: Clients, meta: { breadcrumb: 'Clients' } },
     { name: 'calendar', path: 'calendar', component: Calendar, meta: { breadcrumb: 'Calendar' } },
     { name: 'day', path: 'day', component: Day, meta: { breadcrumb: 'Calendar' } },
     { name: 'chat', path: 'chat', component: Chat, meta: { breadcrumb: 'Char' } },
