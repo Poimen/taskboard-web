@@ -12,6 +12,6 @@
 import { Component, Vue } from 'vue-property-decorator';
 
 @Component
-export default class Filter extends Vue {
+export default class Filters extends Vue {
 }
 </script>

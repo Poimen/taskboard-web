@@ -1,31 +1,29 @@
 <template>
   <div>
-    <div class="container" is-fluid>
-      <div class="columns">
-        <div class="column is-narrow">
-          <label class="checkbox">
-            <input type="checkbox">
-          </label>
+    <div class="columns">
+      <div class="column is-narrow">
+        <div class="field">
+          <b-checkbox></b-checkbox>
         </div>
-        <div class="column">
-            <tagline></tagline>
-          <div>
-            <p>Title</p>
-          </div>
-          <div>
-            ASSIGNEE | DUE DATE
-          </div>
+      </div>
+      <div class="column">
+          <tagline></tagline>
+        <div>
+          <p>Title</p>
         </div>
-        <div class="column">
-          <div>
-            PRIORITY
-          </div>
-          <div>
-            STATUS
-          </div>
-          <div>
-            CLIENT
-          </div>
+        <div>
+          ASSIGNEE | DUE DATE
+        </div>
+      </div>
+      <div class="column is-narrow is-2">
+        <div>
+          PRIORITY
+        </div>
+        <div>
+          STATUS
+        </div>
+        <div>
+          CLIENT
         </div>
       </div>
     </div>

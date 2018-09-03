@@ -4,7 +4,7 @@
     <sorter></sorter>
     <hr/>
     <selection></selection>
-    <div class="container">
+    <div class="container is-fluid">
       <card></card>
     </div>
   </div>

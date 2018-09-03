@@ -1,5 +1,5 @@
 <template>
-  <section id="app" class="section main-landing">
+  <section id="app" class="main-landing">
     <router-view></router-view>
   </section>
 </template>

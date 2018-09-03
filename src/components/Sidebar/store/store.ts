@@ -1,8 +1,8 @@
 import { Module } from 'vuex';
 import { IRootState } from '@/store';
 
-import { MenuItem, MenuSection, SidebarState } from '@/components/Sidebar/store/models';
-import { getters } from '@/components/Sidebar/store/getters';
+import { MenuItem, MenuSection, SidebarState } from './models';
+import { getters } from './getters';
 
 const menus: MenuSection[] = [
   new MenuSection('', [

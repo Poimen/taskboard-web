@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Vuex, { StoreOptions } from 'vuex';
 
 import { sidebarState } from '@/components/Sidebar/store/store';
+import { tasksState } from '@/pages/home/tasks/store/store';
 
 Vue.use(Vuex);
 
@@ -14,7 +15,8 @@ const store: StoreOptions<IRootState> = {
     version: '0.0.1'
   },
   modules: {
-    sidebarState
+    sidebarState,
+    tasksState
   }
 };
 
