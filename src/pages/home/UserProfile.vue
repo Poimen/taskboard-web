@@ -1,7 +1,7 @@
 <template>
-  <section>
+  <div>
     This is User Profile!
-  </section>
+  </div>
 </template>
 
 <style lang="scss" scoped>

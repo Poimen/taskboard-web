@@ -1,7 +1,7 @@
 <template>
-  <section>
+  <div>
     This is Admin!
-  </section>
+  </div>
 </template>
 
 <style lang="scss" scoped>

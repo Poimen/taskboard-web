@@ -1,6 +1,6 @@
 <template>
-  <section class="container is-fluid">
-    <section>
+  <div class="container is-fluid">
+    <div>
       <nav class="level dashboard-summary-items">
         <div class="level-item summary-item">
           <div class="summary">
@@ -39,8 +39,8 @@
           </div>
         </div>
       </nav>
-    </section>
-  </section>
+    </div>
+  </div>
 </template>
 
 <style lang="scss" scoped>

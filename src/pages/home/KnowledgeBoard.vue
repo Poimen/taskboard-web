@@ -1,7 +1,7 @@
 <template>
-  <section>
-    This is Tasks!
-  </section>
+  <div>
+    This is KB!
+  </div>
 </template>
 
 <style lang="scss" scoped>

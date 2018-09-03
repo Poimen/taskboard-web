@@ -1,13 +1,13 @@
 <template>
-  <section>
+  <div>
     <filters></filters>
     <sorter></sorter>
     <hr/>
     <selection></selection>
-    <section>
+    <div class="container">
       <card></card>
-    </section>
-  </section>
+    </div>
+  </div>
 </template>
 
 <style lang="scss" scoped>

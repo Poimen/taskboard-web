@@ -1,7 +1,7 @@
 <template>
-  <section>
+  <div>
     This is Calendar!
-  </section>
+  </div>
 </template>
 
 <style lang="scss" scoped>

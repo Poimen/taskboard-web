@@ -1,7 +1,7 @@
 <template>
-  <section>
+  <div>
     This filters Component
-  </section>
+  </div>
 </template>
 
 <style lang="scss" scoped>

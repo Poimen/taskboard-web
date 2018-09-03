@@ -1,14 +1,14 @@
 <template>
-  <section>
+  <div>
     <navbar class="navbar-container"></navbar>
-    <section class="content-container">
+    <div class="content-container">
       <sidebar class="side-bar-container"></sidebar>
-      <section class="main-content-container">
+      <div class="main-content-container">
         <contextbar class="main-content-context-bar-container"></contextbar>
         <router-view></router-view>
-      </section>
-    </section>
-  </section>
+      </div>
+    </div>
+  </div>
 </template>
 
 <style lang="scss" scoped>

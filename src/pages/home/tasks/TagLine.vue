@@ -1,7 +1,7 @@
 <template>
-  <section>
+  <div>
     This tagline Component
-  </section>
+  </div>
 </template>
 
 <style lang="scss" scoped>

@@ -1,7 +1,7 @@
 <template>
-  <section>
+  <div>
     This is Reports!
-  </section>
+  </div>
 </template>
 
 <style lang="scss" scoped>
