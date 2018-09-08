@@ -53,7 +53,7 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import { State, Getter, namespace } from 'vuex-class';
-import { MenuSection } from '@/components/Sidebar/store/models';
+import { MenuSection } from '@/components/sidebar/store/models';
 
 const menuStore = namespace('sidebarState');
 

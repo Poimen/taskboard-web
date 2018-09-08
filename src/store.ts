@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Vuex, { StoreOptions } from 'vuex';
 
-import { sidebarState } from '@/components/Sidebar/store/store';
+import { sidebarState } from '@/components/sidebar/store/store';
 import { tasksState } from '@/pages/home/tasks/store/store';
 
 Vue.use(Vuex);

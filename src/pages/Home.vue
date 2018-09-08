@@ -49,9 +49,9 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import NavBar from '@/components/Navbar/Navbar.vue';
-import SideBar from '@/components/Sidebar/Sidebar.vue';
-import ContextBar from '@/components/Navbar/Contextbar.vue';
+import NavBar from '@/components/navbar/Navbar.vue';
+import SideBar from '@/components/sidebar/Sidebar.vue';
+import ContextBar from '@/components/navbar/Contextbar.vue';
 
 @Component({
   components: {
