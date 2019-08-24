@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "npm run serve",
+    "dev": "npm run serve",
     "serve": "vue-cli-service serve",
     "build": "npm-run-all clean dist",
     "lint": "vue-cli-service lint --fix",
