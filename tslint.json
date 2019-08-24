@@ -1,0 +1,14 @@
+{
+  "defaultSeverity": "warning",
+  "extends": [
+    "tslint-config-semistandard"
+  ],
+  "linterOptions": {
+    "exclude": [
+      "node_modules/**"
+    ]
+  },
+  "rules": {
+    "space-before-function-paren": [true, { "method": "never" }]
+  }
+}
