@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
 
 function login() {
   return (
-    <div className="flex">
-      <div className="flex-1 h-full bg-red-600">div 1</div>
-      <div className="flex-1 bg-green-400">div 2</div>
+    <div className="flex h-full">
+      <div className="flex-grow bg-red-600">A</div>
+      <div className="flex-grow bg-blue-400">B</div>
     </div>
-  )
+  );
 }
 
-export default login
+export default login;
