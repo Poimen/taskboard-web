@@ -1,6 +1,4 @@
-html {
-  height: 100%;
-}
+@import '~antd/dist/antd.css';
 
 body {
   margin: 0;
@@ -12,8 +10,7 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 #root {
