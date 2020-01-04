@@ -1,7 +1,5 @@
 import React from 'react';
-import Input from 'antd/es/input';
-import Icon from 'antd/es/icon';
-import Button from 'antd/es/button';
+import { Button, Input, Icon } from 'antd';
 
 function Landing() {
   return (
@@ -17,7 +15,6 @@ function Landing() {
             <Input
               size="large"
               placeholder="Enter username"
-              style={{ 'background-color': 'aliceblue' }}
               prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
             />
             <Input
