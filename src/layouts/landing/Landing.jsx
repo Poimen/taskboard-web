@@ -1,4 +1,5 @@
 import React from 'react';
+import './Landing.css';
 import { Button, Input, Icon } from 'antd';
 
 function Landing() {
@@ -17,7 +18,7 @@ function Landing() {
               placeholder="Enter username"
               prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
             />
-            <Input
+            <Input.Password
               size="large"
               placeholder="Enter password"
               prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
