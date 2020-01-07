@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useHistory } from "react-router-dom";
 
 type Auth = {
   userName: string,
@@ -18,6 +19,7 @@ function useAuthValidation(initialState: Auth = { userName: '', password: '' }) 
   const [authState, setAuthState] = useState(initialState);
   const [authInProgress, setAuthInProgress] = useState(false);
   const [authError, setAuthError] = useState(false);
+  const history = useHistory();
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     setAuthState({
@@ -37,6 +39,7 @@ function useAuthValidation(initialState: Auth = { userName: '', password: '' }) 
 
     if (isValidForSubmission(authState)) {
       alert(`Submitted: ${authState.userName} - ${authState.password}`);
+      history.push('/dashboard');
     } else {
       setAuthError(true);
       setAuthInProgress(false);
