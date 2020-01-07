@@ -22,6 +22,7 @@
     "build:css": "postcss src/assets/tailwind.css -o src/assets/generated/base.css",
     "build": "npm run build:css && react-app-rewired build",
     "postbuild": "purgecss -c purgecss.config.js --out build/static/css",
+    "build:serve": "npm run build && serve -s build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
