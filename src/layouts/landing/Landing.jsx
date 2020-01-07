@@ -1,22 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Landing.css';
 import { Button, Input, Icon, Form } from 'antd';
+import useAuthValidation from './auth';
 
 function Landing() {
-  const [authFormState, setAuthFormState] = useState({ userName: '', password: '' });
-
-  const handleSubmit = e => {
-    e.preventDefault();
-
-    alert(`Submitted: ${authFormState.userName} - ${authFormState.password}`);
-  };
-
-  const handleChange = e => {
-    setAuthFormState({
-      ...authFormState,
-      [e.target.name]: e.target.value
-    });
-  };
+  const [handleChange, handleBlur, handleSubmit, authFormState, authInProgress, authError] = useAuthValidation();
 
   return (
     <div className="flex flex-row min-h-full">
@@ -25,9 +13,9 @@ function Landing() {
         {/* <span className="tracking-wide text-white text-6xl font-light">TASK | BOARD</span> */}
       </div>
       <div className="flex flex-1.3 items-center justify-center min-h-full shadow-2xl shadow-outline bg-white">
-        <div className="text-center w-full m-32">
+        <div className="text-center w-full m-24">
           <span className="tracking-wider text-gray-700 text-4xl font-light">Login</span>
-          <div className="tracking-wider text-gray-700 text-4xl font-light mt-12">
+          <div className="mt-12">
             <Form onSubmit={handleSubmit}>
               <Form.Item>
                 <Input
@@ -35,6 +23,7 @@ function Landing() {
                   placeholder="Enter username"
                   prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
                   onChange={handleChange}
+                  onBlur={handleBlur}
                   value={authFormState.userName}
                   name="userName"
                 />
@@ -45,14 +34,25 @@ function Landing() {
                   placeholder="Enter password"
                   prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
                   onChange={handleChange}
+                  onBlur={handleBlur}
                   value={authFormState.password}
                   name="password"
                 />
               </Form.Item>
               <Form.Item>
-                <Button type="primary" size="large" style={{ width: '100%' }} htmlType="submit">Login</Button>
+                <Button
+                  loading={authInProgress}
+                  type="primary"
+                  size="large"
+                  style={{ width: '100%' }}
+                  htmlType="submit">
+                  { authInProgress || 'Login' }
+                </Button>
               </Form.Item>
             </Form>
+          </div>
+          <div className="text-left mt-2">
+            <span className="text-red-800 tracking-wide font-bold">{ authError && 'Incorrect Username or Password' }<br /></span>
           </div>
         </div>
       </div>

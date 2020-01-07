@@ -1,3 +1,7 @@
 .ant-input {
   background-color: #f7fafc;
 }
+
+.ant-form-horizontal .ant-form-item:last-child {
+  margin-bottom: 0px;
+}
