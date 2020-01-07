@@ -38,7 +38,6 @@ function useAuthValidation(initialState: Auth = { userName: '', password: '' }) 
     setAuthError(false);
 
     if (isValidForSubmission(authState)) {
-      alert(`Submitted: ${authState.userName} - ${authState.password}`);
       history.push('/dashboard');
     } else {
       setAuthError(true);

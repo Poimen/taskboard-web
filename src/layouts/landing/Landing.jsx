@@ -1,7 +1,7 @@
 import React from 'react';
-import './Landing.css';
 import { Button, Input, Icon, Form } from 'antd';
 import useAuthValidation from './auth';
+import './Landing.css';
 
 function Landing() {
   const [handleChange, handleBlur, handleSubmit, authFormState, authInProgress, authError] = useAuthValidation();
