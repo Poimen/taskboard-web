@@ -73,9 +73,16 @@ function Dashboard() {
                       onSearch={value => console.log(value)}
                     />
                   </div>
-                  <div className="block w-auto flex text-right">
-                    <div className="-mt-1 mr-5 text-xs">
-                      <Badge count="3" style={{ 'font-size': 12 }}>
+                  <div className="w-auto flex">
+                    <div className="-mt-1 mr-5">
+                      <Badge count={3} style={{ fontSize: 12 }}>
+                        <div className="text-xl">
+                          <Icon type="mail" />
+                        </div>
+                      </Badge>
+                    </div>
+                    <div className="-mt-1 mr-5">
+                      <Badge count="3" style={{ fontSize: 12 }}>
                         <div className="text-xl">
                           <Icon type="bell" />
                         </div>

@@ -13,3 +13,7 @@ export {
 export {
   default as BellOutline
 } from '@ant-design/icons/lib/outline/BellOutline';
+
+export {
+  default as MailOutline
+} from '@ant-design/icons/lib/outline/MailOutline';
