@@ -9,7 +9,9 @@ module.exports = override(
   }),
   addLessLoader({
     javascriptEnabled: true,
-    modifyVars: { }
+    modifyVars: {
+      // '@menu-dark-highlight-color': '#000'
+    }
   }),
   addWebpackAlias({
     '@ant-design/icons/lib/dist$': path.resolve(__dirname, './src/assets/icons.js')
