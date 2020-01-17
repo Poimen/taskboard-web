@@ -23,8 +23,10 @@ function SideMenu() {
         <Menu theme="light" defaultSelectedKeys={['1']} mode="inline">
           <Menu.ItemGroup title="Home">
             <Menu.Item key="1">
-              <Icon type="desktop" />
-              <span>Dashboard</span>
+              <div className="block flex items-center">
+                <Icon type="desktop" />
+                <span>Dashboard</span>
+              </div>
             </Menu.Item>
             <Menu.Item key="2">
               <Icon type="desktop" />
