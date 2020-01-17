@@ -17,3 +17,15 @@ export {
 export {
   default as MailOutline
 } from '@ant-design/icons/lib/outline/MailOutline';
+
+export {
+  default as LeftOutline
+} from '@ant-design/icons/lib/outline/LeftOutline';
+
+export {
+  default as RightOutline
+} from '@ant-design/icons/lib/outline/RightOutline';
+
+export {
+  default as DesktopOutline
+} from '@ant-design/icons/lib/outline/DesktopOutline';

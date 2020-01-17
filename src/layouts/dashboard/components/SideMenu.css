@@ -1,0 +1,10 @@
+.logo {
+  line-height: 64px;
+  letter-spacing: 0.225em;
+  color: black;
+}
+
+.ant-menu-item-group-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}

@@ -10,7 +10,8 @@ module.exports = override(
   addLessLoader({
     javascriptEnabled: true,
     modifyVars: {
-      // '@menu-dark-highlight-color': '#000'
+      // '@layout-body-background': '#e2e8f0' // bg-gray-300
+      '@layout-body-background': '#f7fafc' // bg-gray-100
     }
   }),
   addWebpackAlias({

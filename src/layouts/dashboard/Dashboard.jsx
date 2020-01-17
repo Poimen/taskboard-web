@@ -1,70 +1,19 @@
-import React, { useState } from 'react';
-import { Layout, Menu, Breadcrumb, Icon, Avatar, Input, Badge } from 'antd';
+import React from 'react';
+import { Layout, Breadcrumb, Icon, Avatar, Input, Badge } from 'antd';
+import SideMenu from './components/SideMenu';
 import './Dashboard.css';
 
-const { Header, Content, Footer, Sider } = Layout;
-const { SubMenu } = Menu;
+const { Header, Content } = Layout;
 const { Search } = Input;
 
-function LogoText(collapsed) {
-  return collapsed
-    ? <span className="font-bold">TB</span>
-    : (<><span className="font-bold">TASK</span><span className="font-hairline">BOARD</span></>);
-}
-
 function Dashboard() {
-  const [sidebarCollapsed, setSidebarCollapse] = useState(false);
-
   return (
     <>
       <Layout style={{ minHeight: '100vh' }}>
-        <Sider collapsible collapsed={sidebarCollapsed} onCollapse={() => setSidebarCollapse(prev => !prev)}>
-          <div className="logo flex items-center justify-center text-2xl">
-            {LogoText(sidebarCollapsed)}
-          </div>
-          <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
-            <Menu.Item key="1">
-              <Icon type="pie-chart" />
-              <span>Option 1</span>
-            </Menu.Item>
-            <Menu.Item key="2">
-              <Icon type="desktop" />
-              <span>Option 2</span>
-            </Menu.Item>
-            <SubMenu
-              key="sub1"
-              title={
-                <span>
-                  <Icon type="user" />
-                  <span>User</span>
-                </span>
-              }
-            >
-              <Menu.Item key="3">Tom</Menu.Item>
-              <Menu.Item key="4">Bill</Menu.Item>
-              <Menu.Item key="5">Alex</Menu.Item>
-            </SubMenu>
-            <SubMenu
-              key="sub2"
-              title={
-                <span>
-                  <Icon type="team" />
-                  <span>Team</span>
-                </span>
-              }
-            >
-              <Menu.Item key="6">Team 1</Menu.Item>
-              <Menu.Item key="8">Team 2</Menu.Item>
-            </SubMenu>
-            <Menu.Item key="9">
-              <Icon type="file" />
-              <span>File</span>
-            </Menu.Item>
-          </Menu>
-        </Sider>
+        <SideMenu></SideMenu>
         <Layout>
           <Header style={{ padding: 0 }}>
-            <div className="bg-white">
+            <div className="bg-gray-100">
               <div className="mx-auto px-4">
                 <div className="flex items-center justify-between py-4-1">
                   <div className="w-3/4">
@@ -110,7 +59,7 @@ function Dashboard() {
             </Breadcrumb>
             <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>Bill is a cat.</div>
           </Content>
-          <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+          {/* <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer> */}
         </Layout>
       </Layout>
     </>
