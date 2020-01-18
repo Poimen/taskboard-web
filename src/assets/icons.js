@@ -29,3 +29,7 @@ export {
 export {
   default as DesktopOutline
 } from '@ant-design/icons/lib/outline/DesktopOutline';
+
+export {
+  default as CheckSquareOutline
+} from '@ant-design/icons/lib/outline/CheckSquareOutline';

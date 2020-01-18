@@ -1,6 +1,6 @@
 import React from 'react';
 import { Layout, Breadcrumb, Icon, Avatar, Input, Badge } from 'antd';
-import SideMenu from './components/SideMenu';
+import SideMenu from '../main/components/SideMenu';
 import './Dashboard.css';
 
 const { Header, Content } = Layout;
