@@ -16,8 +16,8 @@ function SideMenu() {
 
   return (
     <>
-      <Sider className="shadow-lg" collapsible theme="light" collapsed={sidebarCollapsed} onCollapse={() => setSidebarCollapse(prev => !prev)}>
-        <div className="logo flex items-center justify-center text-2xl">
+      <Sider className="shadow-lg border-r-2 border-gray-300" collapsible theme="light" collapsed={sidebarCollapsed} onCollapse={() => setSidebarCollapse(prev => !prev)}>
+        <div className="logo flex items-center justify-center text-2xl border-b-2 border-gray-300">
           {LogoText(sidebarCollapsed)}
         </div>
         <Menu theme="light" defaultSelectedKeys={['1']} mode="inline">
@@ -64,7 +64,6 @@ function SideMenu() {
           </Menu.Item>
         </Menu>
       </Sider>
-
     </>
   );
 }
