@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './SideMenu.css';
 import { Layout, Menu } from 'antd';
+import { Link, useLocation } from 'react-router-dom';
 import SiderMenuOptionText from './SiderMenuOptionText';
 
 const { Sider } = Layout;
@@ -13,6 +14,7 @@ function LogoText(collapsed) {
 
 function SideMenu() {
   const [sidebarCollapsed, setSidebarCollapse] = useState(false);
+  const location = useLocation();
 
   return (
     <>
@@ -20,12 +22,18 @@ function SideMenu() {
         <div className="logo flex items-center justify-center text-2xl border-b-2 border-gray-300">
           {LogoText(sidebarCollapsed)}
         </div>
-        <Menu theme="light" defaultSelectedKeys={['1']} mode="inline">
-          <Menu.Item key="1">
+        <Menu theme="light" selectedKeys={[location.pathname]} mode="inline">
+          <Menu.Item key="/dashboard">
             <SiderMenuOptionText icon="desktop" text="Dashboard"></SiderMenuOptionText>
+            <Link to="/dashboard" />
           </Menu.Item>
-          <Menu.Item key="2">
+          <Menu.Item key="/tasks">
             <SiderMenuOptionText icon="check-square" text="Tasks"></SiderMenuOptionText>
+            <Link to="/tasks" />
+          </Menu.Item>
+          <Menu.Item key="/calendar">
+            <SiderMenuOptionText icon="calendar" text="Calendar"></SiderMenuOptionText>
+            <Link to="/calendar" />
           </Menu.Item>
         </Menu>
       </Sider>

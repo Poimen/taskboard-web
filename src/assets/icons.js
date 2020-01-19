@@ -33,3 +33,7 @@ export {
 export {
   default as CheckSquareOutline
 } from '@ant-design/icons/lib/outline/CheckSquareOutline';
+
+export {
+  default as CalendarOutline
+} from '@ant-design/icons/lib/outline/CalendarOutline';

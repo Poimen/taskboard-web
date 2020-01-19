@@ -1,10 +1,12 @@
 import React from 'react';
 import './Main.css';
-import { Layout, Breadcrumb } from 'antd';
+import { Layout } from 'antd';
 import { Route, Switch } from 'react-router-dom';
 import SideMenu from './components/SideMenu';
 import MainHeader from './components/MainHeader';
-import Landing from 'layouts/landing/Landing';
+import Dashboard from 'layouts/dashboard/Dashboard';
+import Tasks from 'layouts/tasks/Tasks';
+import Calendar from 'layouts/calendar/Calendar';
 
 const { Content } = Layout;
 
@@ -15,16 +17,11 @@ export default function Main() {
       <Layout>
         <MainHeader></MainHeader>
         <Content style={{ margin: '0 16px' }}>
-          <Breadcrumb style={{ margin: '16px 0' }}>
-            <Breadcrumb.Item>User</Breadcrumb.Item>
-            <Breadcrumb.Item>Bill</Breadcrumb.Item>
-          </Breadcrumb>
-          <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>Bill is a cat.</div>
-
           <Switch>
-            <Route exact path='/dashboard' component={Landing} />
+            <Route exact path='/dashboard' component={Dashboard} />
+            <Route exact path='/tasks' component={Tasks} />
+            <Route exact path='/calendar' component={Calendar} />
           </Switch>
-
         </Content>
         {/* <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer> */}
       </Layout>
