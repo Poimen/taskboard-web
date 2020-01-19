@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './SideMenu.css';
 import { Layout, Menu } from 'antd';
-import MenuOptionText from './MenuOptionText';
+import SiderMenuOptionText from './SiderMenuOptionText';
 
 const { Sider } = Layout;
 
@@ -22,10 +22,10 @@ function SideMenu() {
         </div>
         <Menu theme="light" defaultSelectedKeys={['1']} mode="inline">
           <Menu.Item key="1">
-            <MenuOptionText icon="desktop" text="Dashboard"></MenuOptionText>
+            <SiderMenuOptionText icon="desktop" text="Dashboard"></SiderMenuOptionText>
           </Menu.Item>
           <Menu.Item key="2">
-            <MenuOptionText icon="check-square" text="Tasks"></MenuOptionText>
+            <SiderMenuOptionText icon="check-square" text="Tasks"></SiderMenuOptionText>
           </Menu.Item>
         </Menu>
       </Sider>
