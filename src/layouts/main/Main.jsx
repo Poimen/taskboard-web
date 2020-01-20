@@ -20,7 +20,11 @@ export default function Main() {
           <Switch>
             <Route exact path='/dashboard' component={Dashboard} />
             <Route exact path='/tasks' component={Tasks} />
+            <Route exact path='/client' component={Calendar} />
             <Route exact path='/calendar' component={Calendar} />
+            <Route exact path='/knowledge' component={Calendar} />
+            <Route exact path='/report' component={Calendar} />
+            <Route exact path='/chat' component={Calendar} />
           </Switch>
         </Content>
         {/* <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer> */}

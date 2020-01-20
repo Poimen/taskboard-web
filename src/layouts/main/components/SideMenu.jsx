@@ -3,6 +3,7 @@ import './SideMenu.css';
 import { Layout, Menu } from 'antd';
 import { Link, useLocation } from 'react-router-dom';
 import SiderMenuOptionText from './SiderMenuOptionText';
+import Chat from '@svg/Chat';
 
 const { Sider } = Layout;
 
@@ -31,9 +32,21 @@ function SideMenu() {
             <SiderMenuOptionText icon="check-square" text="Tasks"></SiderMenuOptionText>
             <Link to="/tasks" />
           </Menu.Item>
+          <Menu.Item key="/client">
+            <SiderMenuOptionText icon="team" text="Clients"></SiderMenuOptionText>
+            <Link to="/client" />
+          </Menu.Item>
           <Menu.Item key="/calendar">
             <SiderMenuOptionText icon="calendar" text="Calendar"></SiderMenuOptionText>
             <Link to="/calendar" />
+          </Menu.Item>
+          <Menu.Item key="/knowledge">
+            <SiderMenuOptionText icon="book" text="Knowledge Base"></SiderMenuOptionText>
+            <Link to="/knowledge" />
+          </Menu.Item>
+          <Menu.Item key="/chat">
+            <SiderMenuOptionText component={Chat} text="Chat"></SiderMenuOptionText>
+            <Link to="/chat" />
           </Menu.Item>
         </Menu>
       </Sider>

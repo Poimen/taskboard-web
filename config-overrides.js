@@ -15,6 +15,7 @@ module.exports = override(
     }
   }),
   addWebpackAlias({
-    '@ant-design/icons/lib/dist$': path.resolve(__dirname, './src/assets/icons.js')
+    '@ant-design/icons/lib/dist$': path.resolve(__dirname, './src/assets/icons.js'),
+    '@svg': path.resolve(__dirname, './src/assets/svg')
   })
 );

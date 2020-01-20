@@ -11,9 +11,7 @@ function App() {
       <Switch>
         {/* Check if we are loged in then switch the component?? */}
         <Route exact path='/' component={Landing} />
-        <PrivateRoute exact path='/dashboard' component={Main} />
-        <PrivateRoute exact path='/tasks' component={Main} />
-        <PrivateRoute exact path='/calendar' component={Main} />
+        <PrivateRoute path='/' component={Main} />
       </Switch>
     </BrowserRouter>
   );

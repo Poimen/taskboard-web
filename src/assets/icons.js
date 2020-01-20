@@ -37,3 +37,11 @@ export {
 export {
   default as CalendarOutline
 } from '@ant-design/icons/lib/outline/CalendarOutline';
+
+export {
+  default as TeamOutline
+} from '@ant-design/icons/lib/outline/TeamOutline';
+
+export {
+  default as BookOutline
+} from '@ant-design/icons/lib/outline/BookOutline';

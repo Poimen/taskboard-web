@@ -1,10 +1,15 @@
 import React from 'react';
 import { Icon } from 'antd';
 
-export function SiderMenuOptionText({ icon, text }) {
+export function SiderMenuOptionText({ icon, component, text }) {
+  const iconOpts = {
+    type: icon,
+    component: component
+  };
+
   return (
     <div className="block flex items-center">
-      <Icon type={icon} />
+      <Icon {...iconOpts} />
       <span>{text}</span>
     </div>
   );
