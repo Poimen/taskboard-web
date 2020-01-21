@@ -31,8 +31,8 @@ export {
 } from '@ant-design/icons/lib/outline/DesktopOutline';
 
 export {
-  default as CheckSquareOutline
-} from '@ant-design/icons/lib/outline/CheckSquareOutline';
+  default as BarsOutline
+} from '@ant-design/icons/lib/outline/BarsOutline';
 
 export {
   default as CalendarOutline

@@ -29,7 +29,7 @@ function SideMenu() {
             <Link to="/dashboard" />
           </Menu.Item>
           <Menu.Item key="/tasks">
-            <SiderMenuOptionText icon="check-square" text="Tasks"></SiderMenuOptionText>
+            <SiderMenuOptionText icon="bars" text="Tasks"></SiderMenuOptionText>
             <Link to="/tasks" />
           </Menu.Item>
           <Menu.Item key="/client">

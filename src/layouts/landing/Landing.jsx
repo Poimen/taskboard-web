@@ -54,7 +54,7 @@ function Landing() {
                 </Form>
               </div>
               <div className="text-left mt-2">
-                <p class="text-red-600 text-xs italic font-bold">{authError && 'Incorrect Username or Password'}<br /></p>
+                <p className="text-red-600 text-xs italic font-bold">{authError && 'Incorrect Username or Password'}<br /></p>
               </div>
             </div>
           </div>
