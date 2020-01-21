@@ -44,6 +44,10 @@ function SideMenu() {
             <SiderMenuOptionText icon="book" text="Knowledge Base"></SiderMenuOptionText>
             <Link to="/knowledge" />
           </Menu.Item>
+          <Menu.Item key="/report">
+            <SiderMenuOptionText icon="bar-chart" text="Reports"></SiderMenuOptionText>
+            <Link to="/report" />
+          </Menu.Item>
           <Menu.Item key="/chat">
             <SiderMenuOptionText component={Chat} text="Chat"></SiderMenuOptionText>
             <Link to="/chat" />

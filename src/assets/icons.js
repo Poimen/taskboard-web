@@ -45,3 +45,7 @@ export {
 export {
   default as BookOutline
 } from '@ant-design/icons/lib/outline/BookOutline';
+
+export {
+  default as BarChartOutline
+} from '@ant-design/icons/lib/outline/BarChartOutline';
