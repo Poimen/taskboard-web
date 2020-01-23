@@ -6,6 +6,7 @@ import SideMenu from './components/SideMenu';
 import MainHeader from './components/MainHeader';
 import Dashboard from 'layouts/dashboard/Dashboard';
 import Tasks from 'layouts/tasks/Tasks';
+import Contacts from 'layouts/contacts/Contacts';
 import Calendar from 'layouts/calendar/Calendar';
 
 const { Content } = Layout;
@@ -20,7 +21,7 @@ export default function Main() {
           <Switch>
             <Route exact path='/dashboard' component={Dashboard} />
             <Route exact path='/tasks' component={Tasks} />
-            <Route exact path='/client' component={Calendar} />
+            <Route exact path='/client' component={Contacts} />
             <Route exact path='/calendar' component={Calendar} />
             <Route exact path='/knowledge' component={Calendar} />
             <Route exact path='/report' component={Calendar} />

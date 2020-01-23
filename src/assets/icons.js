@@ -27,6 +27,14 @@ export {
 } from '@ant-design/icons/lib/outline/RightOutline';
 
 export {
+  default as CaretUpFill
+} from '@ant-design/icons/lib/fill/CaretUpFill';
+
+export {
+  default as CaretDownFill
+} from '@ant-design/icons/lib/fill/CaretDownFill';
+
+export {
   default as DesktopOutline
 } from '@ant-design/icons/lib/outline/DesktopOutline';
 
