@@ -57,3 +57,7 @@ export {
 export {
   default as BarChartOutline
 } from '@ant-design/icons/lib/outline/BarChartOutline';
+
+export {
+  default as UserAddOutline
+} from '@ant-design/icons/lib/outline/UserAddOutline';

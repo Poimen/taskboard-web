@@ -33,9 +33,9 @@ function SideMenu() {
             <SiderMenuOptionText icon="bars" text="Tasks"></SiderMenuOptionText>
             <Link to="/tasks" />
           </Menu.Item>
-          <Menu.Item key="/client">
-            <SiderMenuOptionText icon="team" text="Clients"></SiderMenuOptionText>
-            <Link to="/client" />
+          <Menu.Item key="/contact">
+            <SiderMenuOptionText icon="team" text="Contacts"></SiderMenuOptionText>
+            <Link to="/contact" />
           </Menu.Item>
           <Menu.Item key="/company">
             <SiderMenuOptionText component={Office} text="Companies"></SiderMenuOptionText>

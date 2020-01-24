@@ -16,7 +16,7 @@ function MainHeader() {
                 onSearch={value => console.log(value)}
               />
             </div>
-            <div className="w-auto flex">
+            <div className="w-auto flex items-center">
               <div className="-mt-1 mr-5">
                 <Badge count={3} style={{ fontSize: 12 }}>
                   <div className="text-xl">

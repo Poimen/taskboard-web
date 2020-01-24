@@ -21,7 +21,7 @@ export default function Main() {
           <Switch>
             <Route exact path='/dashboard' component={Dashboard} />
             <Route exact path='/tasks' component={Tasks} />
-            <Route exact path='/client' component={Contacts} />
+            <Route exact path='/contact' component={Contacts} />
             <Route exact path='/calendar' component={Calendar} />
             <Route exact path='/knowledge' component={Calendar} />
             <Route exact path='/report' component={Calendar} />

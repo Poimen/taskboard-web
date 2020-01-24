@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table, Divider, Tag, List, Avatar, Icon } from 'antd';
+import { Table, Divider, Tag, Avatar, Button } from 'antd';
 
 function Contacts() {
   const columns = [
@@ -7,7 +7,7 @@ function Contacts() {
       title: 'Contact',
       dataIndex: 'fullname',
       key: 'fullname',
-      render: (text, record, index) => (
+      render: (text, record) => (
         <div className="flex flex-row flex-auto justify-between items-center">
           <div className="mr-4">
             <Avatar className="text-black">{record.firstName[0]}{record.lastName[0]}</Avatar>
@@ -113,12 +113,17 @@ function Contacts() {
 
   return (
     <>
-      <div className="flex flex-row flex-auto">
-        <div className="mt-4">
-          <span className="text-3xl">Clients</span>
+      <div className="mt-4 flex flex-row flex-auto mx-auto justify-between">
+        <div>
+          <span className="text-3xl text-blue-600">Clients</span>
+        </div>
+        <div className="flex items-center justify-end">
+          <Button icon="user-add" type="primary">
+            <span>Add contact</span>
+          </Button>
         </div>
       </div>
-      <Table rowSelection={rowSelection} columns={columns} dataSource={data} />
+      <Table className="mt-4" rowSelection={rowSelection} columns={columns} dataSource={data} />
     </>
 
   );
