@@ -102,6 +102,8 @@ function Contacts() {
   ];
 
   const rowSelection = {
+    // Potential actions:
+    // Assign (contact owner), delete, create task, (communications subscriptions?)
     onChange: (selectedRowKeys, selectedRows) => {
       console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
     },
@@ -125,7 +127,6 @@ function Contacts() {
       </div>
       <Table className="mt-4" rowSelection={rowSelection} columns={columns} dataSource={data} />
     </>
-
   );
 }
 
