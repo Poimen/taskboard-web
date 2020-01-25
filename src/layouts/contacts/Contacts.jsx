@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table, Divider, Tag, Avatar, Button } from 'antd';
+import { Table, Divider, Tag, Avatar, Button, Icon } from 'antd';
 
 function Contacts() {
   const columns = [
@@ -56,6 +56,12 @@ function Contacts() {
       sorter: (a, b) => a.tags[0].length - b.tags[0].length
     },
     {
+      title: 'Assigned to',
+      key: 'assigned',
+      dataIndex: 'assigned',
+      sorter: (a, b) => a.assigned.length - b.assigned.length
+    },
+    {
       title: 'Action',
       key: 'action',
       render: (text, record) => (
@@ -77,7 +83,8 @@ function Contacts() {
       company: 'Some Company',
       emails: ['j@brown.com'],
       phones: ['123456'],
-      tags: ['bulk']
+      tags: ['bulk'],
+      assigned: 'a'
     },
     {
       key: '2',
@@ -87,7 +94,8 @@ function Contacts() {
       company: 'Some Company',
       emails: ['j@brown.com'],
       phones: ['92349732487'],
-      tags: ['bulk']
+      tags: ['bulk'],
+      assigned: 'b'
     },
     {
       key: '3',
@@ -97,7 +105,8 @@ function Contacts() {
       company: 'Some Company',
       emails: ['j@brown.com'],
       phones: ['3459809', '230489034'],
-      tags: ['container', 'rail']
+      tags: ['container', 'rail'],
+      assigned: 'c'
     }
   ];
 
@@ -113,16 +122,17 @@ function Contacts() {
     })
   };
 
+  // Todo : filter by assigned user
+
   return (
     <>
       <div className="mt-4 flex flex-row flex-auto mx-auto justify-between">
         <div>
-          <span className="text-3xl text-blue-600">Clients</span>
+          <span className="text-3xl text-blue-600">Contacts</span>
         </div>
         <div className="flex items-center justify-end">
-          <Button icon="user-add" type="primary">
-            <span>Add contact</span>
-          </Button>
+          <Button className="mr-2">Filter <Icon type="filter"></Icon></Button>
+          <Button icon="user-add" type="primary">Add contact</Button>
         </div>
       </div>
       <Table className="mt-4" rowSelection={rowSelection} columns={columns} dataSource={data} />

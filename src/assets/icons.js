@@ -61,3 +61,11 @@ export {
 export {
   default as UserAddOutline
 } from '@ant-design/icons/lib/outline/UserAddOutline';
+
+export {
+  default as UsergroupAddOutline
+} from '@ant-design/icons/lib/outline/UsergroupAddOutline';
+
+export {
+  default as FilterOutline
+} from '@ant-design/icons/lib/outline/FilterOutline';
