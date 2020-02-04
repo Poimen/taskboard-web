@@ -32,9 +32,11 @@ function Contacts() {
       title: 'Phone',
       dataIndex: 'phones',
       key: 'phones',
-      render: phones => (<span>{
-        phones.join(', ')
-      }</span>),
+      render: phones => (<>
+        <span>{
+          phones.join(', ')
+        }</span></>
+      ),
       sorter: (a, b) => a.phones[0].length - b.phones[0].length
     },
     {
@@ -122,6 +124,14 @@ function Contacts() {
     })
   };
 
+  const onRow = (record, rowIndex) => {
+    return {
+      onClick: event => {
+        console.log(`Clicked - ${JSON.stringify(record)}:${rowIndex}`);
+      }
+    };
+  };
+
   // Todo : filter by assigned user
 
   return (
@@ -135,7 +145,7 @@ function Contacts() {
           <Button icon="user-add" type="primary">Add contact</Button>
         </div>
       </div>
-      <Table className="mt-4" rowSelection={rowSelection} columns={columns} dataSource={data} />
+      <Table className="mt-4" rowSelection={rowSelection} columns={columns} dataSource={data} onRow={onRow} />
     </>
   );
 }
