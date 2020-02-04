@@ -9,6 +9,7 @@ import Tasks from 'layouts/tasks/Tasks';
 import Contacts from 'layouts/contacts/Contacts';
 import Companies from 'layouts/companies/Companies';
 import Calendar from 'layouts/calendar/Calendar';
+import ThirdParties from 'layouts/thirdparties/ThirdParties';
 
 const { Content } = Layout;
 
@@ -24,6 +25,7 @@ export default function Main() {
             <Route exact path='/tasks' component={Tasks} />
             <Route exact path='/contact' component={Contacts} />
             <Route exact path='/company' component={Companies} />
+            <Route exact path='/thirdparty' component={ThirdParties} />
             <Route exact path='/calendar' component={Calendar} />
             <Route exact path='/knowledge' component={Calendar} />
             <Route exact path='/report' component={Calendar} />

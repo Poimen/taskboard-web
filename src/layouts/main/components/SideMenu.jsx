@@ -21,7 +21,7 @@ function SideMenu() {
   return (
     <>
       <Sider className="shadow-lg border-r-2 border-gray-300" collapsible theme="light" collapsed={sidebarCollapsed} onCollapse={() => setSidebarCollapse(prev => !prev)}>
-        <div className="logo flex items-center justify-center text-2xl border-b-2 border-gray-300">
+        <div className="logo flex items-center justify-center text-2xl">
           {LogoText(sidebarCollapsed)}
         </div>
         <Menu theme="light" selectedKeys={[location.pathname]} mode="inline">
@@ -41,9 +41,9 @@ function SideMenu() {
             <SiderMenuOptionText svg={Office} text="Companies"></SiderMenuOptionText>
             <Link to="/company" />
           </Menu.Item>
-          <Menu.Item key="/thirdparties">
+          <Menu.Item key="/thirdparty">
             <SiderMenuOptionText svg={Office} text="Third Parties"></SiderMenuOptionText>
-            <Link to="/thirdparties" />
+            <Link to="/thirdparty" />
           </Menu.Item>
           <Menu.Item key="/calendar">
             <SiderMenuOptionText icon="calendar" text="Calendar"></SiderMenuOptionText>
