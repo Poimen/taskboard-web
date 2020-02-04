@@ -1,10 +1,10 @@
 import React from 'react';
 import { Icon } from 'antd';
 
-export function SiderMenuOptionText({ icon, component, text }) {
+export function SiderMenuOptionText({ icon, svg, text }) {
   const iconOpts = {
     type: icon,
-    component: component
+    component: svg
   };
 
   return (

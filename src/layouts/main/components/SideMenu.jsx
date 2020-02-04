@@ -38,8 +38,12 @@ function SideMenu() {
             <Link to="/contact" />
           </Menu.Item>
           <Menu.Item key="/company">
-            <SiderMenuOptionText component={Office} text="Companies"></SiderMenuOptionText>
+            <SiderMenuOptionText svg={Office} text="Companies"></SiderMenuOptionText>
             <Link to="/company" />
+          </Menu.Item>
+          <Menu.Item key="/thirdparties">
+            <SiderMenuOptionText svg={Office} text="Third Parties"></SiderMenuOptionText>
+            <Link to="/thirdparties" />
           </Menu.Item>
           <Menu.Item key="/calendar">
             <SiderMenuOptionText icon="calendar" text="Calendar"></SiderMenuOptionText>
@@ -54,7 +58,7 @@ function SideMenu() {
             <Link to="/report" />
           </Menu.Item>
           <Menu.Item key="/chat">
-            <SiderMenuOptionText component={Chat} text="Chat"></SiderMenuOptionText>
+            <SiderMenuOptionText svg={Chat} text="Chat"></SiderMenuOptionText>
             <Link to="/chat" />
           </Menu.Item>
         </Menu>
