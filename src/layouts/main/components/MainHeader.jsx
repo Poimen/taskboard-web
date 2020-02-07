@@ -7,9 +7,12 @@ const { Search } = Input;
 function MainHeader() {
   return (
     <Header className="p-0">
-      <div className="bg-white border-b-2 border-gray-300">
-        <div className="mx-auto px-4">
-          <div className="flex items-center justify-between py-4-1">
+      <div className="h-16 bg-white border-b-2 border-gray-300">
+        <div className="px-4">
+          <div className="flex items-center justify-between py-4-1 w-full">
+            {/* <div className="bg-white text-2xl leading-loose tracking-widest">
+              <span className="font-bold tracking-wide">TASK</span><span className="font-hairline">BOARD</span>
+            </div> */}
             <div className="w-3/4">
               <Search
                 placeholder="Type to search..."
