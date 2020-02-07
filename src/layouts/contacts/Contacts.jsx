@@ -1,5 +1,6 @@
 import React from 'react';
 import { Table, Divider, Tag, Avatar, Button, Icon } from 'antd';
+import { useHistory } from 'react-router-dom';
 
 function Contacts() {
   const columns = [
@@ -124,15 +125,18 @@ function Contacts() {
     })
   };
 
-  const onRow = (record, rowIndex) => {
+  const onRow = (history) => (record, rowIndex) => {
     return {
       onClick: event => {
         console.log(`Clicked - ${JSON.stringify(record)}:${rowIndex}`);
+        history.push(`/contact/${record.key}`);
       }
     };
   };
 
   // Todo : filter by assigned user
+
+  const history = useHistory();
 
   return (
     <>
@@ -145,7 +149,7 @@ function Contacts() {
           <Button icon="user-add" type="primary">Add contact</Button>
         </div>
       </div>
-      <Table className="mt-4" rowSelection={rowSelection} columns={columns} dataSource={data} onRow={onRow} />
+      <Table className="mt-4" rowSelection={rowSelection} columns={columns} dataSource={data} onRow={onRow(history)} />
     </>
   );
 }

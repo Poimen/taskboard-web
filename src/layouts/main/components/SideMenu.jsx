@@ -25,6 +25,7 @@ function SideMenu() {
           {LogoText(sidebarCollapsed)}
         </div>
         <div className="">
+          {/* TODO : Fixpath name match for highlight */}
           <Menu theme="light" selectedKeys={[location.pathname]} mode="inline">
             <Menu.Item key="/dashboard">
               <SiderMenuOptionText icon="desktop" text="Dashboard"></SiderMenuOptionText>

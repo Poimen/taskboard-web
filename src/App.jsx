@@ -9,7 +9,7 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        {/* Check if we are loged in then switch the component?? */}
+        {/* Check if we are logged in then switch the component?? */}
         <Route exact path='/' component={Landing} />
         <PrivateRoute path='/' component={Main} />
       </Switch>
