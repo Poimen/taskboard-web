@@ -11,6 +11,7 @@ import ContactDetails from 'layouts/contacts/contact/Details';
 import Companies from 'layouts/companies/Companies';
 import Calendar from 'layouts/calendar/Calendar';
 import ThirdParties from 'layouts/thirdparties/ThirdParties';
+import KnowledgeBase from 'layouts/knowledge/KnowledgeBase';
 
 const { Content } = Layout;
 
@@ -29,12 +30,11 @@ export default function Main() {
             <Route exact path='/company' component={Companies} />
             <Route exact path='/thirdparty' component={ThirdParties} />
             <Route exact path='/calendar' component={Calendar} />
-            <Route exact path='/knowledge' component={Calendar} />
+            <Route exact path='/knowledge' component={KnowledgeBase} />
             <Route exact path='/report' component={Calendar} />
             <Route exact path='/chat' component={Calendar} />
           </Switch>
         </Content>
-        {/* <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer> */}
       </Layout>
     </Layout>
   );
