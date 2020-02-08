@@ -69,3 +69,7 @@ export {
 export {
   default as FilterOutline
 } from '@ant-design/icons/lib/outline/FilterOutline';
+
+export {
+  default as EditOutline
+} from '@ant-design/icons/lib/outline/EditOutline';
