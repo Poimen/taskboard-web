@@ -73,3 +73,7 @@ export {
 export {
   default as EditOutline
 } from '@ant-design/icons/lib/outline/EditOutline';
+
+export {
+  default as CloseOutline
+} from '@ant-design/icons/lib/outline/CloseOutline';
