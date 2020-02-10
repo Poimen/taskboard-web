@@ -43,26 +43,26 @@ function SideMenu() {
               <SiderMenuOptionText svg={Office} text="Companies"></SiderMenuOptionText>
               <Link to="/company" />
             </Menu.Item>
-            <Menu.Item key="/thirdparties">
+            {/* <Menu.Item key="/thirdparties">
               <SiderMenuOptionText svg={Office} text="Third Parties"></SiderMenuOptionText>
               <Link to="/thirdparties" />
-            </Menu.Item>
-            <Menu.Item key="/calendar">
+            </Menu.Item> */}
+            {/* <Menu.Item key="/calendar">
               <SiderMenuOptionText icon="calendar" text="Calendar"></SiderMenuOptionText>
               <Link to="/calendar" />
-            </Menu.Item>
-            <Menu.Item key="/knowledge">
+            </Menu.Item> */}
+            {/* <Menu.Item key="/knowledge">
               <SiderMenuOptionText icon="book" text="Knowledge Base"></SiderMenuOptionText>
               <Link to="/knowledge" />
-            </Menu.Item>
-            <Menu.Item key="/report">
+            </Menu.Item> */}
+            {/* <Menu.Item key="/report">
               <SiderMenuOptionText icon="bar-chart" text="Reports"></SiderMenuOptionText>
               <Link to="/report" />
-            </Menu.Item>
-            <Menu.Item key="/chat">
+            </Menu.Item> */}
+            {/* <Menu.Item key="/chat">
               <SiderMenuOptionText svg={Chat} text="Chat"></SiderMenuOptionText>
               <Link to="/chat" />
-            </Menu.Item>
+            </Menu.Item> */}
           </Menu>
         </div>
       </Sider>
