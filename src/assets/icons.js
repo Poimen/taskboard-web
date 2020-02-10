@@ -77,3 +77,7 @@ export {
 export {
   default as CloseOutline
 } from '@ant-design/icons/lib/outline/CloseOutline';
+
+export {
+  default as CheckSquareOutline
+} from '@ant-design/icons/lib/outline/CheckSquareOutline';
