@@ -3,7 +3,7 @@ import './SideMenu.css';
 import { Layout, Menu } from 'antd';
 import { Link, useLocation } from 'react-router-dom';
 import SiderMenuOptionText from './SiderMenuOptionText';
-import Chat from '@svg/Chat';
+// import Chat from '@svg/Chat';
 import Office from '@svg/Office';
 
 const { Sider } = Layout;
