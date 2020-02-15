@@ -1,6 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import { Table } from 'antd';
+import { Card, Table } from 'antd';
 
 function Tasks() {
   const columns = [
@@ -40,7 +40,9 @@ function Tasks() {
 
   return (
     <>
-      <Table className="mt-4" columns={columns} dataSource={data} onRow={onRow(history)} />
+      <Card className="mt-8 shadow">
+        <Table columns={columns} dataSource={data} onRow={onRow(history)} />
+      </Card>
     </>
   );
 }

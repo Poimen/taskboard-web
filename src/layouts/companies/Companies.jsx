@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table, Tag, Button, Icon } from 'antd';
+import { Card, Table, Tag, Button, Icon } from 'antd';
 
 function Companies() {
   const columns = [
@@ -57,14 +57,16 @@ function Companies() {
     <>
       <div className="mt-4 flex flex-row flex-auto mx-auto justify-between">
         <div>
-          <span className="text-3xl text-blue-600">Companies</span>
+          <span className="text-4xl text-blue-600">Companies</span>
         </div>
         <div className="flex items-center justify-end">
           <Button className="mr-2">Filter <Icon type="filter"></Icon></Button>
           <Button icon="usergroup-add" type="primary">Add Company</Button>
         </div>
       </div>
-      <Table className="mt-4" columns={columns} dataSource={data} pagination={false} />
+      <Card className="mt-8 shadow">
+        <Table columns={columns} dataSource={data} pagination={false} />
+      </Card>
     </>
   );
 }

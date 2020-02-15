@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table, Divider, Tag, Avatar, Button, Icon } from 'antd';
+import { Card, Table, Divider, Tag, Avatar, Button, Icon } from 'antd';
 import { useHistory } from 'react-router-dom';
 
 function Contacts() {
@@ -141,15 +141,18 @@ function Contacts() {
   return (
     <>
       <div className="mt-4 flex flex-row flex-auto mx-auto justify-between">
-        <div>
-          <span className="text-3xl text-blue-600">Contacts</span>
+        <div className="flex flex-col">
+          <span className="text-4xl text-blue-600">Contacts</span>
+          <span className="text-xs text-gray-500 ml-4">77 Contacts</span>
         </div>
         <div className="flex items-center justify-end">
           <Button className="mr-2">Filter <Icon type="filter"></Icon></Button>
           <Button icon="user-add" type="primary">Add contact</Button>
         </div>
       </div>
-      <Table className="mt-4" rowSelection={rowSelection} columns={columns} dataSource={data} onRow={onRow(history)} />
+      <Card className="mt-8 shadow">
+        <Table rowSelection={rowSelection} columns={columns} dataSource={data} onRow={onRow(history)} />
+      </Card>
     </>
   );
 }
