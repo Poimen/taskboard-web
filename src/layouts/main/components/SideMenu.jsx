@@ -43,9 +43,9 @@ function SideMenu() {
               <SiderMenuOptionText svg={Office} text="Companies"></SiderMenuOptionText>
               <Link to="/company" />
             </Menu.Item>
-            {/* <Menu.Item key="/thirdparties">
-              <SiderMenuOptionText svg={Office} text="Third Parties"></SiderMenuOptionText>
-              <Link to="/thirdparties" />
+            {/* <Menu.Item key="/vendors">
+              <SiderMenuOptionText svg={Office} text="Vendors"></SiderMenuOptionText>
+              <Link to="/vendors" />
             </Menu.Item> */}
             {/* <Menu.Item key="/calendar">
               <SiderMenuOptionText icon="calendar" text="Calendar"></SiderMenuOptionText>
