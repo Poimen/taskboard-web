@@ -1,9 +1,27 @@
 import React from 'react';
 // import { Layout, Icon, Avatar, Badge, Input } from 'antd';
-import { Layout, Icon, Avatar, Badge } from 'antd';
+import { Dropdown, Menu, Button, Layout, Icon, Avatar, Badge } from 'antd';
+import { Link } from 'react-router-dom';
+import './MainHeader.css';
 
 const { Header } = Layout;
 // const { Search } = Input;
+
+const menu = (
+  <Menu>
+    <Menu.Item>
+      <Link to="/dashboard">
+        Add task
+      </Link>
+      <Link to="/dashboard">
+        Add customer
+      </Link>
+      <Link to="/dashboard">
+        Add client
+      </Link>
+    </Menu.Item>
+  </Menu>
+);
 
 function MainHeader() {
   return (
@@ -20,6 +38,14 @@ function MainHeader() {
                   placeholder="Type to search..."
                   onSearch={value => console.log(value)}
                 /> */}
+              </div>
+              <div className="mr-4">
+                <Dropdown overlay={menu}>
+                  <Button ghost>
+                    <span>New</span>
+                    <Icon type="down" />
+                  </Button>
+                </Dropdown>
               </div>
               <div className="mr-4">
                 <Badge count={3} style={{ fontSize: 11 }}>

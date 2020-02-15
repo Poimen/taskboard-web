@@ -4,7 +4,7 @@ import { Card as AntCard } from 'antd';
 function Card() {
   return (
     <>
-      <AntCard className="w-full" bordered={false}>
+      <AntCard className="w-full shadow" bordered={false}>
         Card content
       </AntCard>
     </>

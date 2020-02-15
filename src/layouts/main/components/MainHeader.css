@@ -3,3 +3,9 @@
   letter-spacing: 0.225em;
   color: black;
 }
+
+.ant-btn:hover {
+  color: white;
+  border-color: white;
+  border-style: dashed;
+}
