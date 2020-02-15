@@ -129,7 +129,7 @@ function Clients() {
     return {
       onClick: event => {
         console.log(`Clicked - ${JSON.stringify(record)}:${rowIndex}`);
-        history.push(`/clients/${record.key}`);
+        history.push(`/client/${record.key}`);
       }
     };
   };
