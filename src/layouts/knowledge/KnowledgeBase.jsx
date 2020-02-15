@@ -49,7 +49,7 @@ function KnowledgeBase() {
 
   const rowSelection = {
     // Potential actions:
-    // Assign (contact owner), delete, create task, (communications subscriptions?)
+    // Assign (Client owner), delete, create task, (communications subscriptions?)
     onChange: (selectedRowKeys, selectedRows) => {
       console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
     },

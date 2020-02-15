@@ -14,6 +14,7 @@ const menu = (
         Add task
       </Link>
     </Menu.Item>
+    <Menu.Divider />
     <Menu.Item>
       <Link to="/dashboard">
         Add customer

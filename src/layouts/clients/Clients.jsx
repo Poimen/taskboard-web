@@ -2,10 +2,10 @@ import React from 'react';
 import { Card, Table, Divider, Tag, Avatar, Button, Icon } from 'antd';
 import { useHistory } from 'react-router-dom';
 
-function Contacts() {
+function Clients() {
   const columns = [
     {
-      title: 'Contact',
+      title: 'Client',
       dataIndex: 'fullname',
       key: 'fullname',
       render: (text, record) => (
@@ -115,7 +115,7 @@ function Contacts() {
 
   const rowSelection = {
     // Potential actions:
-    // Assign (contact owner), delete, create task, (communications subscriptions?)
+    // Assign (Client owner), delete, create task, (communications subscriptions?)
     onChange: (selectedRowKeys, selectedRows) => {
       console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
     },
@@ -129,7 +129,7 @@ function Contacts() {
     return {
       onClick: event => {
         console.log(`Clicked - ${JSON.stringify(record)}:${rowIndex}`);
-        history.push(`/contact/${record.key}`);
+        history.push(`/clients/${record.key}`);
       }
     };
   };
@@ -142,12 +142,12 @@ function Contacts() {
     <>
       <div className="mt-4 flex flex-row flex-auto mx-auto justify-between">
         <div className="flex flex-col">
-          <span className="text-4xl text-blue-600">Contacts</span>
-          <span className="text-xs text-gray-500 ml-4">77 Contacts</span>
+          <span className="text-4xl text-blue-600">Clients</span>
+          <span className="text-xs text-gray-500 ml-4">77 Clients</span>
         </div>
         <div className="flex items-center justify-end">
           <Button className="mr-2">Filter <Icon type="filter"></Icon></Button>
-          <Button icon="user-add" type="primary">Add contact</Button>
+          <Button icon="user-add" type="primary">Add client</Button>
         </div>
       </div>
       <Card className="mt-8 shadow">
@@ -157,4 +157,4 @@ function Contacts() {
   );
 }
 
-export default Contacts;
+export default Clients;

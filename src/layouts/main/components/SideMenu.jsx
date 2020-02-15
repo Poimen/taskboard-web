@@ -35,9 +35,9 @@ function SideMenu() {
               <SiderMenuOptionText icon="bars" text="Tasks"></SiderMenuOptionText>
               <Link to="/tasks" />
             </Menu.Item>
-            <Menu.Item key="/contact">
-              <SiderMenuOptionText icon="team" text="Contacts"></SiderMenuOptionText>
-              <Link to="/contact" />
+            <Menu.Item key="/client">
+              <SiderMenuOptionText icon="team" text="Clients"></SiderMenuOptionText>
+              <Link to="/client" />
             </Menu.Item>
             <Menu.Item key="/company">
               <SiderMenuOptionText svg={Office} text="Companies"></SiderMenuOptionText>

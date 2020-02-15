@@ -6,7 +6,7 @@ import Tasks from './Tasks';
 
 const { TabPane } = Tabs;
 
-function ContactDetails() {
+function ClientDetails() {
   function callback(key) {
     console.log(key);
   }
@@ -44,4 +44,4 @@ function ContactDetails() {
   );
 }
 
-export default ContactDetails;
+export default ClientDetails;
