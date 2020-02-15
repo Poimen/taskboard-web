@@ -13,9 +13,13 @@ const menu = (
       <Link to="/dashboard">
         Add task
       </Link>
+    </Menu.Item>
+    <Menu.Item>
       <Link to="/dashboard">
         Add customer
       </Link>
+    </Menu.Item>
+    <Menu.Item>
       <Link to="/dashboard">
         Add client
       </Link>
