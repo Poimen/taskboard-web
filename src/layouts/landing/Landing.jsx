@@ -9,7 +9,7 @@ function Landing() {
   return (
     <>
       <div className="flex min-h-full flex-col items-center justify-center">
-        <div className="flex flex-row w-3/4 shadow-md">
+        <div className="flex flex-row w-7/12 shadow-md">
           <div className="flex flex-1 items-center justify-center min-h-full bg-blue-500 flex-col rounded-l-lg">
             <span className="tracking-widest text-white text-6xl font-hairline">Welcome</span>
             {/* <span className="tracking-wide text-white text-6xl font-light">TASK | BOARD</span> */}

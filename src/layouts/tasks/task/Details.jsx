@@ -1,11 +1,10 @@
 import React from 'react';
 
-function ThirdParties() {
+function Details() {
   return (
     <div>
-      Thirds
     </div>
   );
 }
 
-export default ThirdParties;
+export default Details;

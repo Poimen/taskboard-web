@@ -10,7 +10,7 @@ import Contacts from 'layouts/contacts/Contacts';
 import ContactDetails from 'layouts/contacts/contact/Details';
 import Companies from 'layouts/companies/Companies';
 import Calendar from 'layouts/calendar/Calendar';
-import ThirdParties from 'layouts/thirdparties/ThirdParties';
+import Vendors from 'layouts/vendors/Vendors';
 import KnowledgeBase from 'layouts/knowledge/KnowledgeBase';
 
 const { Content } = Layout;
@@ -18,9 +18,9 @@ const { Content } = Layout;
 export default function Main() {
   return (
     <Layout className="min-h-screen">
-      <SideMenu></SideMenu>
+      <MainHeader></MainHeader>
       <Layout>
-        <MainHeader></MainHeader>
+        <SideMenu></SideMenu>
         <Content style={{ margin: '0 16px' }}>
           <Switch>
             <Route exact path='/dashboard' component={Dashboard} />
@@ -28,7 +28,7 @@ export default function Main() {
             <Route exact path='/contact' component={Contacts} />
             <Route exact path='/contact/:id' component={ContactDetails} />
             <Route exact path='/company' component={Companies} />
-            <Route exact path='/thirdparty' component={ThirdParties} />
+            <Route exact path='/vendor' component={Vendors} />
             <Route exact path='/calendar' component={Calendar} />
             <Route exact path='/knowledge' component={KnowledgeBase} />
             <Route exact path='/report' component={Calendar} />

@@ -8,11 +8,11 @@ import Office from '@svg/Office';
 
 const { Sider } = Layout;
 
-function LogoText(collapsed) {
-  return collapsed
-    ? <span className="font-bold">TB</span>
-    : (<><span className="font-bold tracking-wide">TASK</span><span className="font-hairline">BOARD</span></>);
-}
+// function LogoText(collapsed) {
+//   return collapsed
+//     ? <span className="font-bold">TB</span>
+//     : (<><span className="font-bold tracking-wide">TASK</span><span className="font-hairline">BOARD</span></>);
+// }
 
 function SideMenu() {
   const [sidebarCollapsed, setSidebarCollapse] = useState(false);
@@ -21,9 +21,9 @@ function SideMenu() {
   return (
     <>
       <Sider className="border-gray-300 border-r-2" collapsible theme="light" collapsed={sidebarCollapsed} onCollapse={() => setSidebarCollapse(prev => !prev)}>
-        <div className="logo flex items-center justify-center text-2xl">
+        {/* <div className="logo flex items-center justify-center text-2xl">
           {LogoText(sidebarCollapsed)}
-        </div>
+        </div> */}
         <div className="">
           {/* TODO : Fixpath name match for highlight */}
           <Menu theme="light" selectedKeys={[location.pathname]} mode="inline">
