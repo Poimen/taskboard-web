@@ -44,7 +44,7 @@ function MainHeader() {
                   onSearch={value => console.log(value)}
                 /> */}
               </div>
-              <div className="mr-4">
+              <div className="mainheader--new-dropdown mr-4">
                 <Dropdown overlay={menu}>
                   <Button ghost>
                     <span>New</span>
