@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from './Card';
 
-function TaskSuymmaryCard() {
+function TaskSummaryCard() {
   return (
     <div className="flex-auto m-2">
       <Card></Card>
@@ -9,4 +9,4 @@ function TaskSuymmaryCard() {
   );
 }
 
-export default TaskSuymmaryCard;
+export default TaskSummaryCard;

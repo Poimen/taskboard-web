@@ -1,6 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import { Card, Table, Button, Icon } from 'antd';
+import { Card, Table, Button, Icon, Tag } from 'antd';
 
 function Tasks() {
   const columns = [
@@ -18,6 +18,18 @@ function Tasks() {
       title: 'Assigned To',
       dataIndex: 'assingedTo',
       key: 'assignedTo'
+    },
+    {
+      title: 'Priority',
+      dataIndex: 'priority',
+      key: 'priority',
+      render: p => (
+        <span>
+          <Tag color='red'>
+            {p.toUpperCase()}
+          </Tag>
+        </span>
+      )
     }
   ];
   const data = [
@@ -25,7 +37,8 @@ function Tasks() {
       key: '1',
       task: 'Something to do...',
       dueBy: '12/12/2020',
-      assignedTo: 'AB'
+      assignedTo: 'AB',
+      priority: 'high'
     }
   ];
 
@@ -34,6 +47,7 @@ function Tasks() {
     return {
       onClick: event => {
         console.log(`Clicked - ${JSON.stringify(record)}:${rowIndex}`);
+        history.push(`/tasks/${record.key}`);
       }
     };
   };
@@ -49,7 +63,18 @@ function Tasks() {
           <Button icon="check-square" type="primary">Add task</Button>
         </div>
       </div>
-      <Card className="mt-8 shadow">
+      <div className="flex items-center justify-between pt-4">
+        <div className="flex-auto m-2">
+          <Card>High tasks</Card>
+        </div>
+        <div className="flex-auto m-2">
+          <Card>Medium tasks</Card>
+        </div>
+        <div className="flex-auto m-2">
+          <Card>Low Tasks</Card>
+        </div>
+      </div>
+      <Card className="mt-4 shadow">
         <Table columns={columns} dataSource={data} onRow={onRow(history)} />
       </Card>
     </>

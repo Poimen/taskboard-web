@@ -1,6 +1,6 @@
 import React from 'react';
 import './Dashboard.css';
-import TaskSummaryCard from './components/TaskSuymmaryCard';
+import TaskSummaryCard from './components/TaskSummaryCard';
 
 function Dashboard() {
   return (
