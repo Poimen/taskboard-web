@@ -14,8 +14,8 @@ function Clients() {
             <Avatar className="text-black">{record.firstName[0]}{record.lastName[0]}</Avatar>
           </div>
           <div className="flex flex-col w-full">
-            <div><span>{text}</span></div>
-            <div><span className="text-gray-500 text-xs">{record.company}</span></div>
+            <div><span className="text-gray-800">{text}</span></div>
+            <div><span className="text-gray-600 text-xs">{record.company}</span></div>
           </div>
         </div>),
       sorter: (a, b) => a.fullname.length - b.fullname.length
@@ -140,19 +140,21 @@ function Clients() {
 
   return (
     <>
-      <div className="mt-4 flex flex-row flex-auto mx-auto justify-between">
+      <div className="p-2 flex flex-row flex-auto mx-auto justify-between bg-white border-b-2 border-gray-300">
         <div className="flex flex-col">
-          <span className="text-4xl text-blue-600">Clients</span>
-          <span className="text-xs text-gray-500 ml-4">77 Clients</span>
+          <span className="text-xl text-blue-600">Clients</span>
+          {/* <span className="text-xs text-gray-500 ml-4">77 Clients</span> */}
         </div>
         <div className="flex items-center justify-end">
           <Button className="mr-2">Filter <Icon type="filter"></Icon></Button>
           <Button icon="user-add" type="primary">Add client</Button>
         </div>
       </div>
-      <Card className="mt-8 shadow">
-        <Table rowSelection={rowSelection} columns={columns} dataSource={data} onRow={onRow(history)} />
-      </Card>
+      <div className="mr-4 ml-4">
+        <Card className="mt-8 shadow">
+          <Table rowSelection={rowSelection} columns={columns} dataSource={data} onRow={onRow(history)} />
+        </Card>
+      </div>
     </>
   );
 }

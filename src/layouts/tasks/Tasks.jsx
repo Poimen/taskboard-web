@@ -54,9 +54,9 @@ function Tasks() {
 
   return (
     <>
-      <div className="mt-4 flex flex-row flex-auto mx-auto justify-between">
+      <div className="p-3 flex flex-row flex-auto mx-auto justify-between bg-white border-b-2 border-gray-300">
         <div>
-          <span className="text-4xl text-blue-600">Tasks</span>
+          <span className="text-xl text-blue-600">Tasks</span>
         </div>
         <div className="flex items-center justify-end">
           <Button className="mr-2">Filter <Icon type="filter"></Icon></Button>
@@ -74,9 +74,11 @@ function Tasks() {
           <Card>Low Tasks</Card>
         </div>
       </div>
-      <Card className="mt-4 shadow">
-        <Table columns={columns} dataSource={data} onRow={onRow(history)} />
-      </Card>
+      <div className="mr-4 ml-4">
+        <Card className="mt-4 shadow">
+          <Table columns={columns} dataSource={data} onRow={onRow(history)} />
+        </Card>
+      </div>
     </>
   );
 }

@@ -55,18 +55,20 @@ function Companies() {
 
   return (
     <>
-      <div className="mt-4 flex flex-row flex-auto mx-auto justify-between">
+      <div className="p-3 flex flex-row flex-auto mx-auto justify-between bg-white border-b-2 border-gray-300">
         <div>
-          <span className="text-4xl text-blue-600">Companies</span>
+          <span className="text-xl text-blue-600">Companies</span>
         </div>
         <div className="flex items-center justify-end">
           <Button className="mr-2">Filter <Icon type="filter"></Icon></Button>
           <Button icon="usergroup-add" type="primary">Add Company</Button>
         </div>
       </div>
-      <Card className="mt-8 shadow">
-        <Table columns={columns} dataSource={data} pagination={false} />
-      </Card>
+      <div className="mr-4 ml-4">
+        <Card className="mt-8 shadow">
+          <Table columns={columns} dataSource={data} pagination={false} />
+        </Card>
+      </div>
     </>
   );
 }

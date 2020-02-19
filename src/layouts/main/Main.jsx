@@ -22,7 +22,7 @@ export default function Main() {
       <MainHeader></MainHeader>
       <Layout>
         <SideMenu></SideMenu>
-        <Content style={{ margin: '0 16px' }}>
+        <Content>
           <Switch>
             <Route exact path='/dashboard' component={Dashboard} />
             <Route exact path='/tasks' component={Tasks} />
