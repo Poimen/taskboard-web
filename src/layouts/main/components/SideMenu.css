@@ -16,3 +16,11 @@
 .ant-layout-sider-trigger {
   border-right: 2px solid #e2e8f0;
 }
+
+.ant-menu .ant-menu-item {
+  border-left: 3px solid white;
+}
+
+.ant-menu .ant-menu-item-selected {
+  border-left: 3px solid;
+}
