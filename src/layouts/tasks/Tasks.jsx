@@ -63,18 +63,18 @@ function Tasks() {
           <Button icon="check-square" type="primary">Add task</Button>
         </div>
       </div>
-      <div className="flex items-center justify-between pt-4">
-        <div className="flex-auto m-2">
-          <Card>High tasks</Card>
-        </div>
-        <div className="flex-auto m-2">
-          <Card>Medium tasks</Card>
-        </div>
-        <div className="flex-auto m-2">
-          <Card>Low Tasks</Card>
-        </div>
-      </div>
       <div className="mr-4 ml-4">
+        <div className="flex items-center justify-between pt-4">
+          <div className="flex-auto m-2 border-l-4 border-red-400 rounded-lg">
+            <Card className="rounded-sm">5 High tasks</Card>
+          </div>
+          <div className="flex-auto m-2 border-l-4 border-green-500 rounded-lg">
+            <Card className="rounded-sm">10 Medium tasks</Card>
+          </div>
+          <div className="flex-auto m-2 border-l-4 border-blue-400 rounded-lg">
+            <Card className="rounded-sm">100 Low Tasks</Card>
+          </div>
+        </div>
         <Card className="mt-4 shadow">
           <Table columns={columns} dataSource={data} onRow={onRow(history)} />
         </Card>
