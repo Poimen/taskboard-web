@@ -26,7 +26,7 @@ function SideMenu() {
         </div> */}
         <div className="">
           {/* TODO : Fixpath name match for highlight */}
-          <Menu theme="light" selectedKeys={[location.pathname]} mode="inline">
+          <Menu theme="light" selectedKeys={[location.pathname]} mode="vertical">
             <Menu.Item key="/dashboard">
               <SiderMenuOptionText icon="desktop" text="Dashboard"></SiderMenuOptionText>
               <Link to="/dashboard" />

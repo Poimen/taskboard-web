@@ -37,6 +37,10 @@ function ClientDetails() {
             <TabPane tab="Tasks" key="2">
               <Tasks></Tasks>
             </TabPane>
+            <TabPane tab="Notes" key="3">
+            </TabPane>
+            <TabPane tab="Documents" key="4">
+            </TabPane>
           </Tabs>
         </div>
       </div>
