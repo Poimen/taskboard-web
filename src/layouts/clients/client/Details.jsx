@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tabs, Avatar, Icon } from 'antd';
+import { Tabs, Avatar, Icon, Breadcrumb } from 'antd';
 import './Details.css';
 import Information from './Information';
 import Tasks from './Tasks';
@@ -15,7 +15,16 @@ function ClientDetails() {
     <>
       <div className="p-3 flex flex-row flex-auto mx-auto justify-between bg-white border-b-2 border-gray-300">
         <div>
-          <span className="text-xs text-blue-600"><Icon type="left"></Icon> Back to Clients</span>
+          <Breadcrumb>
+            <Breadcrumb.Item>
+              <Icon className="text-blue-600" style={{ fontSize: 18 }} type="team"></Icon>
+              <span className="text-xl text-blue-600">Clients</span>
+            </Breadcrumb.Item>
+            <Breadcrumb.Item>
+              <span className="text-xl text-blue-600">Shaun Clark</span>
+            </Breadcrumb.Item>
+          </Breadcrumb>
+          {/* <span className="text-xs text-blue-600"><Icon type="left"></Icon> Back to Clients</span> */}
         </div>
       </div>
       <div className="mr-4 ml-4">

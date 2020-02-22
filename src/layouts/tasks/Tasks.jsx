@@ -54,8 +54,9 @@ function Tasks() {
 
   return (
     <>
-      <div className="p-2 flex flex-row flex-auto mx-auto justify-between bg-white border-b-2 border-gray-300">
+      <div className="p-3 flex flex-row flex-auto mx-auto justify-between bg-white border-b-2 border-gray-300">
         <div>
+          <Icon className="text-blue-600 pr-2" style={{ fontSize: 18 }} type="bars"></Icon>
           <span className="text-xl text-blue-600">Tasks</span>
         </div>
         <div className="flex items-center justify-end">

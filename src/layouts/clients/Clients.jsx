@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Table, Divider, Tag, Avatar, Button, Icon } from 'antd';
+import { Card, Table, Divider, Tag, Avatar, Button, Icon, Breadcrumb } from 'antd';
 import { useHistory } from 'react-router-dom';
 
 function Clients() {
@@ -140,9 +140,15 @@ function Clients() {
 
   return (
     <>
-      <div className="p-2 flex flex-row flex-auto mx-auto justify-between bg-white border-b-2 border-gray-300">
+      <div className="p-3 flex flex-row flex-auto mx-auto justify-between bg-white border-b-2 border-gray-300">
         <div className="flex flex-col">
-          <span className="text-xl text-blue-600">Clients</span>
+          <Breadcrumb>
+            <Breadcrumb.Item>
+              <Icon className="text-blue-600" style={{ fontSize: 18 }} type="team"></Icon>
+              <span className="text-xl text-blue-600">Clients</span>
+            </Breadcrumb.Item>
+          </Breadcrumb>
+          {/* <span className="text-xl text-blue-600">Clients</span> */}
           {/* <span className="text-xs text-gray-500 ml-4">77 Clients</span> */}
         </div>
         <div className="flex items-center justify-end">
