@@ -7,5 +7,5 @@
 .mainheader--new-dropdown .ant-btn:hover {
   color: white;
   border-color: white;
-  border-style: dashed;
+  border-style: solid;
 }
