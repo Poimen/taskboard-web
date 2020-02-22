@@ -29,7 +29,7 @@ function ClientDetails() {
                 Shaun Clark
               </div>
               <div className="text-gray-600 text-xs">
-                Boing Boing transport
+                Boing Boing transport - Senior Manager
               </div>
             </div>
           </div>
@@ -40,12 +40,15 @@ function ClientDetails() {
               <TabPane tab="Information" key="1">
                 <Information></Information>
               </TabPane>
-              <TabPane tab="Tasks" key="2">
+              <TabPane tab="Notes" key="2">
+              </TabPane>
+              <TabPane tab="Documents" key="3">
+              </TabPane>
+              <TabPane tab="Tasks" key="4">
                 <Tasks></Tasks>
               </TabPane>
-              <TabPane tab="Notes" key="3">
-              </TabPane>
-              <TabPane tab="Documents" key="4">
+              <TabPane tab="Archived Tasks" key="5">
+                <Tasks></Tasks>
               </TabPane>
             </Tabs>
           </div>

@@ -19,6 +19,10 @@ function Information() {
           </colgroup>
           <tbody className="align-baseline">
             <tr>
+              <td className="p-4 border-b border-gray-300 whitespace-no-wrap">Position:</td>
+              <td className="p-4 border-b border-gray-300 break-words">Senior Manager</td>
+            </tr>
+            <tr>
               <td className="p-4 border-b border-gray-300 whitespace-no-wrap">Email:</td>
               <td className="p-4 border-b border-gray-300 break-words">example@sxample.com</td>
             </tr>
