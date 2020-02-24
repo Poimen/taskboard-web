@@ -1,5 +1,7 @@
 import React from 'react';
-import { Breadcrumb, Icon, Card, Avatar, Tag } from 'antd';
+import { Breadcrumb, Icon, Card, Avatar, Tag, Tabs } from 'antd';
+
+const { TabPane } = Tabs;
 
 function Details() {
   return (
@@ -22,7 +24,7 @@ function Details() {
         <div className="flex justify-center">
           <Card className="mt-8 shadow flex flex-col flex-grow-0 w-3/4">
             <div className="flex justify-start">
-              <div className="w-9/12">
+              <div className="w-8/12">
                 <div className="flex items-center">
                   <Avatar style={{ color: 'black' }}>RS</Avatar>
                   <div className="flex flex-col ml-2 text-xl text-gray-700 font-bold">
@@ -31,12 +33,12 @@ function Details() {
                   </div>
                 </div>
               </div>
-              <div className="w-3/12 flex flex-col flex-1 items-end justify-end">
+              <div className="w-4/12 flex flex-col flex-1 items-end justify-end">
                 <span>
                   Tags
                 </span>
-                <span>
-                  Created a moment ago
+                <span className="text-xs">
+                  Created a moment ago (26 February 2020 at 2:30pm)
                 </span>
                 <span className="text-xs text-gray-500">
                   Created by Agent
@@ -54,6 +56,14 @@ function Details() {
               Excepturi voluptates officia velit, quaerat similique eligendi quibusdam, culpa pariatur iure, assumenda ex fuga repellendus maxime exercitationem molestiae aspernatur? Quidem beatae hic sunt eius voluptatibus doloribus tempora amet numquam laudantium?
               Tempora consequuntur modi deserunt, tempore iusto aliquam nesciunt veritatis incidunt accusamus illum cupiditate adipisci consequatur commodi? Dignissimos ipsum nesciunt ipsa at autem corporis odit numquam, itaque repellat tempore totam officia.
               Autem esse eveniet maiores ex illo! Eveniet eaque distinctio accusamus soluta dicta ipsum. Magnam quaerat delectus accusamus architecto animi eaque, totam in ea minima aut repellendus numquam, obcaecati sit eveniet?
+            </div>
+            <div className="mt-8">
+              <Tabs defaultActiveKey="1" animated={false} tabPosition='top'>
+                <TabPane tab="Comments" key="1">
+                </TabPane>
+                <TabPane tab="History" key="2">
+                </TabPane>
+              </Tabs>
             </div>
           </Card>
           <Card className="mt-8 shadow flex-grow-0 w-1/4 ml-2" title="Details">
