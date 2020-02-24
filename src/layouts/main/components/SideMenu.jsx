@@ -20,7 +20,7 @@ function SideMenu() {
 
   return (
     <>
-      <Sider className="border-gray-300 border-r-2" collapsible theme="light" collapsed={sidebarCollapsed} onCollapse={() => setSidebarCollapse(prev => !prev)}>
+      <Sider className="border-gray-300 border-r-1" collapsible theme="light" collapsed={sidebarCollapsed} onCollapse={() => setSidebarCollapse(prev => !prev)}>
         {/* <div className="logo flex items-center justify-center text-2xl">
           {LogoText(sidebarCollapsed)}
         </div> */}

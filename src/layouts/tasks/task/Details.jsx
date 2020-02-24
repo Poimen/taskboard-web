@@ -1,5 +1,5 @@
 import React from 'react';
-import { Breadcrumb, Icon, Card, Avatar, Tag, Tabs, Empty } from 'antd';
+import { Breadcrumb, Icon, Card, Avatar, Tag, Tabs, Empty, Button } from 'antd';
 
 const { TabPane } = Tabs;
 
@@ -46,16 +46,25 @@ function Details() {
               </div>
             </div>
             <hr className="mt-2" />
-            <div className="flex mt-2">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, in! Dignissimos ipsam eligendi nemo totam asperiores dolorum, tempore quo fuga delectus facere saepe iste soluta officia velit nostrum, obcaecati quasi?
-              Obcaecati placeat officiis alias ut voluptate iste expedita ad magni doloremque quae? Suscipit asperiores nostrum tempore vero, eligendi tempora porro sed dolorum! Ab dolor, aut eveniet quaerat veniam commodi excepturi?
-              Reprehenderit expedita soluta eaque quisquam rerum dicta recusandae at aliquid odit nulla harum molestias sit magnam praesentium saepe illo nesciunt, similique iure placeat officia, maxime quis sint. Nihil, illo adipisci.
-              Delectus reprehenderit cumque, aperiam, iure quis quod blanditiis et nobis dolor repellendus quia minus quae dolores aspernatur omnis modi. Dolorem officiis corporis eius repellat consectetur ad, animi doloribus blanditiis quaerat?
-              Ducimus vitae, distinctio adipisci doloribus soluta aperiam praesentium fuga magnam saepe repellendus, inventore autem corrupti necessitatibus hic officia maxime expedita nihil dicta sed iste possimus magni maiores. Molestiae, tenetur? Odit.
-              Adipisci nam esse corrupti architecto enim non cum, doloribus dolores, nesciunt voluptatibus voluptatum, illum voluptates. Cumque ab illum veritatis voluptas distinctio, doloremque fuga sed ex nisi non pariatur quibusdam fugiat.
-              Excepturi voluptates officia velit, quaerat similique eligendi quibusdam, culpa pariatur iure, assumenda ex fuga repellendus maxime exercitationem molestiae aspernatur? Quidem beatae hic sunt eius voluptatibus doloribus tempora amet numquam laudantium?
-              Tempora consequuntur modi deserunt, tempore iusto aliquam nesciunt veritatis incidunt accusamus illum cupiditate adipisci consequatur commodi? Dignissimos ipsum nesciunt ipsa at autem corporis odit numquam, itaque repellat tempore totam officia.
-              Autem esse eveniet maiores ex illo! Eveniet eaque distinctio accusamus soluta dicta ipsum. Magnam quaerat delectus accusamus architecto animi eaque, totam in ea minima aut repellendus numquam, obcaecati sit eveniet?
+            <div className="mt-4">
+              <div>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, in! Dignissimos ipsam eligendi nemo totam asperiores dolorum, tempore quo fuga delectus facere saepe iste soluta officia velit nostrum, obcaecati quasi?
+                Obcaecati placeat officiis alias ut voluptate iste expedita ad magni doloremque quae? Suscipit asperiores nostrum tempore vero, eligendi tempora porro sed dolorum! Ab dolor, aut eveniet quaerat veniam commodi excepturi?
+                Reprehenderit expedita soluta eaque quisquam rerum dicta recusandae at aliquid odit nulla harum molestias sit magnam praesentium saepe illo nesciunt, similique iure placeat officia, maxime quis sint. Nihil, illo adipisci.
+                Delectus reprehenderit cumque, aperiam, iure quis quod blanditiis et nobis dolor repellendus quia minus quae dolores aspernatur omnis modi. Dolorem officiis corporis eius repellat consectetur ad, animi doloribus blanditiis quaerat?
+                Ducimus vitae, distinctio adipisci doloribus soluta aperiam praesentium fuga magnam saepe repellendus, inventore autem corrupti necessitatibus hic officia maxime expedita nihil dicta sed iste possimus magni maiores. Molestiae, tenetur? Odit.
+                Adipisci nam esse corrupti architecto enim non cum, doloribus dolores, nesciunt voluptatibus voluptatum, illum voluptates. Cumque ab illum veritatis voluptas distinctio, doloremque fuga sed ex nisi non pariatur quibusdam fugiat.
+                Excepturi voluptates officia velit, quaerat similique eligendi quibusdam, culpa pariatur iure, assumenda ex fuga repellendus maxime exercitationem molestiae aspernatur? Quidem beatae hic sunt eius voluptatibus doloribus tempora amet numquam laudantium?
+                Tempora consequuntur modi deserunt, tempore iusto aliquam nesciunt veritatis incidunt accusamus illum cupiditate adipisci consequatur commodi? Dignissimos ipsum nesciunt ipsa at autem corporis odit numquam, itaque repellat tempore totam officia.
+                Autem esse eveniet maiores ex illo! Eveniet eaque distinctio accusamus soluta dicta ipsum. Magnam quaerat delectus accusamus architecto animi eaque, totam in ea minima aut repellendus numquam, obcaecati sit eveniet?
+              </div>
+              <div className="flex mt-10 justify-end">
+                <Button.Group>
+                  <Button>Assign</Button>
+                  <Button>Suspend</Button>
+                  <Button>Do Something else</Button>
+                </Button.Group>
+              </div>
             </div>
             <div className="mt-8">
               <Tabs defaultActiveKey="1" animated={false} tabPosition='top'>

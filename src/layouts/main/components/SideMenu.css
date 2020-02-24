@@ -24,3 +24,11 @@
 .ant-menu .ant-menu-item-selected {
   border-left: 3px solid;
 }
+
+ul.ant-menu.ant-menu-light.ant-menu-root.ant-menu-vertical {
+  border-right: 1px;
+}
+
+.border-r-1 {
+  border-right: solid 1px;
+}
