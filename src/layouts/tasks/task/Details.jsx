@@ -1,5 +1,5 @@
 import React from 'react';
-import { Breadcrumb, Icon, Card, Avatar, Tag, Tabs } from 'antd';
+import { Breadcrumb, Icon, Card, Avatar, Tag, Tabs, Empty } from 'antd';
 
 const { TabPane } = Tabs;
 
@@ -60,8 +60,14 @@ function Details() {
             <div className="mt-8">
               <Tabs defaultActiveKey="1" animated={false} tabPosition='top'>
                 <TabPane tab="Comments" key="1">
+                  <div className="mt-8 mb-8">
+                    <Empty description="No comments here..." />
+                  </div>
                 </TabPane>
                 <TabPane tab="History" key="2">
+                  <div className="mt-8 mb-8">
+                    <Empty description="No history here..." />
+                  </div>
                 </TabPane>
               </Tabs>
             </div>
