@@ -60,6 +60,9 @@ function ClientDetails() {
               <TabPane tab="Archived Tasks" key="5">
                 <Tasks></Tasks>
               </TabPane>
+              <TabPane tab="Products" key="6">
+                <Tasks></Tasks>
+              </TabPane>
             </Tabs>
           </div>
         </div>

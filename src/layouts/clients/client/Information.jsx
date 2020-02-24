@@ -33,7 +33,7 @@ function Information() {
               </tr>
               <tr>
                 <td className="p-4 border-b border-gray-300 whitespace-no-wrap">Address:</td>
-                <td className="p-4 border-b border-gray-300">42 Wallaby Way, Sydney, 4051, sdfkjhdskjfh</td>
+                <td className="p-4 border-b border-gray-300">42 Wallaby Way, Sydney, 4051</td>
               </tr>
               <tr>
                 <td className="p-4 whitespace-no-wrap">
@@ -67,6 +67,10 @@ function Information() {
                   <div className="flex justify-between">
                     <span>
                       12pm on 23 February 2020
+                      <br></br>
+                      <span className="text-xs text-gray-500">
+                        Reminder @ 11:55am 23/02/2020
+                      </span>
                     </span>
                     <span>
                       <Button icon="edit" />
