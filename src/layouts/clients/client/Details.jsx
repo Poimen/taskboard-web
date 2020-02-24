@@ -43,7 +43,8 @@ function ClientDetails() {
             </div>
           </div>
         </div>
-        <div>
+        <hr />
+        <div className="mt-4">
           <div>
             <Tabs defaultActiveKey="1" animated={false} tabPosition='top' onChange={callback}>
               <TabPane tab="Information" key="1">
