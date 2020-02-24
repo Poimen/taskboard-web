@@ -85,3 +85,7 @@ export {
 export {
   default as CheckSquareOutline
 } from '@ant-design/icons/lib/outline/CheckSquareOutline';
+
+export {
+  default as PlusOutline
+} from '@ant-design/icons/lib/outline/PlusOutline';
