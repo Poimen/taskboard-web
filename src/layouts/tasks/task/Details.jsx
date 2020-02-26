@@ -1,5 +1,5 @@
 import React from 'react';
-import { Breadcrumb, Icon, Switch, Avatar, Tag, Tabs, Empty, Button, Badge } from 'antd';
+import { Breadcrumb, Icon, Switch, Avatar, Tag, Tabs, Empty, Button, Badge, Input } from 'antd';
 import './Details.css';
 
 const { TabPane } = Tabs;
@@ -23,7 +23,7 @@ function Details() {
         </div>
       </div>
       { /* TODO: Sort out hieght hack */}
-      <div className="mr-6 ml-6 h-screen">
+      <div className="ml-8 h-screen">
         <div className="flex justify-center h-screen">
           <div className="mt-8 mr-8 flex flex-col w-3/4 ">
             <div className="flex justify-start ">
@@ -67,7 +67,18 @@ function Details() {
               <Tabs defaultActiveKey="1" animated={false} tabPosition='top'>
                 <TabPane tab="Comments" key="1">
                   <div className="mt-8 mb-8">
-                    <Empty description="No comments here..." />
+                    <Empty description="No comments yet..." />
+                  </div>
+                  <div className="mt-16 mb-8">
+                    <div className="flex items-center justify-start">
+                      <div className="mr-4">
+                        <Avatar size={55} style={{ color: 'grey' }}>AG</Avatar>
+                      </div>
+                      <div className="w-full">
+                        {/* TODO : Switch out with reac-quill */}
+                        <Input placeholder="Add comment..." onClick={() => console.log('clicked')}></Input>
+                      </div>
+                    </div>
                   </div>
                 </TabPane>
                 <TabPane tab="History" key="2">
@@ -75,10 +86,15 @@ function Details() {
                     <Empty description="No history here..." />
                   </div>
                 </TabPane>
+                <TabPane tab="Workflow" key="3">
+                  <div className="mt-8 mb-8">
+                    <Empty description="No workflow here..." />
+                  </div>
+                </TabPane>
               </Tabs>
             </div>
           </div>
-          <div className=" pl-8 w-1/4 ml-2 bg-task-sidebar border-l-2">
+          <div className="pl-8 w-1/4 ml-2 bg-task-sidebar border-l-2">
             <table className="w-full text-left table-fixed">
               <thead>
               </thead>
@@ -99,7 +115,6 @@ function Details() {
                   <td className="p-4 border-b border-gray-300 whitespace-no-wrap">Status:</td>
                   <td className="p-4 border-b border-gray-300 break-words">
                     <Badge status="success" text="Assigned" />
-
                   </td>
                 </tr>
                 <tr>
