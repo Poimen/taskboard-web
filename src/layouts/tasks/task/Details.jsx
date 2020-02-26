@@ -1,47 +1,44 @@
 import React from 'react';
-import { Breadcrumb, Icon, Card, Avatar, Tag, Tabs, Empty, Button } from 'antd';
+import { Breadcrumb, Icon, Switch, Avatar, Tag, Tabs, Empty, Button } from 'antd';
+import './Details.css';
 
 const { TabPane } = Tabs;
 
 function Details() {
   return (
     <>
-      <div className="p-3 flex flex-row flex-auto mx-auto justify-between bg-white border-b-2 border-gray-300">
-        <div>
-          <Breadcrumb>
-            <Breadcrumb.Item>
-              <Icon className="text-blue-600 pr-2" style={{ fontSize: 18 }} type="bars"></Icon>
-              <span className="text-xl text-blue-600">Tasks</span>
-            </Breadcrumb.Item>
-            <Breadcrumb.Item>
-              <span className="text-xl text-blue-600">25</span>
-            </Breadcrumb.Item>
-          </Breadcrumb>
-          {/* <span className="text-xs text-blue-600"><Icon type="left"></Icon> Back to Clients</span> */}
+      <div className="mr-4 ml-4">
+        <div className="p-4 flex flex-row flex-auto mx-auto justify-between bg-white border-b-2 border-gray-300">
+          <div>
+            <Breadcrumb>
+              <Breadcrumb.Item>
+                <Icon className="text-blue-600 pr-2" style={{ fontSize: 14 }} type="bars"></Icon>
+                <span className="text-base text-blue-600">Tasks</span>
+              </Breadcrumb.Item>
+              <Breadcrumb.Item>
+                <span className="text-base text-blue-600">25</span>
+              </Breadcrumb.Item>
+            </Breadcrumb>
+          </div>
         </div>
       </div>
-      <div className="mr-4 ml-4">
-        <div className="flex justify-center">
-          <Card className="mt-8 shadow flex flex-col flex-grow-0 w-3/4">
-            <div className="flex justify-start">
+      { /* TODO: Sort out hieght hack */}
+      <div className="mr-6 ml-6 h-screen">
+        <div className="flex justify-center h-screen">
+          <div className="mt-8 mr-8 flex flex-col w-3/4 ">
+            <div className="flex justify-start ">
               <div className="w-8/12">
                 <div className="flex items-center">
                   <Avatar style={{ color: 'black' }}>RS</Avatar>
-                  <div className="flex flex-col ml-2 text-xl text-gray-700 font-bold">
+                  <div className="flex flex-col ml-2 text-2xl text-gray-800 font-medium">
                     <span>Check some pricing</span>
                     <span className="text-gray-500 text-xs font-normal">Connected to Boing Boing Transport</span>
                   </div>
                 </div>
               </div>
-              <div className="w-4/12 flex flex-col flex-1 items-end justify-end">
-                <span>
-                  Tags
-                </span>
+              <div className="w-4/12 flex flex-col items-end justify-center">
                 <span className="text-xs">
                   Created a moment ago (26 February 2020 at 2:30pm)
-                </span>
-                <span className="text-xs text-gray-500">
-                  Created by Agent
                 </span>
               </div>
             </div>
@@ -80,49 +77,62 @@ function Details() {
                 </TabPane>
               </Tabs>
             </div>
-          </Card>
-          <Card className="mt-8 shadow flex-grow-0 w-1/4 ml-2" title="Details">
+          </div>
+          <div className=" pl-8 w-1/4 ml-2 bg-task-sidebar border-l-2">
             <table className="w-full text-left table-fixed">
               <thead>
               </thead>
               <colgroup>
-                <col className="w-1/3"></col>
-                <col className="w-2/3"></col>
+                <col className="w-1/2"></col>
+                <col className="w-1/2"></col>
               </colgroup>
               <tbody className="align-baseline">
                 <tr>
-                  <td className="p-4 border-b border-gray-300 whitespace-no-wrap">Position:</td>
-                  <td className="p-4 border-b border-gray-300 break-words">Senior Manager</td>
+                  <td className="p-4 border-b border-gray-300 whitespace-no-wrap">Assinged to:</td>
+                  <td className="p-4 border-b border-gray-300 break-words">Auguste Gusteau</td>
                 </tr>
                 <tr>
-                  <td className="p-4 border-b border-gray-300 whitespace-no-wrap">Email:</td>
-                  <td className="p-4 border-b border-gray-300 break-words">example@sxample.com</td>
+                  <td className="p-4 border-b border-gray-300 whitespace-no-wrap">Reported by:</td>
+                  <td className="p-4 border-b border-gray-300 break-words">Abominable Snowman</td>
                 </tr>
                 <tr>
-                  <td className="p-4 border-b border-gray-300 whitespace-no-wrap">Phone:</td>
-                  <td className="p-4 border-b border-gray-300">24872990234</td>
+                  <td className="p-4 border-b border-gray-300 whitespace-no-wrap">Status:</td>
+                  <td className="p-4 border-b border-gray-300 break-words">Assigned</td>
                 </tr>
                 <tr>
-                  <td className="p-4 border-b border-gray-300 whitespace-no-wrap">Address:</td>
-                  <td className="p-4 border-b border-gray-300">42 Wallaby Way, Sydney, 4051, sdfkjhdskjfh</td>
+                  <td className="p-4 border-b border-gray-300 whitespace-no-wrap">Priority:</td>
+                  <td className="p-4 border-b border-gray-300 break-words">
+                    <Tag color="red" key="urgent">
+                      Urgent
+                    </Tag>
+                  </td>
                 </tr>
                 <tr>
-                  <td className="p-4 whitespace-no-wrap">
+                  <td className="p-4 border-b border-gray-300 whitespace-no-wrap">Company:</td>
+                  <td className="p-4 border-b border-gray-300 break-words">Boing Boing Transport</td>
+                </tr>
+                <tr>
+                  <td className="p-4 whitespace-no-wrap border-b border-gray-300">
                     Tags:
                     <br />
                   </td>
-                  <td className="p-4 whitespace-pre">
+                  <td className="p-4 whitespace-pre border-b border-gray-300">
                     <Tag color="geekblue" closable onClose={e => e.preventDefault()} key="bulk">
                       Bulk
                     </Tag>
                   </td>
                 </tr>
+                <tr>
+                  <td className="p-4 border-b border-gray-300 whitespace-no-wrap">Notifications:</td>
+                  <td className="p-4 border-b border-gray-300 break-words">
+                    <Switch defaultChecked checkedChildren={<Icon type="check" />} unCheckedChildren={<Icon type="close" />} />
+                  </td>
+                </tr>
               </tbody>
             </table>
-          </Card>
-
+          </div>
         </div>
-        <div className="flex justify-center">
+        {/* <div className="flex justify-center">
           <div className="w-3/4">
             <Card className="mt-8 shadow">
               Task Activity
@@ -148,7 +158,7 @@ function Details() {
               </Card>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

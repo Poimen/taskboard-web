@@ -54,14 +54,16 @@ function Tasks() {
 
   return (
     <>
-      <div className="p-3 flex flex-row flex-auto mx-auto justify-between bg-white border-b-2 border-gray-300">
-        <div>
-          <Icon className="text-blue-600 pr-2" style={{ fontSize: 18 }} type="bars"></Icon>
-          <span className="text-xl text-blue-600">Tasks</span>
-        </div>
-        <div className="flex items-center justify-end">
-          <Button className="mr-2">Filter <Icon type="filter"></Icon></Button>
-          <Button icon="check-square" type="primary">Add task</Button>
+      <div className="ml-4 mr-4">
+        <div className="p-3 flex flex-row flex-auto mx-auto justify-between bg-white border-b-2 border-gray-300">
+          <div>
+            <Icon className="text-blue-600 pr-2" style={{ fontSize: 14 }} type="bars"></Icon>
+            <span className="text-base text-blue-600">Tasks</span>
+          </div>
+          <div className="flex items-center justify-end">
+            <Button className="mr-2">Filter <Icon type="filter"></Icon></Button>
+            <Button icon="check-square" type="primary">Add task</Button>
+          </div>
         </div>
       </div>
       <div className="mr-4 ml-4">
