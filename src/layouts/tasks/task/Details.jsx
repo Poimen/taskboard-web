@@ -1,5 +1,5 @@
 import React from 'react';
-import { Breadcrumb, Icon, Switch, Avatar, Tag, Tabs, Empty, Button } from 'antd';
+import { Breadcrumb, Icon, Switch, Avatar, Tag, Tabs, Empty, Button, Badge } from 'antd';
 import './Details.css';
 
 const { TabPane } = Tabs;
@@ -29,7 +29,7 @@ function Details() {
             <div className="flex justify-start ">
               <div className="w-8/12">
                 <div className="flex items-center">
-                  <Avatar style={{ color: 'black' }}>RS</Avatar>
+                  <Avatar shape="square" size={55} style={{ color: 'grey' }}>AS</Avatar>
                   <div className="flex flex-col ml-2 text-2xl text-gray-800 font-medium">
                     <span>Check some pricing</span>
                     <span className="text-gray-500 text-xs font-normal">Connected to Boing Boing Transport</span>
@@ -37,7 +37,7 @@ function Details() {
                 </div>
               </div>
               <div className="w-4/12 flex flex-col items-end justify-center">
-                <span className="text-xs">
+                <span className="text-xs text-gray-500">
                   Created a moment ago (26 February 2020 at 2:30pm)
                 </span>
               </div>
@@ -97,7 +97,10 @@ function Details() {
                 </tr>
                 <tr>
                   <td className="p-4 border-b border-gray-300 whitespace-no-wrap">Status:</td>
-                  <td className="p-4 border-b border-gray-300 break-words">Assigned</td>
+                  <td className="p-4 border-b border-gray-300 break-words">
+                    <Badge status="success" text="Assigned" />
+
+                  </td>
                 </tr>
                 <tr>
                   <td className="p-4 border-b border-gray-300 whitespace-no-wrap">Priority:</td>
