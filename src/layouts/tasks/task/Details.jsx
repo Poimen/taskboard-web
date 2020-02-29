@@ -59,7 +59,7 @@ function Details() {
                 <Button.Group>
                   <Button>Assign</Button>
                   <Button>Suspend</Button>
-                  <Button>Do Something else</Button>
+                  <Button>Edit</Button>
                 </Button.Group>
               </div>
             </div>
