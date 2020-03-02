@@ -9,6 +9,10 @@
   text-transform: uppercase;
 }
 
+.bg-gray-menu {
+  background-color: rgb(250, 250, 250);
+}
+
 .ant-menu-inline {
   border-right: unset;
 }
@@ -27,6 +31,7 @@
 
 ul.ant-menu.ant-menu-light.ant-menu-root.ant-menu-vertical {
   border-right: 1px;
+  background-color: rgb(250, 250, 250);
 }
 
 .border-r-1 {
