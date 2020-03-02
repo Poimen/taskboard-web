@@ -27,7 +27,7 @@ function ClientDetails() {
           {/* <span className="text-xs text-blue-600"><Icon type="left"></Icon> Back to Clients</span> */}
         </div>
       </div>
-      <div className="mr-4 ml-4">
+      <div className="mx-4">
         <div>
           <div className="flex items-center p-4">
             <div>
@@ -43,8 +43,8 @@ function ClientDetails() {
             </div>
           </div>
         </div>
-        <hr />
-        <div className="mt-4">
+        {/* <hr /> */}
+        <div className="">
           <div>
             <Tabs defaultActiveKey="1" animated={false} tabPosition='top' onChange={callback}>
               <TabPane tab="Information" key="1">
