@@ -1,5 +1,6 @@
 import React from 'react';
 import { Breadcrumb, Icon, Switch, Avatar, Tag, Tabs, Empty, Button, Badge, Input } from 'antd';
+import { Link } from 'react-router-dom';
 import './Details.css';
 
 const { TabPane } = Tabs;
@@ -7,26 +8,27 @@ const { TabPane } = Tabs;
 function Details() {
   return (
     <>
-      <div className="mr-4 ml-4">
-        <div className="p-4 flex flex-row flex-auto mx-auto justify-between bg-white border-b-2 border-gray-300">
-          <div>
-            <Breadcrumb>
-              <Breadcrumb.Item>
-                <Icon className="text-blue-600 pr-2" style={{ fontSize: 14 }} type="bars"></Icon>
-                <span className="text-base text-blue-600">Tasks</span>
-              </Breadcrumb.Item>
-              <Breadcrumb.Item>
-                <span className="text-base text-blue-600">25</span>
-              </Breadcrumb.Item>
-            </Breadcrumb>
-          </div>
-        </div>
-      </div>
       { /* TODO: Sort out hieght hack */}
-      <div className="ml-8 h-screen">
-        <div className="flex justify-center h-screen">
-          <div className="mt-8 mr-8 flex flex-col w-3/4 ">
-            <div className="flex justify-start ">
+      <div className="ml-4">
+        <div className="flex justify-center">
+          <div className="mr-5 flex flex-col w-3/4">
+            <div className="mt-1">
+              <div className="py-1 flex flex-row flex-auto mx-auto justify-between bg-white border-b-1-gray">
+                <div>
+                  <Breadcrumb>
+                    <Breadcrumb.Item>
+                      <Link to="/tasks">
+                        <span className="text-sm text-blue-600 hover:underline">Tasks</span>
+                      </Link>
+                    </Breadcrumb.Item>
+                    <Breadcrumb.Item>
+                      <span className="text-sm text-blue-600 font-semibold"><span className="text-sm">#</span> 25</span>
+                    </Breadcrumb.Item>
+                  </Breadcrumb>
+                </div>
+              </div>
+            </div>
+            <div className="mt-4 flex justify-start">
               <div className="w-8/12">
                 <div className="flex items-center">
                   <Avatar shape="square" size={55} style={{ color: 'grey' }}>AS</Avatar>
@@ -42,7 +44,7 @@ function Details() {
                 </span>
               </div>
             </div>
-            <hr className="mt-2" />
+            <hr className="mt-4" />
             <div className="mt-4">
               <div>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, in! Dignissimos ipsam eligendi nemo totam asperiores dolorum, tempore quo fuga delectus facere saepe iste soluta officia velit nostrum, obcaecati quasi?
@@ -94,7 +96,7 @@ function Details() {
               </Tabs>
             </div>
           </div>
-          <div className="pl-8 w-1/4 ml-2 bg-task-sidebar border-l-2">
+          <div className="pl-4 pr-2 w-1/4 ml-2 bg-task-sidebar border-l-2">
             <table className="w-full text-left table-fixed">
               <thead>
               </thead>
@@ -139,6 +141,14 @@ function Details() {
                       Bulk
                     </Tag>
                   </td>
+                </tr>
+                <tr>
+                  <td className="p-4 border-b border-gray-300 whitespace-no-wrap">Due date:</td>
+                  <td className="p-4 border-b border-gray-300 break-words">Auguste Gusteau</td>
+                </tr>
+                <tr>
+                  <td className="p-4 border-b border-gray-300 whitespace-no-wrap">Linked to:</td>
+                  <td className="p-4 border-b border-gray-300 break-words">Task #34</td>
                 </tr>
                 <tr>
                   <td className="p-4 border-b border-gray-300 whitespace-no-wrap">Notifications:</td>
