@@ -84,7 +84,7 @@ function Tasks() {
                 Some search fields here
               </div>
               <Link to="/tasks/25">
-                <div className="flex items-center justify-between mx-2 my-2">
+                <div className="flex items-center justify-between px-2 my-2 border-l-2 border-red-300">
                   <div className="flex items-center">
                     <Avatar shape="square" size={40} style={{ color: 'grey' }}>AS</Avatar>
                     <div className="flex flex-col ml-2 text-base text-gray-800 font-medium">
