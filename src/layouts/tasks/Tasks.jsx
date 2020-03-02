@@ -83,8 +83,8 @@ function Tasks() {
               <div className="flex border-b-2 p-4 bg-gray-200">
                 Some search fields here
               </div>
-              <div className="flex items-center justify-between mx-2 my-2">
-                <Link to="/tasks/25">
+              <Link to="/tasks/25">
+                <div className="flex items-center justify-between mx-2 my-2">
                   <div className="flex items-center">
                     <Avatar shape="square" size={40} style={{ color: 'grey' }}>AS</Avatar>
                     <div className="flex flex-col ml-2 text-base text-gray-800 font-medium">
@@ -98,12 +98,12 @@ function Tasks() {
                       </div>
                     </div>
                   </div>
-                </Link>
-                <div className="flex items-center">
-                  <span>Assigned to:</span>
-                  <span>Abominable Snowman</span>
+                  <div className="flex items-center">
+                    <span>Assigned to:</span>
+                    <span>Abominable Snowman</span>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
           </TabPane>
           <TabPane tab="Closed Tasks" key="2">
