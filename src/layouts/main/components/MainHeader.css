@@ -9,3 +9,7 @@
   border-color: white;
   border-style: solid;
 }
+
+.mainheader--icon:hover {
+  background-color: rgba(201,220,242,0.2);
+}

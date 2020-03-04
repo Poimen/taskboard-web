@@ -9,8 +9,8 @@ function Details() {
   return (
     <>
       { /* TODO: Sort out hieght hack */}
-      <div className="ml-4">
-        <div className="flex justify-center">
+      <div className="ml-4 h-full">
+        <div className="h-full flex justify-center">
           <div className="mr-5 flex flex-col w-3/4">
             <div className="mt-1">
               <div className="py-1 flex flex-row flex-auto mx-auto justify-between bg-white border-b-1-gray">
