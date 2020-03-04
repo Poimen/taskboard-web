@@ -65,6 +65,9 @@ function ClientDetails() {
               <TabPane tab="Products" key="6">
                 <Tasks></Tasks>
               </TabPane>
+              <TabPane tab="Timeline" key="7">
+                <Tasks></Tasks>
+              </TabPane>
             </Tabs>
           </div>
         </div>

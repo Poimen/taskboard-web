@@ -162,8 +162,8 @@ function Details() {
                   </td>
                 </tr>
                 <tr>
-                  <td className="p-4 border-b border-gray-300 whitespace-no-wrap">Due date:</td>
-                  <td className="p-4 border-b border-gray-300 break-words">Auguste Gusteau</td>
+                  <td className="p-4 border-b border-gray-300 whitespace-no-wrap">Due by:</td>
+                  <td className="p-4 border-b border-gray-300 break-words">22/03/2020</td>
                 </tr>
                 <tr>
                   <td className="p-4 border-b border-gray-300 whitespace-no-wrap">
