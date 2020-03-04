@@ -1,5 +1,5 @@
 import React from 'react';
-import { Breadcrumb, Icon, Switch, Avatar, Tag, Tabs, Empty, Button, Badge, Input } from 'antd';
+import { Checkbox, Breadcrumb, Icon, Switch, Avatar, Tag, Tabs, Empty, Button, Badge, Input } from 'antd';
 import { Link } from 'react-router-dom';
 import './Details.css';
 
@@ -13,7 +13,7 @@ function Details() {
         <div className="h-full flex justify-center">
           <div className="mr-5 flex flex-col w-3/4">
             <div className="mt-1">
-              <div className="py-1 flex flex-row flex-auto mx-auto justify-between bg-white border-b-1-gray">
+              <div className="py-1 flex flex-row flex-auto mx-auto justify-between items-center bg-white border-b-1-gray">
                 <div>
                   <Breadcrumb>
                     <Breadcrumb.Item>
@@ -25,6 +25,14 @@ function Details() {
                       <span className="text-sm text-blue-600 font-semibold"><span className="text-sm">#</span> 25</span>
                     </Breadcrumb.Item>
                   </Breadcrumb>
+                </div>
+                <div>
+                  <Button.Group>
+                    <Button>Add Subtask</Button>
+                    <Button>Suspend</Button>
+                    <Button>Duplicate Task</Button>
+                    <Button>Delete</Button>
+                  </Button.Group>
                 </div>
               </div>
             </div>
@@ -46,23 +54,31 @@ function Details() {
             </div>
             <hr className="mt-4" />
             <div className="mt-4">
-              <div>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, in! Dignissimos ipsam eligendi nemo totam asperiores dolorum, tempore quo fuga delectus facere saepe iste soluta officia velit nostrum, obcaecati quasi?
-                Obcaecati placeat officiis alias ut voluptate iste expedita ad magni doloremque quae? Suscipit asperiores nostrum tempore vero, eligendi tempora porro sed dolorum! Ab dolor, aut eveniet quaerat veniam commodi excepturi?
-                Reprehenderit expedita soluta eaque quisquam rerum dicta recusandae at aliquid odit nulla harum molestias sit magnam praesentium saepe illo nesciunt, similique iure placeat officia, maxime quis sint. Nihil, illo adipisci.
-                Delectus reprehenderit cumque, aperiam, iure quis quod blanditiis et nobis dolor repellendus quia minus quae dolores aspernatur omnis modi. Dolorem officiis corporis eius repellat consectetur ad, animi doloribus blanditiis quaerat?
-                Ducimus vitae, distinctio adipisci doloribus soluta aperiam praesentium fuga magnam saepe repellendus, inventore autem corrupti necessitatibus hic officia maxime expedita nihil dicta sed iste possimus magni maiores. Molestiae, tenetur? Odit.
-                Adipisci nam esse corrupti architecto enim non cum, doloribus dolores, nesciunt voluptatibus voluptatum, illum voluptates. Cumque ab illum veritatis voluptas distinctio, doloremque fuga sed ex nisi non pariatur quibusdam fugiat.
-                Excepturi voluptates officia velit, quaerat similique eligendi quibusdam, culpa pariatur iure, assumenda ex fuga repellendus maxime exercitationem molestiae aspernatur? Quidem beatae hic sunt eius voluptatibus doloribus tempora amet numquam laudantium?
-                Tempora consequuntur modi deserunt, tempore iusto aliquam nesciunt veritatis incidunt accusamus illum cupiditate adipisci consequatur commodi? Dignissimos ipsum nesciunt ipsa at autem corporis odit numquam, itaque repellat tempore totam officia.
-                Autem esse eveniet maiores ex illo! Eveniet eaque distinctio accusamus soluta dicta ipsum. Magnam quaerat delectus accusamus architecto animi eaque, totam in ea minima aut repellendus numquam, obcaecati sit eveniet?
-              </div>
-              <div className="flex mt-10 justify-end">
-                <Button.Group>
-                  <Button>Assign</Button>
-                  <Button>Suspend</Button>
-                  <Button>Edit</Button>
-                </Button.Group>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, in! Dignissimos ipsam eligendi nemo totam asperiores dolorum, tempore quo fuga delectus facere saepe iste soluta officia velit nostrum, obcaecati quasi?
+              Obcaecati placeat officiis alias ut voluptate iste expedita ad magni doloremque quae? Suscipit asperiores nostrum tempore vero, eligendi tempora porro sed dolorum! Ab dolor, aut eveniet quaerat veniam commodi excepturi?
+              Reprehenderit expedita soluta eaque quisquam rerum dicta recusandae at aliquid odit nulla harum molestias sit magnam praesentium saepe illo nesciunt, similique iure placeat officia, maxime quis sint. Nihil, illo adipisci.
+              Delectus reprehenderit cumque, aperiam, iure quis quod blanditiis et nobis dolor repellendus quia minus quae dolores aspernatur omnis modi. Dolorem officiis corporis eius repellat consectetur ad, animi doloribus blanditiis quaerat?
+              Ducimus vitae, distinctio adipisci doloribus soluta aperiam praesentium fuga magnam saepe repellendus, inventore autem corrupti necessitatibus hic officia maxime expedita nihil dicta sed iste possimus magni maiores. Molestiae, tenetur? Odit.
+              Adipisci nam esse corrupti architecto enim non cum, doloribus dolores, nesciunt voluptatibus voluptatum, illum voluptates. Cumque ab illum veritatis voluptas distinctio, doloremque fuga sed ex nisi non pariatur quibusdam fugiat.
+              Excepturi voluptates officia velit, quaerat similique eligendi quibusdam, culpa pariatur iure, assumenda ex fuga repellendus maxime exercitationem molestiae aspernatur? Quidem beatae hic sunt eius voluptatibus doloribus tempora amet numquam laudantium?
+              Tempora consequuntur modi deserunt, tempore iusto aliquam nesciunt veritatis incidunt accusamus illum cupiditate adipisci consequatur commodi? Dignissimos ipsum nesciunt ipsa at autem corporis odit numquam, itaque repellat tempore totam officia.
+              Autem esse eveniet maiores ex illo! Eveniet eaque distinctio accusamus soluta dicta ipsum. Magnam quaerat delectus accusamus architecto animi eaque, totam in ea minima aut repellendus numquam, obcaecati sit eveniet?
+              <div className="mt-10">
+                <div className="flex flex-row justify-between items-center">
+                  <span className="font-bold tracking-wider text-base text-gray-800">Subtasks <span className="text-gray-500 text-xs">(0 of 3 complete)</span></span>
+                  <div><span className="font-semibold text-xl">+</span></div>
+                </div>
+                <div className="flex flex-col justify-start">
+                  <div className="mt-1">
+                    <Checkbox></Checkbox><Link to="/tasks" className="ml-2 hover:underline">#27 / This is a task</Link>
+                  </div>
+                  <div className="mt-1">
+                    <Checkbox>#28 / This is a task</Checkbox>
+                  </div>
+                  <div className="mt-1">
+                    <Checkbox>#31 / This is a task</Checkbox>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="mt-8">
@@ -106,6 +122,9 @@ function Details() {
               </colgroup>
               <tbody className="align-baseline">
                 <tr>
+                  <td className="p-4 border-b border-gray-300 whitespace-no-wrap">Type:</td>
+                  <td className="p-4 border-b border-gray-300 break-words">Query</td>
+                </tr>                <tr>
                   <td className="p-4 border-b border-gray-300 whitespace-no-wrap">Assinged to:</td>
                   <td className="p-4 border-b border-gray-300 break-words">Auguste Gusteau</td>
                 </tr>
@@ -116,7 +135,7 @@ function Details() {
                 <tr>
                   <td className="p-4 border-b border-gray-300 whitespace-no-wrap">Status:</td>
                   <td className="p-4 border-b border-gray-300 break-words">
-                    <Badge status="success" text="Assigned" />
+                    <Badge status="success" text="Open" />
                   </td>
                 </tr>
                 <tr>
@@ -147,8 +166,15 @@ function Details() {
                   <td className="p-4 border-b border-gray-300 break-words">Auguste Gusteau</td>
                 </tr>
                 <tr>
-                  <td className="p-4 border-b border-gray-300 whitespace-no-wrap">Linked to:</td>
-                  <td className="p-4 border-b border-gray-300 break-words">Task #34</td>
+                  <td className="p-4 border-b border-gray-300 whitespace-no-wrap">
+                    Linked to:
+                    <br />
+                    <br />
+                    <Button size="small">+ Link to...</Button>
+                  </td>
+                  <td className="p-4 border-b border-gray-300 break-words">
+                    <span>Task #34</span>
+                  </td>
                 </tr>
                 <tr>
                   <td className="p-4 border-b border-gray-300 whitespace-no-wrap">Notifications:</td>
