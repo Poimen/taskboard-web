@@ -158,7 +158,7 @@ function Clients() {
       </div>
       <div className="mr-4 ml-4 mt-8">
         {/* <Card className="mt-8 shadow"> */}
-          <Table rowSelection={rowSelection} columns={columns} dataSource={data} onRow={onRow(history)} />
+        <Table rowSelection={rowSelection} columns={columns} dataSource={data} onRow={onRow(history)} />
         {/* </Card> */}
       </div>
     </>

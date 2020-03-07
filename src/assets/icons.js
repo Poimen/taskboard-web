@@ -97,3 +97,11 @@ export {
 export {
   default as MoreOutline
 } from '@ant-design/icons/lib/outline/MoreOutline';
+
+export {
+  default as CheckCircleOutline
+} from '@ant-design/icons/lib/outline/CheckCircleOutline';
+
+export {
+  default as DeleteOutline
+} from '@ant-design/icons/lib/outline/DeleteOutline';

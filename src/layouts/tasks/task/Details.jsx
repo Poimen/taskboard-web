@@ -1,5 +1,5 @@
 import React from 'react';
-import { Checkbox, Breadcrumb, Icon, Switch, Avatar, Tag, Tabs, Empty, Button, Badge, Input, Dropdown, Menu } from 'antd';
+import { Checkbox, Icon, Switch, Avatar, Tag, Tabs, Empty, Button, Badge, Input, Dropdown, Menu } from 'antd';
 import { Link } from 'react-router-dom';
 import './Details.css';
 
