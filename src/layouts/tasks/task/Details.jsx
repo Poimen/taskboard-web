@@ -1,9 +1,15 @@
 import React from 'react';
-import { Checkbox, Breadcrumb, Icon, Switch, Avatar, Tag, Tabs, Empty, Button, Badge, Input } from 'antd';
+import { Checkbox, Breadcrumb, Icon, Switch, Avatar, Tag, Tabs, Empty, Button, Badge, Input, Dropdown, Menu } from 'antd';
 import { Link } from 'react-router-dom';
 import './Details.css';
 
 const { TabPane } = Tabs;
+
+const editMenu = (
+  <Menu>
+    <Menu.Item style={{ width: 100 }}>Edit</Menu.Item>
+  </Menu>
+);
 
 function Details() {
   return (
@@ -47,9 +53,14 @@ function Details() {
                   </div>
                 </div>
               </div>
-              <div className="w-4/12 flex flex-col items-end justify-center">
-                <span className="text-xs text-gray-500">
+              <div className="w-4/12 flex flex-col items-end justify-evenly">
+                <span className="flex items-center text-xs text-gray-500">
                   Created a moment ago (26 February 2020 at 2:30pm)
+                  <span className="text-xl ml-4">
+                    <Dropdown overlay={editMenu}>
+                      <Icon className="font-bold text-black" type="more" />
+                    </Dropdown>
+                  </span>
                 </span>
               </div>
             </div>

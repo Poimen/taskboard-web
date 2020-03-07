@@ -93,3 +93,7 @@ export {
 export {
   default as CheckOutline
 } from '@ant-design/icons/lib/outline/CheckOutline';
+
+export {
+  default as MoreOutline
+} from '@ant-design/icons/lib/outline/MoreOutline';

@@ -10,6 +10,7 @@ import TaskDetails from 'layouts/tasks/task/Details';
 import Clients from 'layouts/clients/Clients';
 import ClientDetails from 'layouts/clients/client/Details';
 import Companies from 'layouts/companies/Companies';
+import CompanyDetails from 'layouts/companies/company/Details';
 import Calendar from 'layouts/calendar/Calendar';
 import Vendors from 'layouts/vendors/Vendors';
 import KnowledgeBase from 'layouts/knowledge/KnowledgeBase';
@@ -31,6 +32,7 @@ export default function Main() {
               <Route exact path='/client' component={Clients} />
               <Route exact path='/client/:id' component={ClientDetails} />
               <Route exact path='/company' component={Companies} />
+              <Route exact path='/company/:id' component={CompanyDetails} />
               <Route exact path='/vendor' component={Vendors} />
               <Route exact path='/calendar' component={Calendar} />
               <Route exact path='/knowledge' component={KnowledgeBase} />

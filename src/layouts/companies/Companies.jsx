@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Table, Tag, Button, Icon } from 'antd';
+import { useHistory } from 'react-router-dom';
 
 function Companies() {
   const columns = [
@@ -53,6 +54,17 @@ function Companies() {
     }
   ];
 
+  const history = useHistory();
+
+  const onRow = (history) => (record, rowIndex) => {
+    return {
+      onClick: event => {
+        console.log(`Clicked - ${JSON.stringify(record)}:${rowIndex}`);
+        history.push(`/company/${record.key}`);
+      }
+    };
+  };
+
   return (
     <>
       <div className="p-3 flex flex-row flex-auto mx-auto justify-between bg-white border-b-2 border-gray-300">
@@ -64,10 +76,10 @@ function Companies() {
           <Button icon="usergroup-add" type="primary">Add Company</Button>
         </div>
       </div>
-      <div className="mr-4 ml-4">
-        <Card className="mt-8 shadow">
-          <Table columns={columns} dataSource={data} pagination={false} />
-        </Card>
+      <div className="mr-4 ml-4 mt-8">
+        {/* <Card className="mt-8 shadow"> */}
+          <Table onRow={onRow(history)} columns={columns} dataSource={data} pagination={false} />
+        {/* </Card> */}
       </div>
     </>
   );
