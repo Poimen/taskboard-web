@@ -18,22 +18,15 @@ function Details() {
       <div className="ml-4 h-full">
         <div className="h-full flex justify-center">
           <div className="mr-5 flex flex-col w-3/4">
-            <div className="mt-1">
-              <div className="py-1 flex flex-row flex-auto mx-auto justify-between items-center bg-white border-b-1-gray">
+            <div className="">
+              <div className="pt-3 pb-2 flex flex-row flex-auto mx-auto justify-between bg-white border-b-2 border-gray-300">
                 <div>
-                  <Breadcrumb>
-                    <Breadcrumb.Item>
-                      <Link to="/tasks">
-                        <Icon className="text-blue-600 pr-2 text-sm" type="bars"></Icon>
-                        <span className="text-sm text-blue-600 hover:underline">Tasks</span>
-                      </Link>
-                    </Breadcrumb.Item>
-                    <Breadcrumb.Item>
-                      <span className="text-sm text-blue-600 font-semibold"><span className="text-sm">#</span> 25</span>
-                    </Breadcrumb.Item>
-                  </Breadcrumb>
+                  <Icon className="text-blue-600 pr-2 text-xl" type="bars"></Icon>
+                  <span className="text-xl font-medium text-blue-600">Tasks</span>
+                  <span className="mx-3 text-gray-500">/</span>
+                  <span className="text-xl text-blue-600 font-medium"><span className="text-sm">#</span> 25</span>
                 </div>
-                <div>
+                <div className="flex items-center justify-end">
                   <Button.Group>
                     <Button>Add Subtask</Button>
                     <Button>Suspend</Button>
