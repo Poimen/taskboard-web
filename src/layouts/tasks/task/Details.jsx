@@ -18,6 +18,7 @@ function Details() {
                   <Breadcrumb>
                     <Breadcrumb.Item>
                       <Link to="/tasks">
+                        <Icon className="text-blue-600 pr-2 text-sm" type="bars"></Icon>
                         <span className="text-sm text-blue-600 hover:underline">Tasks</span>
                       </Link>
                     </Breadcrumb.Item>

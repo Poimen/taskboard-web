@@ -66,8 +66,8 @@ function Tasks() {
       <div className="mx-4">
         <div className="pt-3 pb-2 flex flex-row flex-auto mx-auto justify-between bg-white border-b-2 border-gray-300">
           <div>
-            <Icon className="text-blue-600 pr-2" type="bars"></Icon>
-            <span className="text-base text-blue-600">Tasks</span>
+            <Icon className="text-blue-600 pr-2 text-xl" type="bars"></Icon>
+            <span className="text-xl font-medium text-blue-600">Tasks</span>
           </div>
           <div className="flex items-center justify-end">
             <Button className="mr-2">Filter <Icon type="filter"></Icon></Button>
