@@ -1,5 +1,6 @@
 import React from 'react';
 import { Avatar, Card, Tag, Button, Icon, Empty } from 'antd';
+import { Link } from 'react-router-dom';
 import './Dashboard.css';
 import TaskSummaryCard from './components/TaskSummaryCard';
 
@@ -107,6 +108,16 @@ function Dashboard() {
                   </div>
                 </div>
               </div>
+            </div>
+          </Card>
+        </div>
+      </div>
+      <div className="flex items-center justify-between pt-4">
+        <div className="flex-auto m-2">
+          <Card className="shadow" title="Notifications">
+            <div className="flex flex-row items-center justify-start">
+              <Button className="mr-2" icon="check-circle"></Button>
+              <Link to="/tasks/25">Task #25 has been updated <span className="text-gray-500 text-xs ml-2">(25 March 2020 - 8am)</span></Link>
             </div>
           </Card>
         </div>
