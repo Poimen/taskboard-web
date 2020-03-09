@@ -24,18 +24,18 @@ function Dashboard() {
         </div>
       </div>
       <div className="flex items-center justify-between pt-4">
-        <TaskSummaryCard></TaskSummaryCard>
-        <TaskSummaryCard></TaskSummaryCard>
-        <TaskSummaryCard></TaskSummaryCard>
-        <TaskSummaryCard></TaskSummaryCard>
-        <TaskSummaryCard></TaskSummaryCard>
+        <TaskSummaryCard status="total" taskCount={25} subtext="Total"></TaskSummaryCard>
+        <TaskSummaryCard status="unresolved" taskCount={10} subtext="Unresolved"></TaskSummaryCard>
+        <TaskSummaryCard status="dueToday" taskCount={5} subtext="Due Today"></TaskSummaryCard>
+        {/* <TaskSummaryCard></TaskSummaryCard>
+        <TaskSummaryCard></TaskSummaryCard> */}
       </div>
       <div className="flex items-center justify-between pt-4">
-        <TaskSummaryCard></TaskSummaryCard>
-        <TaskSummaryCard></TaskSummaryCard>
+        {/* <TaskSummaryCard></TaskSummaryCard>
+        <TaskSummaryCard></TaskSummaryCard> */}
       </div>
       <div className="flex items-center justify-between pt-4">
-        <TaskSummaryCard></TaskSummaryCard>
+        {/* <TaskSummaryCard></TaskSummaryCard> */}
       </div>
     </>
   );

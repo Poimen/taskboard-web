@@ -1,10 +1,10 @@
 import React from 'react';
 import Card from './Card';
 
-function TaskSummaryCard() {
+function TaskSummaryCard(props) {
   return (
     <div className="flex-auto m-2">
-      <Card></Card>
+      <Card {...props}></Card>
     </div>
   );
 }
