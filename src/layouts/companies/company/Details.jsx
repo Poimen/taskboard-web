@@ -141,7 +141,7 @@ function Details() {
         {/* <hr /> */}
         <div className="">
           <div>
-            <Tabs defaultActiveKey="3" animated={false} tabPosition='top' onChange={callback}>
+            <Tabs defaultActiveKey="1" animated={false} tabPosition='top' onChange={callback}>
               <TabPane tab="Information" key="1">
                 <div className="mt-4 h-full flex justify-center">
                   <div className="mr-5 flex flex-row w-7/12">
