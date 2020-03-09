@@ -90,19 +90,19 @@ function Dashboard() {
               </div>
               <div className="flex flex-col items-start justify-between w-1/6">
                 <div className="border-green-500 border-l-2">
-                  <div className="flex flex-col items-start justify-between ml-2 px-4">
+                  <div className="flex flex-col items-start justify-between ml-2 px-4 py-2">
                     <span className="text-3xl text-black tracking-wide">25</span>
                     <span className="text-sm text-gray-500">Resolved today</span>
                   </div>
                 </div>
                 <div className="border-blue-500 border-l-2 mt-3">
-                  <div className="flex flex-col items-start justify-between ml-2 px-4">
+                  <div className="flex flex-col items-start justify-between ml-2 px-4 py-2">
                     <span className="text-3xl text-black tracking-wide">2</span>
                     <span className="text-sm text-gray-500">Opened today</span>
                   </div>
                 </div>
                 <div className="border-red-500 border-l-2 mt-3">
-                  <div className="flex flex-col items-start justify-between ml-2 px-4">
+                  <div className="flex flex-col items-start justify-between ml-2 px-4 py-2">
                     <span className="text-3xl text-black tracking-wide">0</span>
                     <span className="text-sm text-gray-500">On hold</span>
                   </div>

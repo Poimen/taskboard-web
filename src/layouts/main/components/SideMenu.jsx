@@ -18,6 +18,11 @@ function SideMenu() {
   const [sidebarCollapsed, setSidebarCollapse] = useState(false);
   const location = useLocation();
 
+  const selectedKey = location.pathname.split('/')[1];
+  console.log(selectedKey)
+  console.log(location.pathname)
+  console.log(location.pathname.split('/'))
+
   return (
     <>
       <Sider className="border-gray-300 border-r-1 bg-gray-menu" collapsible theme="light" collapsed={sidebarCollapsed} onCollapse={() => setSidebarCollapse(prev => !prev)}>
@@ -25,41 +30,40 @@ function SideMenu() {
           {LogoText(sidebarCollapsed)}
         </div> */}
         <div className="">
-          {/* TODO : Fixpath name match for highlight */}
-          <Menu theme="light" selectedKeys={[location.pathname]} mode="vertical">
-            <Menu.Item key="/dashboard">
+          <Menu theme="light" selectedKeys={[selectedKey]} mode="vertical">
+            <Menu.Item key="dashboard">
               <SiderMenuOptionText icon="desktop" text="Dashboard"></SiderMenuOptionText>
               <Link to="/dashboard" />
             </Menu.Item>
-            <Menu.Item key="/tasks">
+            <Menu.Item key="tasks">
               <SiderMenuOptionText icon="bars" text="Tasks"></SiderMenuOptionText>
               <Link to="/tasks" />
             </Menu.Item>
-            <Menu.Item key="/client">
+            <Menu.Item key="client">
               <SiderMenuOptionText icon="team" text="Clients"></SiderMenuOptionText>
               <Link to="/client" />
             </Menu.Item>
-            <Menu.Item key="/company">
+            <Menu.Item key="company">
               <SiderMenuOptionText svg={Office} text="Companies"></SiderMenuOptionText>
               <Link to="/company" />
             </Menu.Item>
-            {/* <Menu.Item key="/vendors">
+            {/* <Menu.Item key="vendors">
               <SiderMenuOptionText svg={Office} text="Vendors"></SiderMenuOptionText>
               <Link to="/vendors" />
             </Menu.Item> */}
-            {/* <Menu.Item key="/calendar">
+            {/* <Menu.Item key="calendar">
               <SiderMenuOptionText icon="calendar" text="Calendar"></SiderMenuOptionText>
               <Link to="/calendar" />
             </Menu.Item> */}
-            {/* <Menu.Item key="/knowledge">
+            {/* <Menu.Item key="knowledge">
               <SiderMenuOptionText icon="book" text="Knowledge Base"></SiderMenuOptionText>
               <Link to="/knowledge" />
             </Menu.Item> */}
-            {/* <Menu.Item key="/report">
+            {/* <Menu.Item key="report">
               <SiderMenuOptionText icon="bar-chart" text="Reports"></SiderMenuOptionText>
               <Link to="/report" />
             </Menu.Item> */}
-            {/* <Menu.Item key="/chat">
+            {/* <Menu.Item key="chat">
               <SiderMenuOptionText svg={Chat} text="Chat"></SiderMenuOptionText>
               <Link to="/chat" />
             </Menu.Item> */}
