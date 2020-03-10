@@ -81,6 +81,52 @@ function Information() {
             </tbody>
           </table>
         </Card>
+        <Card className="w-1/3 pb-4 ml-4 flex-grow-0" title="Tasks" extra={<Button type="dashed" shape="circle" icon="plus" />}>
+          <div>
+            <div className="flex flex-col border-b-2">
+              <div className="flex items-center justify-between px-2 my-2 border-l-2 border-red-300">
+                <div className="flex flex-row items-center">
+                  <Button className="mr-2" icon="check-circle"></Button>
+                  <div className="flex items-center w-full">
+                    <div className="flex flex-col ml-2 text-base text-gray-800 font-medium">
+                      <span>Check some pricing</span>
+                      <div>
+                        <Tag color="red">URGENT</Tag>
+                        <Tag color="blue">BULK</Tag>
+                        <Tag color="green">RAIL</Tag>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col">
+                  <div className="mt-1">
+                    <span className="text-gray-500 text-sm font-normal">Last updated a moment ago</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex items-center justify-between px-2 my-2 border-l-2 border-red-300">
+              <div className="flex flex-row items-center">
+                <Button className="mr-2" icon="check-circle"></Button>
+                <div className="flex items-center w-full">
+                  <div className="flex flex-col ml-2 text-base text-gray-800 font-medium">
+                    <span>Check on transport</span>
+                    <div>
+                      <Tag color="red">URGENT</Tag>
+                      <Tag color="blue">BULK</Tag>
+                      <Tag color="green">ROAD</Tag>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-col">
+                <div className="mt-1">
+                  <span className="text-gray-500 text-sm font-normal">Last week</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Card>
       </div>
     </>
   );

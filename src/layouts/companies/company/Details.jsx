@@ -197,8 +197,8 @@ function Details() {
                         </colgroup>
                         <tbody className="align-baseline">
                           <tr>
-                            <td className="p-4 border-b border-gray-300 whitespace-no-wrap">Meeting:</td>
-                            <td className="p-4 border-b border-gray-300 break-words">
+                            <td className="py-4 border-b border-gray-300 whitespace-no-wrap">Meeting:</td>
+                            <td className="py-4 border-b border-gray-300 break-words">
                               <div className="flex justify-between">
                                 <span>
                                   12pm on 23 February 2020
@@ -210,7 +210,7 @@ function Details() {
                                 <span className="ml-1 flex flex-row justify-end items-center">
                                   <Button className="mr-2" icon="edit" />
                                   <Button className="mr-2" icon="check-circle"></Button>
-                                  <Button className="mr-2" icon="delete"></Button>
+                                  <Button type="danger" className="mr-2" icon="delete"></Button>
                                 </span>
                               </div>
                             </td>
