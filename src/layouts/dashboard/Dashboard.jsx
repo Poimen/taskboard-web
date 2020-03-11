@@ -114,7 +114,7 @@ function Dashboard() {
       </div>
       <div className="flex items-center justify-between pt-4">
         <div className="flex-auto m-2">
-          <Card className="shadow" title="Notifications">
+          <Card className="shadow" title={<span><Icon type="bell" /> Notifications</span>} icon>
             <div className="flex flex-row items-center justify-start">
               <Button className="mr-2" icon="check-circle"></Button>
               <Link to="/tasks/25">Task #25 has been updated <span className="text-gray-500 text-xs ml-2">(25 March 2020 - 8am)</span></Link>
