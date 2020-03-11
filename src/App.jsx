@@ -4,6 +4,7 @@ import './App.css';
 import PrivateRoute from 'components/auth/PrivateRoute';
 import Main from 'layouts/main/Main';
 import Landing from 'layouts/landing/Landing';
+import Workspaces from 'layouts/workspaces/Workspaces';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Switch>
         {/* Check if we are logged in then switch the component?? */}
         <Route exact path='/' component={Landing} />
+        <Route exact path='/workspaces' component={Workspaces} />
         <PrivateRoute path='/' component={Main} />
       </Switch>
     </BrowserRouter>

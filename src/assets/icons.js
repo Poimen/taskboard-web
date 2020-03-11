@@ -109,3 +109,7 @@ export {
 export {
   default as DeleteTwoTone
 } from '@ant-design/icons/lib/twotone/DeleteTwoTone';
+
+export {
+  default as StarOutline
+} from '@ant-design/icons/lib/outline/StarOutline';
