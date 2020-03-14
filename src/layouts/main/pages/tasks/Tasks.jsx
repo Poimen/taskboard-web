@@ -1,4 +1,5 @@
 import React from 'react';
+import { ContentName } from '@components';
 import { useHistory, Link } from 'react-router-dom';
 import { Card, Table, Button, Icon, Tag, Avatar, Tabs, Badge } from 'antd';
 import './Tasks.css';
@@ -64,16 +65,19 @@ function Tasks() {
   return (
     <>
       <div className="mx-4">
-        <div className="pt-3 pb-2 flex flex-row flex-auto mx-auto justify-between bg-white border-b-2 border-gray-300">
+        <div className="pt-3 pb-2 flex flex-row flex-auto mx-auto justify-between bg-white- border-b-2- border-gray-300">
           <div>
-            <Icon className="text-blue-600 pr-2 text-xl" type="bars"></Icon>
-            <span className="text-xl font-medium text-blue-600">Tasks</span>
+            <ContentName title="Tasks" subTitle="My Tasks" iconType="bars"></ContentName>
           </div>
-          <div className="flex items-center justify-end">
+          <div className="flex items-end justify-end">
             <Button className="mr-2">Filter <Icon type="filter"></Icon></Button>
-            <Button icon="check-square" type="primary">Add task</Button>
+            <Button className="mr-2" icon="check-square" type="primary">Add task</Button>
+            <Button className="mr-2">Configure Tasks <Icon type="filter"></Icon></Button>
           </div>
         </div>
+      </div>
+
+      <div className="mx-4">
         <Tabs className="pt-4" defaultActiveKey="1" animated={false} tabPosition='top' onChange={callback}>
           <TabPane tab={
             <div>

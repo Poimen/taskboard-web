@@ -1,6 +1,7 @@
 import React from 'react';
-import { Avatar, Card, Tag, Button, Icon, Empty } from 'antd';
+import { Card, Tag, Button, Empty } from 'antd';
 import { Link } from 'react-router-dom';
+import { Icon, TextButton, ContentName } from '../../components';
 import './Dashboard.css';
 import TaskSummaryCard from './components/TaskSummaryCard';
 
@@ -10,16 +11,10 @@ function Dashboard() {
       <div className="mx-4">
         <div className="pt-3 pb-2 flex flex-row flex-auto mx-auto justify-between bg-white- border-b-2- border-gray-300">
           <div>
-            <div className="flex items-center">
-              <Avatar shape="square" size={55} style={{ color: 'grey' }} icon={<Icon type="desktop" className="font-base" />}></Avatar>
-              <div className="flex flex-col ml-2 text-2xl text-gray-800 font-medium">
-                <span className="text-xl text-blue-600">Dashboard</span>
-                <span className="text-gray-500 text-xs font-normal ml-1">My Home</span>
-              </div>
-            </div>
+            <ContentName title="Dashboard" subTitle="My Home" iconType="desktop"></ContentName>
           </div>
           <div className="flex items-end justify-end">
-            <Button className="mr-2">Configure Dashboard <Icon type="filter"></Icon></Button>
+            <TextButton icon="filter">Configure Dashboard</TextButton>
           </div>
         </div>
       </div>
