@@ -20,7 +20,6 @@ function Dashboard() {
           </div>
           <div className="flex items-end justify-end">
             <Button className="mr-2">Configure Dashboard <Icon type="filter"></Icon></Button>
-            {/* <Button icon="usergroup-add" type="primary">Add Company</Button> */}
           </div>
         </div>
       </div>
@@ -28,8 +27,6 @@ function Dashboard() {
         <TaskSummaryCard status="total" taskCount={25} subtext="Total"></TaskSummaryCard>
         <TaskSummaryCard status="unresolved" taskCount={10} subtext="Unresolved"></TaskSummaryCard>
         <TaskSummaryCard status="dueToday" taskCount={5} subtext="Due Today"></TaskSummaryCard>
-        {/* <TaskSummaryCard></TaskSummaryCard>
-        <TaskSummaryCard></TaskSummaryCard> */}
       </div>
       <div className="flex items-center justify-between pt-4">
         <div className="flex-auto m-2">
