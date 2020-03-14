@@ -3,7 +3,7 @@ import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import './App.css';
 import PrivateRoute from 'components/auth/PrivateRoute';
 import Main from 'layouts/main/Main';
-import Landing from 'layouts/landing/Landing';
+import Landing from 'layouts/login/Landing';
 import Workspaces from 'layouts/workspaces/Workspaces';
 
 function App() {

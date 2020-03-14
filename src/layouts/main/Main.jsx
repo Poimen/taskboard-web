@@ -4,16 +4,16 @@ import { Layout } from 'antd';
 import { Route, Switch } from 'react-router-dom';
 import SideMenu from './components/SideMenu';
 import MainHeader from './components/MainHeader';
-import Dashboard from 'layouts/dashboard/Dashboard';
-import Tasks from 'layouts/tasks/Tasks';
-import TaskDetails from 'layouts/tasks/task/Details';
-import Clients from 'layouts/clients/Clients';
-import ClientDetails from 'layouts/clients/client/Details';
-import Companies from 'layouts/companies/Companies';
-import CompanyDetails from 'layouts/companies/company/Details';
-import Calendar from 'layouts/calendar/Calendar';
-import Vendors from 'layouts/vendors/Vendors';
-import KnowledgeBase from 'layouts/knowledge/KnowledgeBase';
+import Dashboard from 'layouts/main/pages/dashboard/Dashboard';
+import Tasks from 'layouts/main/pages/tasks/Tasks';
+import TaskDetails from 'layouts/main/pages/tasks/task/Details';
+import Clients from 'layouts/main/pages/clients/Clients';
+import ClientDetails from 'layouts/main/pages/clients/client/Details';
+import Companies from 'layouts/main/pages/companies/Companies';
+import CompanyDetails from 'layouts/main/pages/companies/company/Details';
+import Calendar from 'layouts/main/pages/calendar/Calendar';
+import Vendors from 'layouts/main/pages/vendors/Vendors';
+import KnowledgeBase from 'layouts/main/pages/knowledge/KnowledgeBase';
 
 const { Content } = Layout;
 
