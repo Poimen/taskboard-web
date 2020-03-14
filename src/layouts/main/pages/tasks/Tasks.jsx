@@ -1,5 +1,5 @@
 import React from 'react';
-import { ContentName } from '@components';
+import { ContextHeader, ContentName, ContextButtonContainer } from '@components';
 import { useHistory, Link } from 'react-router-dom';
 import { Card, Table, Button, Icon, Tag, Avatar, Tabs, Badge } from 'antd';
 import './Tasks.css';
@@ -64,19 +64,22 @@ function Tasks() {
 
   return (
     <>
+      <ContextHeader>
+        <ContentName title="Tasks" subTitle="My Tasks" iconType="bars"></ContentName>
+        <ContextButtonContainer>
+          <Button className="mr-2">Filter <Icon type="filter"></Icon></Button>
+          <Button className="mr-2" icon="check-square" type="primary">Add task</Button>
+          <Button className="mr-2">Configure Tasks <Icon type="filter"></Icon></Button>
+        </ContextButtonContainer>
+      </ContextHeader>
       <div className="mx-4">
         <div className="pt-3 pb-2 flex flex-row flex-auto mx-auto justify-between bg-white- border-b-2- border-gray-300">
           <div>
-            <ContentName title="Tasks" subTitle="My Tasks" iconType="bars"></ContentName>
           </div>
           <div className="flex items-end justify-end">
-            <Button className="mr-2">Filter <Icon type="filter"></Icon></Button>
-            <Button className="mr-2" icon="check-square" type="primary">Add task</Button>
-            <Button className="mr-2">Configure Tasks <Icon type="filter"></Icon></Button>
           </div>
         </div>
       </div>
-
       <div className="mx-4">
         <Tabs className="pt-4" defaultActiveKey="1" animated={false} tabPosition='top' onChange={callback}>
           <TabPane tab={

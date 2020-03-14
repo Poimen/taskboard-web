@@ -1,23 +1,19 @@
 import React from 'react';
 import { Card, Tag, Button, Empty } from 'antd';
 import { Link } from 'react-router-dom';
-import { Icon, TextButton, ContentName } from '../../components';
+import { Icon, TextButton, ContextHeader, ContentName, ContextButtonContainer } from '@components';
 import './Dashboard.css';
 import TaskSummaryCard from './components/TaskSummaryCard';
 
 function Dashboard() {
   return (
     <>
-      <div className="mx-4">
-        <div className="pt-3 pb-2 flex flex-row flex-auto mx-auto justify-between bg-white- border-b-2- border-gray-300">
-          <div>
-            <ContentName title="Dashboard" subTitle="My Home" iconType="desktop"></ContentName>
-          </div>
-          <div className="flex items-end justify-end">
-            <TextButton icon="filter">Configure Dashboard</TextButton>
-          </div>
-        </div>
-      </div>
+      <ContextHeader>
+        <ContentName title="Dashboard" subTitle="My Home" iconType="desktop"></ContentName>
+        <ContextButtonContainer>
+          <TextButton icon="filter">Configure Dashboard</TextButton>
+        </ContextButtonContainer>
+      </ContextHeader>
       <div className="flex items-center justify-between pt-4">
         <TaskSummaryCard status="total" taskCount={25} subtext="Total"></TaskSummaryCard>
         <TaskSummaryCard status="unresolved" taskCount={10} subtext="Unresolved"></TaskSummaryCard>
