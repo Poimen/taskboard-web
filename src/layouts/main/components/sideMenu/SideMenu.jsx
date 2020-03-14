@@ -19,9 +19,6 @@ function SideMenu() {
   const location = useLocation();
 
   const selectedKey = location.pathname.split('/')[1];
-  console.log(selectedKey)
-  console.log(location.pathname)
-  console.log(location.pathname.split('/'))
 
   return (
     <>
