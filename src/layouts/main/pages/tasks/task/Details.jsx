@@ -1,6 +1,7 @@
 import React from 'react';
 import { Checkbox, Icon, Switch, Avatar, Tag, Tabs, Empty, Button, Badge, Input, Dropdown, Menu } from 'antd';
 import { Link } from 'react-router-dom';
+import { ContextHeader, ContentName, ContextButtonContainer } from '../../../components/index';
 import './Details.css';
 
 const { TabPane } = Tabs;
@@ -15,28 +16,21 @@ function Details() {
   return (
     <>
       { /* TODO: Sort out hieght hack */}
-      <div className="ml-4 h-full">
+      <div className="h-full">
         <div className="h-full flex justify-center">
-          <div className="mr-5 flex flex-col w-3/4">
-            <div className="">
-              <div className="pt-3 pb-2 flex flex-row flex-auto mx-auto justify-between bg-white border-b-2 border-gray-300">
-                <div>
-                  <Icon className="text-blue-600 pr-2 text-xl" type="bars"></Icon>
-                  <span className="text-xl font-medium text-blue-600">Tasks</span>
-                  <span className="mx-3 text-gray-500">/</span>
-                  <span className="text-xl text-blue-600 font-medium"><span className="text-sm">#</span> 25</span>
-                </div>
-                <div className="flex items-center justify-end">
-                  <Button.Group>
-                    <Button>Add Subtask</Button>
-                    <Button>Suspend</Button>
-                    <Button>Duplicate Task</Button>
-                    <Button>Delete</Button>
-                  </Button.Group>
-                </div>
-              </div>
-            </div>
-            <div className="mt-4 flex justify-start">
+          <div className="flex flex-col w-3/4">
+            <ContextHeader>
+              <ContentName title="Tasks" subTitle="My Tasks" iconType="bars"></ContentName>
+              <ContextButtonContainer>
+                <Button.Group>
+                  <Button>Add Subtask</Button>
+                  <Button>Suspend</Button>
+                  <Button>Duplicate Task</Button>
+                  <Button>Delete</Button>
+                </Button.Group>
+              </ContextButtonContainer>
+            </ContextHeader>
+            <div className="ml-4 pt-4 flex justify-start border-t-2">
               <div className="w-8/12">
                 <div className="flex items-center">
                   <Avatar shape="square" size={55} style={{ color: 'grey' }}>AS</Avatar>
@@ -57,8 +51,8 @@ function Details() {
                 </span>
               </div>
             </div>
-            <hr className="mt-4" />
-            <div className="mt-4">
+            <hr className="ml-4 mt-4" />
+            <div className="ml-4 mt-4">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, in! Dignissimos ipsam eligendi nemo totam asperiores dolorum, tempore quo fuga delectus facere saepe iste soluta officia velit nostrum, obcaecati quasi?
               Obcaecati placeat officiis alias ut voluptate iste expedita ad magni doloremque quae? Suscipit asperiores nostrum tempore vero, eligendi tempora porro sed dolorum! Ab dolor, aut eveniet quaerat veniam commodi excepturi?
               Reprehenderit expedita soluta eaque quisquam rerum dicta recusandae at aliquid odit nulla harum molestias sit magnam praesentium saepe illo nesciunt, similique iure placeat officia, maxime quis sint. Nihil, illo adipisci.
@@ -86,7 +80,7 @@ function Details() {
                 </div>
               </div>
             </div>
-            <div className="mt-8">
+            <div className="ml-4 mt-8">
               <Tabs defaultActiveKey="1" animated={false} tabPosition='top'>
                 <TabPane tab="Comments" key="1">
                   <div className="mt-8 mb-8">
@@ -117,7 +111,7 @@ function Details() {
               </Tabs>
             </div>
           </div>
-          <div className="pl-4 pr-2 w-1/4 ml-2 bg-task-sidebar border-l-2">
+          <div className="ml-4 pl-4 pr-2 w-1/4 ml-2 bg-task-sidebar border-l-2">
             <table className="w-full text-left table-fixed">
               <thead>
               </thead>

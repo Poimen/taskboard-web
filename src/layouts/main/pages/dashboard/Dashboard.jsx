@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Tag, Button, Empty } from 'antd';
 import { Link } from 'react-router-dom';
-import { Icon, TextButton, ContextHeader, ContentName, ContextButtonContainer } from '@components';
+import { Icon, TextButton, ContextHeader, ContentName, ContextButtonContainer } from '../../components/index';
 import './Dashboard.css';
 import TaskSummaryCard from './components/TaskSummaryCard';
 
