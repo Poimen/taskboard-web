@@ -20,7 +20,7 @@ function Details() {
         <div className="h-full flex justify-center">
           <div className="flex flex-col w-3/4">
             <ContextHeader>
-              <ContentName title="Tasks" subTitle="My Tasks" iconType="bars"></ContentName>
+              <ContentName title="Tasks" subTitle="My Tasks" iconType="bars" link="/tasks"></ContentName>
               <ContextButtonContainer>
                 <Button.Group>
                   <Button>Add Subtask</Button>
@@ -30,88 +30,90 @@ function Details() {
                 </Button.Group>
               </ContextButtonContainer>
             </ContextHeader>
-            <div className="ml-4 pt-4 flex justify-start border-t-2">
-              <div className="w-8/12">
-                <div className="flex items-center">
-                  <Avatar shape="square" size={55} style={{ color: 'grey' }}>AS</Avatar>
-                  <div className="flex flex-col ml-2 text-2xl text-gray-800 font-medium">
-                    <span>Check some pricing</span>
-                    <span className="text-gray-500 text-xs font-normal">Connected to Boing Boing Transport</span>
-                  </div>
-                </div>
-              </div>
-              <div className="w-4/12 flex flex-col items-end justify-evenly">
-                <span className="flex items-center text-xs text-gray-500">
-                  Created a moment ago (26 February 2020 at 2:30pm)
-                  <span className="text-xl ml-4">
-                    <Dropdown overlay={editMenu}>
-                      <Icon className="font-bold text-black" type="more" />
-                    </Dropdown>
-                  </span>
-                </span>
-              </div>
-            </div>
-            <hr className="ml-4 mt-4" />
-            <div className="ml-4 mt-4">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, in! Dignissimos ipsam eligendi nemo totam asperiores dolorum, tempore quo fuga delectus facere saepe iste soluta officia velit nostrum, obcaecati quasi?
-              Obcaecati placeat officiis alias ut voluptate iste expedita ad magni doloremque quae? Suscipit asperiores nostrum tempore vero, eligendi tempora porro sed dolorum! Ab dolor, aut eveniet quaerat veniam commodi excepturi?
-              Reprehenderit expedita soluta eaque quisquam rerum dicta recusandae at aliquid odit nulla harum molestias sit magnam praesentium saepe illo nesciunt, similique iure placeat officia, maxime quis sint. Nihil, illo adipisci.
-              Delectus reprehenderit cumque, aperiam, iure quis quod blanditiis et nobis dolor repellendus quia minus quae dolores aspernatur omnis modi. Dolorem officiis corporis eius repellat consectetur ad, animi doloribus blanditiis quaerat?
-              Ducimus vitae, distinctio adipisci doloribus soluta aperiam praesentium fuga magnam saepe repellendus, inventore autem corrupti necessitatibus hic officia maxime expedita nihil dicta sed iste possimus magni maiores. Molestiae, tenetur? Odit.
-              Adipisci nam esse corrupti architecto enim non cum, doloribus dolores, nesciunt voluptatibus voluptatum, illum voluptates. Cumque ab illum veritatis voluptas distinctio, doloremque fuga sed ex nisi non pariatur quibusdam fugiat.
-              Excepturi voluptates officia velit, quaerat similique eligendi quibusdam, culpa pariatur iure, assumenda ex fuga repellendus maxime exercitationem molestiae aspernatur? Quidem beatae hic sunt eius voluptatibus doloribus tempora amet numquam laudantium?
-              Tempora consequuntur modi deserunt, tempore iusto aliquam nesciunt veritatis incidunt accusamus illum cupiditate adipisci consequatur commodi? Dignissimos ipsum nesciunt ipsa at autem corporis odit numquam, itaque repellat tempore totam officia.
-              Autem esse eveniet maiores ex illo! Eveniet eaque distinctio accusamus soluta dicta ipsum. Magnam quaerat delectus accusamus architecto animi eaque, totam in ea minima aut repellendus numquam, obcaecati sit eveniet?
-              <div className="mt-10">
-                <div className="flex flex-row justify-between items-center">
-                  <span className="font-bold tracking-wider text-base text-gray-800">Subtasks <span className="text-gray-500 text-xs">(0 of 3 complete)</span></span>
-                  <div><span className="font-semibold text-xl">+</span></div>
-                </div>
-                <div className="flex flex-col justify-start">
-                  <div className="mt-1">
-                    <Checkbox></Checkbox><Link to="/tasks" className="ml-2 hover:underline">#27 / This is a task</Link>
-                  </div>
-                  <div className="mt-1">
-                    <Checkbox>#28 / This is a task</Checkbox>
-                  </div>
-                  <div className="mt-1">
-                    <Checkbox>#31 / This is a task</Checkbox>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="ml-4 mt-8">
-              <Tabs defaultActiveKey="1" animated={false} tabPosition='top'>
-                <TabPane tab="Comments" key="1">
-                  <div className="mt-8 mb-8">
-                    <Empty description="No comments yet..." />
-                  </div>
-                  <div className="mt-16 mb-8">
-                    <div className="flex items-center justify-start">
-                      <div className="mr-4">
-                        <Avatar size={55} style={{ color: 'grey' }}>AG</Avatar>
-                      </div>
-                      <div className="w-full">
-                        {/* TODO : Switch out with reac-quill */}
-                        <Input placeholder="Add comment..." onClick={() => console.log('clicked')}></Input>
-                      </div>
+            <div className="bg-white rounded shadow pr-4 pl-4 ml-4 mt-4">
+              <div className="pt-4 flex justify-start bg-white">
+                <div className="w-8/12">
+                  <div className="flex items-center">
+                    <Avatar shape="square" size={55} style={{ color: 'grey' }}>AS</Avatar>
+                    <div className="flex flex-col ml-2 text-2xl text-gray-800 font-medium">
+                      <span>Check some pricing</span>
+                      <span className="text-gray-500 text-xs font-normal">Connected to Boing Boing Transport</span>
                     </div>
                   </div>
-                </TabPane>
-                <TabPane tab="History" key="2">
-                  <div className="mt-8 mb-8">
-                    <Empty description="No history here..." />
+                </div>
+                <div className="w-4/12 flex flex-col items-end justify-evenly">
+                  <span className="flex items-center text-xs text-gray-500">
+                    Created a moment ago (26 February 2020 at 2:30pm)
+                    <span className="text-xl ml-4">
+                      <Dropdown overlay={editMenu}>
+                        <Icon className="font-bold text-black" type="more" />
+                      </Dropdown>
+                    </span>
+                  </span>
+                </div>
+              </div>
+              <hr className="mt-4" />
+              <div className="mt-4">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, in! Dignissimos ipsam eligendi nemo totam asperiores dolorum, tempore quo fuga delectus facere saepe iste soluta officia velit nostrum, obcaecati quasi?
+                Obcaecati placeat officiis alias ut voluptate iste expedita ad magni doloremque quae? Suscipit asperiores nostrum tempore vero, eligendi tempora porro sed dolorum! Ab dolor, aut eveniet quaerat veniam commodi excepturi?
+                Reprehenderit expedita soluta eaque quisquam rerum dicta recusandae at aliquid odit nulla harum molestias sit magnam praesentium saepe illo nesciunt, similique iure placeat officia, maxime quis sint. Nihil, illo adipisci.
+                Delectus reprehenderit cumque, aperiam, iure quis quod blanditiis et nobis dolor repellendus quia minus quae dolores aspernatur omnis modi. Dolorem officiis corporis eius repellat consectetur ad, animi doloribus blanditiis quaerat?
+                Ducimus vitae, distinctio adipisci doloribus soluta aperiam praesentium fuga magnam saepe repellendus, inventore autem corrupti necessitatibus hic officia maxime expedita nihil dicta sed iste possimus magni maiores. Molestiae, tenetur? Odit.
+                Adipisci nam esse corrupti architecto enim non cum, doloribus dolores, nesciunt voluptatibus voluptatum, illum voluptates. Cumque ab illum veritatis voluptas distinctio, doloremque fuga sed ex nisi non pariatur quibusdam fugiat.
+                Excepturi voluptates officia velit, quaerat similique eligendi quibusdam, culpa pariatur iure, assumenda ex fuga repellendus maxime exercitationem molestiae aspernatur? Quidem beatae hic sunt eius voluptatibus doloribus tempora amet numquam laudantium?
+                Tempora consequuntur modi deserunt, tempore iusto aliquam nesciunt veritatis incidunt accusamus illum cupiditate adipisci consequatur commodi? Dignissimos ipsum nesciunt ipsa at autem corporis odit numquam, itaque repellat tempore totam officia.
+                Autem esse eveniet maiores ex illo! Eveniet eaque distinctio accusamus soluta dicta ipsum. Magnam quaerat delectus accusamus architecto animi eaque, totam in ea minima aut repellendus numquam, obcaecati sit eveniet?
+                <div className="mt-10">
+                  <div className="flex flex-row justify-between items-center">
+                    <span className="font-bold tracking-wider text-base text-gray-800">Subtasks <span className="text-gray-500 text-xs">(0 of 3 complete)</span></span>
+                    <div><span className="font-semibold text-xl">+</span></div>
                   </div>
-                </TabPane>
-                <TabPane tab="Workflow" key="3">
-                  <div className="mt-8 mb-8">
-                    <Empty description="No workflow here..." />
+                  <div className="flex flex-col justify-start">
+                    <div className="mt-1">
+                      <Checkbox></Checkbox><Link to="/tasks" className="ml-2 hover:underline">#27 / This is a task</Link>
+                    </div>
+                    <div className="mt-1">
+                      <Checkbox>#28 / This is a task</Checkbox>
+                    </div>
+                    <div className="mt-1">
+                      <Checkbox>#31 / This is a task</Checkbox>
+                    </div>
                   </div>
-                </TabPane>
-              </Tabs>
+                </div>
+              </div>
+              <div className="mt-8">
+                <Tabs defaultActiveKey="1" animated={false} tabPosition='top'>
+                  <TabPane tab="Comments" key="1">
+                    <div className="mt-8 mb-8">
+                      <Empty description="No comments yet..." />
+                    </div>
+                    <div className="mt-16 mb-8">
+                      <div className="flex items-center justify-start">
+                        <div className="mr-4">
+                          <Avatar size={55} style={{ color: 'grey' }}>AG</Avatar>
+                        </div>
+                        <div className="w-full">
+                          {/* TODO : Switch out with reac-quill */}
+                          <Input placeholder="Add comment..." onClick={() => console.log('clicked')}></Input>
+                        </div>
+                      </div>
+                    </div>
+                  </TabPane>
+                  <TabPane tab="History" key="2">
+                    <div className="mt-8 mb-8">
+                      <Empty description="No history here..." />
+                    </div>
+                  </TabPane>
+                  <TabPane tab="Workflow" key="3">
+                    <div className="mt-8 mb-8">
+                      <Empty description="No workflow here..." />
+                    </div>
+                  </TabPane>
+                </Tabs>
+              </div>
             </div>
           </div>
-          <div className="ml-4 pl-4 pr-2 w-1/4 ml-2 bg-task-sidebar border-l-2">
+          <div className="pl-4 pr-2 w-1/4 ml-2 bg-task-sidebar border-l-2">
             <table className="w-full text-left table-fixed">
               <thead>
               </thead>

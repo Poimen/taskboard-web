@@ -80,7 +80,7 @@ function Tasks() {
           </div>
         </div>
       </div>
-      <div className="mx-4">
+      <div className="bg-white pl-6 pr-6 pb-6 mx-4 rounded-md shadow">
         <Tabs className="pt-4" defaultActiveKey="1" animated={false} tabPosition='top' onChange={callback}>
           <TabPane tab={
             <div>
