@@ -72,16 +72,8 @@ function Tasks() {
           <Button className="mr-2">Configure Tasks <Icon type="filter"></Icon></Button>
         </ContextButtonContainer>
       </ContextHeader>
-      <div className="mx-4">
-        <div className="pt-3 pb-2 flex flex-row flex-auto mx-auto justify-between bg-white- border-b-2- border-gray-300">
-          <div>
-          </div>
-          <div className="flex items-end justify-end">
-          </div>
-        </div>
-      </div>
-      <div className="bg-white pl-6 pr-6 pb-6 mx-4 rounded-md shadow">
-        <Tabs className="pt-4" defaultActiveKey="1" animated={false} tabPosition='top' onChange={callback}>
+      <div className="bg-white pl-6 pr-6 pb-6 my-4 mx-4 rounded-md shadow">
+        <Tabs className="pt-2" defaultActiveKey="1" animated={false} tabPosition='top' onChange={callback}>
           <TabPane tab={
             <div>
               <span className="pr-2">Active Tasks</span>
