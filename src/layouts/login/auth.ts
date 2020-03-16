@@ -38,7 +38,7 @@ function useAuthValidation(initialState: Auth = { userName: '', password: '' }) 
     setAuthError(false);
 
     if (isValidForSubmission(authState)) {
-      history.push('/workspaces');
+      history.push('/dashboard');
     } else {
       setAuthError(true);
       setAuthInProgress(false);

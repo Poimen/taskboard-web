@@ -1,9 +1,9 @@
 import React from 'react';
 import { Button, Input, Icon, Form } from 'antd';
 import useAuthValidation from './auth';
-import './Landing.css';
+import './Login.css';
 
-function Landing() {
+function Login() {
   const [handleChange, handleBlur, handleSubmit, authFormState, authInProgress, authError] = useAuthValidation();
 
   return (
@@ -64,4 +64,4 @@ function Landing() {
   );
 }
 
-export default Landing;
+export default Login;
