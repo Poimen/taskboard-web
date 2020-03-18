@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon, TextButton, ContextHeader, ContentName, ContextButtonContainer } from '../../components/index';
+import { Icon, TextButton, ContextHeader, ContentName, ContextButtonContainer } from '../../components';
 import { Card, Table, Divider, Tag, Avatar, Button, Icon as AntIcon, Breadcrumb } from 'antd';
 import { useHistory } from 'react-router-dom';
 

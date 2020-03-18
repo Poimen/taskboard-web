@@ -1,7 +1,7 @@
 import React from 'react';
 import { Checkbox, Icon, Switch, Avatar, Tag, Tabs, Empty, Button, Badge, Input, Dropdown, Menu } from 'antd';
 import { Link } from 'react-router-dom';
-import { ContextHeader, ContentName, ContextButtonContainer } from '../../../components/index';
+import { ContextHeader, ContentName, ContextButtonContainer } from '../../../components';
 import './Details.css';
 
 const { TabPane } = Tabs;
