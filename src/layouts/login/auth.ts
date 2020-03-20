@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import actions from 'store/actions/creators';
 
 type Auth = {
   userName: string,
@@ -20,6 +22,7 @@ function useAuthValidation(initialState: Auth = { userName: '', password: '' }) 
   const [authInProgress, setAuthInProgress] = useState(false);
   const [authError, setAuthError] = useState(false);
   const history = useHistory();
+  const dispatch = useDispatch();
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     setAuthState({
@@ -38,6 +41,7 @@ function useAuthValidation(initialState: Auth = { userName: '', password: '' }) 
     setAuthError(false);
 
     if (isValidForSubmission(authState)) {
+      dispatch(actions.setUser({ id: 1, username: 'Anton Ego' }, '1234556'));
       history.push('/dashboard');
     } else {
       setAuthError(true);
