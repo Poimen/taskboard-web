@@ -3,10 +3,8 @@ module.exports = {
   css: ['build/static/css/*.css'],
   extractors: [
     {
-      extractor: class {
-        static extract(content) {
-          return content.match(/[\w-/:]+(?<!:)/g) || [];
-        }
+      extractor: content => {
+        return content.match(/[\w-/:]+(?<!:)/g) || [];
       },
       extensions: ['html']
     }
