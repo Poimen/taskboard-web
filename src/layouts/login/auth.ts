@@ -1,7 +1,9 @@
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+// import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-import actions from 'store/actions/creators';
+// import actions from 'store/reducers/actions/creators';
+import { useAppDispatch } from 'store/contexts/appContext';
+import { actions } from 'store/reducers';
 
 type Auth = {
   userName: string,
@@ -22,7 +24,8 @@ function useAuthValidation(initialState: Auth = { userName: '', password: '' }) 
   const [authInProgress, setAuthInProgress] = useState(false);
   const [authError, setAuthError] = useState(false);
   const history = useHistory();
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     setAuthState({
@@ -41,7 +44,8 @@ function useAuthValidation(initialState: Auth = { userName: '', password: '' }) 
     setAuthError(false);
 
     if (isValidForSubmission(authState)) {
-      dispatch(actions.setUser({ id: 1, username: 'Anton Ego' }, '1234556'));
+      dispatch(actions.setUser({ id: 1, username: 'Anton Ego' }, true));
+      // dispatch({ type: 'SET_USER' });
       history.push('/dashboard');
     } else {
       setAuthError(true);

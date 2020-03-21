@@ -1,21 +1,23 @@
+// import { User } from 'store/models/user';
+import { AppState } from 'store/models/appState';
 import { User } from 'store/models/user';
 
-const initialState = {
-  loggedIn: false,
-  token: null,
-  user: User
-};
+// type Action = {type: 'SET_USER'}
 
-export function userReducer(state = initialState, action: any) {
+// const initialState = {
+//   loggedIn: false,
+//   token: null,
+//   user: User
+// };
+
+export function userReducer(state: AppState, action: UserActions) {
   console.log(`state = ${JSON.stringify(state, null, 2)}`);
   console.log(`action = ${JSON.stringify(action, null, 2)}`);
   switch (action.type) {
     case 'SET_USER':
       state = {
         ...state,
-        loggedIn: true,
-        user: action.userDetail,
-        token: action.token
+        currentUser: action.user
       };
       break;
   }
@@ -23,4 +25,12 @@ export function userReducer(state = initialState, action: any) {
   console.log(`after state = ${JSON.stringify(state, null, 2)}`);
 
   return state;
+}
+
+export const setUser = (user: User, loggedIn: boolean): UserActions => ({ type: 'SET_USER', user, loggedIn });
+
+export type UserActions = {
+  type: 'SET_USER',
+  loggedIn: boolean,
+  user: User | null
 }

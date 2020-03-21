@@ -1,5 +1,12 @@
-import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
-import reducers from './reducers';
+import React from 'react';
 
-export default createStore(reducers, applyMiddleware(thunk));
+type User = {
+  id: number
+  name: string;
+}
+
+type Store = {
+  currentUser: User;
+}
+
+export const store = React.createContext<Partial<Store>>({});
