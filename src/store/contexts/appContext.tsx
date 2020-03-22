@@ -3,7 +3,6 @@ import React from 'react';
 import reducers, { AllActions } from 'store/reducers';
 import { AppState } from 'store/models/appState';
 
-// type Action = {type: 'SET_USER'}
 type Dispatch = (action: AllActions) => void
 type AppProviderProps = { children: React.ReactNode }
 
