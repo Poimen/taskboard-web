@@ -1,16 +1,15 @@
 // https://kentcdodds.com/blog/how-to-use-react-context-effectively
 import React from 'react';
-import reducers, { AllActions } from 'store/reducers';
-import { AppState } from 'store/models/appState';
+import { AppState, ChildrenProviderProps } from 'store/models/appModels';
+import { appReducer, AppActions } from 'store/contexts/app/appReducer';
 
-type Dispatch = (action: AllActions) => void
-type AppProviderProps = { children: React.ReactNode }
+type Dispatch = (action: AppActions) => void
 
 const AppStateContext = React.createContext<AppState | undefined>(undefined);
 const AppDispatchContext = React.createContext<Dispatch | undefined>(undefined);
 
-function AppContextProvider({ children }: AppProviderProps) {
-  const [state, dispatch] = React.useReducer(reducers.userReducer, { currentUser: null, apiToken: '' });
+function AppContextProvider({ children }: ChildrenProviderProps) {
+  const [state, dispatch] = React.useReducer(appReducer, { });
 
   return (
     <AppStateContext.Provider value={state}>

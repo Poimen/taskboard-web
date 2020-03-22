@@ -1,10 +1,10 @@
 import React from 'react';
 import { Dropdown, Menu, Button, Icon, Avatar, Badge } from 'antd';
 import { Link } from 'react-router-dom';
-import { useAppState } from 'store/contexts/appContext';
 // import { useSelector } from 'react-redux';
 import DownArrow from '@svg/DownArrow';
 import './MainHeader.css';
+import { useAuthenticatedUserState } from 'store/contexts/authenticatedUser/authenticatedUserContext';
 
 // const { Header } = Layout;
 // const { Search } = Input;
@@ -32,7 +32,7 @@ const menu = (
 
 function MainHeader() {
   // const currentUser = useSelector(state => state.currentUser);
-  const { currentUser } = useAppState();
+  const { currentUser } = useAuthenticatedUserState();
 
   return (
     <div className="flex h-12 bg-blue-700">

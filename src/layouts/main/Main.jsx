@@ -18,6 +18,8 @@ import KnowledgeBase from './pages/knowledge/KnowledgeBase';
 const { Content } = Layout;
 
 export default function Main() {
+  React.useEffect(() => {}, []);
+
   return (
     <>
       <Layout className="min-h-screen">

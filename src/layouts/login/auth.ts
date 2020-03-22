@@ -1,9 +1,7 @@
 import { useState } from 'react';
-// import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-// import actions from 'store/reducers/actions/creators';
-import { useAppDispatch } from 'store/contexts/appContext';
 import { actions } from 'store/reducers';
+import { useAuthenticatedUserDispatch } from 'store/contexts/authenticatedUser/authenticatedUserContext';
 
 type Auth = {
   userName: string,
@@ -25,7 +23,7 @@ function useAuthValidation(initialState: Auth = { userName: '', password: '' }) 
   const [authError, setAuthError] = useState(false);
   const history = useHistory();
   // const dispatch = useDispatch();
-  const dispatch = useAppDispatch();
+  const dispatch = useAuthenticatedUserDispatch();
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     setAuthState({

@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import './assets/generated/base.css';
-import { AppContextProvider } from 'store/contexts/appContext';
+import { AppContextProvider } from 'store/contexts/app/appContext';
 // import StoreProvider from 'store/StoreProvider';
 // import store from './store/store';
 

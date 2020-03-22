@@ -2,7 +2,7 @@
 // import { userReducer } from './user';
 
 // export default combineReducers({ currentUser: userReducer });
-import { userReducer, setUser, UserActions } from './user';
+import { userReducer, setUser, UserActions } from '../contexts/authenticatedUser/userReducer';
 
 export type AllActions = UserActions;
 
