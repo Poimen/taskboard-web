@@ -19,9 +19,12 @@ function AuthenticatedUserContextProvider({ children }: ChildrenProviderProps) {
   );
 }
 
-function useAuthenticatedUserState() {
+function useAuthenticatedUserState(selector: any) {
   const context = React.useContext(AuthenticatedUserStateContext);
   if (context) {
+    if (selector) {
+      return selector(context);
+    }
     return context;
   }
   throw new Error('useAppState must be used within an AppProvider');
