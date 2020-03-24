@@ -15,6 +15,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      {/* TODO fix this not to show Login momentarily on reload... */}
       {isAuthenticated && <Redirect to="/dashboard"></Redirect>}
       <Switch>
         {/* Check if we are logged in then switch the component?? */}
