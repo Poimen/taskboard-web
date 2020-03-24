@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import { useAuthenticatedUserDispatch } from 'store/contexts/authenticatedUser/authenticatedUserContext';
-import { setUser } from 'store/contexts/authenticatedUser/userReducer';
+import { setUser } from 'store/reducers/authenticatedUser/userReducer';
+import { useDispatch } from 'react-redux';
+import { useAuthService } from 'services/auth/authService';
 
 type Auth = {
   userName: string,
@@ -22,8 +23,8 @@ function useAuthValidation(initialState: Auth = { userName: '', password: '' }) 
   const [authInProgress, setAuthInProgress] = useState(false);
   const [authError, setAuthError] = useState(false);
   const history = useHistory();
-  // const dispatch = useDispatch();
-  const dispatch = useAuthenticatedUserDispatch();
+  const dispatch = useDispatch();
+  const { performAuth } = useAuthService();
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     setAuthState({
@@ -42,9 +43,9 @@ function useAuthValidation(initialState: Auth = { userName: '', password: '' }) 
     setAuthError(false);
 
     if (isValidForSubmission(authState)) {
-      dispatch(setUser({ id: 1, username: 'Anton Ego' }, true));
-      // dispatch({ type: 'SET_USER' });
-      history.push('/dashboard');
+      performAuth(dispatch, history);
+      // dispatch(setUser({ id: 1, username: 'Anton Ego' }, true));
+      // history.push('/dashboard');
     } else {
       setAuthError(true);
       setAuthInProgress(false);

@@ -1,20 +1,27 @@
 import React from 'react';
-import { useAuthenticatedUserDispatch, useAuthenticatedUserState } from 'store/contexts/authenticatedUser/authenticatedUserContext';
-import { userAuthenticatedSelector, userNameSelector } from 'store/contexts/authenticatedUser/userSelectors';
-import { setUser } from 'store/contexts/authenticatedUser/userReducer';
+import { setUser } from 'store/reducers/authenticatedUser/userReducer';
+import { useSelector, useDispatch } from 'react-redux';
+import { selectUserName, userAuthenticated } from 'store/reducers/authenticatedUser/userSelectors';
+
+function performAuth(dispatcher: any, historyProvider: any) {
+  dispatcher(setUser({ id: 1, username: 'Anton Ego' }, true));
+  historyProvider.push('/dashboard');
+
+  return true;
+}
 
 export function useAuthService() {
-  const isAuthenticated = useAuthenticatedUserState(userAuthenticatedSelector);
-  const userName = useAuthenticatedUserState(userNameSelector);
-  return { isAuthenticated, userName };
+  const isAuthenticated = useSelector(userAuthenticated);
+  const userName = useSelector(selectUserName);
+  return { isAuthenticated, userName, performAuth };
 }
 
 export function useAuthenticationCheck() {
-  const isAuthenticated = useAuthenticatedUserState(userAuthenticatedSelector);
-  const dispatch = useAuthenticatedUserDispatch();
+  const isAuthenticated = useSelector(userAuthenticated);
+  const dispatch = useDispatch();
 
   React.useEffect(() => {
-    if (isAuthenticated) {
+    if (!isAuthenticated) {
       dispatch(setUser({ id: 1, username: 'Anton Ego' }, true));
     }
   }, [isAuthenticated, dispatch]);

@@ -1,7 +1,9 @@
 // import { AppState } from 'store/models/appState';
-import { User } from 'store/contexts/authenticatedUser/models/user';
+import { User } from 'store/reducers/authenticatedUser/models/user';
 
-export function userReducer(state: AuthenticatedUserState, action: UserActions) {
+const initialState = { isAuthenticated: false, currentUser: null };
+
+export function userReducer(state: AuthenticatedUserState = initialState, action: UserActions) {
   console.log(`state = ${JSON.stringify(state, null, 2)}`);
   console.log(`action = ${JSON.stringify(action, null, 2)}`);
   switch (action.type) {
