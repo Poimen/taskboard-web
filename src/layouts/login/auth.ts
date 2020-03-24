@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import { actions } from 'store/reducers';
 import { useAuthenticatedUserDispatch } from 'store/contexts/authenticatedUser/authenticatedUserContext';
+import { setUser } from 'store/contexts/authenticatedUser/userReducer';
 
 type Auth = {
   userName: string,
@@ -42,7 +42,7 @@ function useAuthValidation(initialState: Auth = { userName: '', password: '' }) 
     setAuthError(false);
 
     if (isValidForSubmission(authState)) {
-      dispatch(actions.setUser({ id: 1, username: 'Anton Ego' }, true));
+      dispatch(setUser({ id: 1, username: 'Anton Ego' }, true));
       // dispatch({ type: 'SET_USER' });
       history.push('/dashboard');
     } else {

@@ -8,7 +8,8 @@ export function userReducer(state: AuthenticatedUserState, action: UserActions) 
     case 'SET_USER':
       state = {
         ...state,
-        currentUser: action.user
+        currentUser: action.user,
+        isAuthenticated: action.isAuthenticated
       };
       break;
   }
@@ -18,15 +19,15 @@ export function userReducer(state: AuthenticatedUserState, action: UserActions) 
   return state;
 }
 
-export const setUser = (user: User, loggedIn: boolean): UserActions => ({ type: 'SET_USER', user, loggedIn });
+export const setUser = (user: User, isAuthenticated: boolean): UserActions => ({ type: 'SET_USER', user, isAuthenticated });
 
 export type UserActions = {
   type: 'SET_USER',
-  loggedIn: boolean,
+  isAuthenticated: boolean,
   user: User | null
 }
 
 export type AuthenticatedUserState = {
   currentUser: User | null,
-  loggedIn: boolean
+  isAuthenticated: boolean
 }

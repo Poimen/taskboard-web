@@ -8,7 +8,7 @@ const AuthenticatedUserStateContext = React.createContext<AuthenticatedUserState
 const AuthenticatedUserDispatchContext = React.createContext<Dispatch | undefined>(undefined);
 
 function AuthenticatedUserContextProvider({ children }: ChildrenProviderProps) {
-  const [state, dispatch] = React.useReducer(userReducer, { loggedIn: false, currentUser: null });
+  const [state, dispatch] = React.useReducer(userReducer, { isAuthenticated: false, currentUser: null });
 
   return (
     <AuthenticatedUserStateContext.Provider value={state}>
@@ -19,11 +19,15 @@ function AuthenticatedUserContextProvider({ children }: ChildrenProviderProps) {
   );
 }
 
-function useAuthenticatedUserState(selector: any) {
+function useAuthenticatedUserState(selector: Function) {
   const context = React.useContext(AuthenticatedUserStateContext);
   if (context) {
     if (selector) {
-      return selector(context);
+      const fnSelector = selector(context);
+      // if (typeof fnSelector === 'function') {
+      //   return fnSelector(context);
+      // }
+      return fnSelector;
     }
     return context;
   }
