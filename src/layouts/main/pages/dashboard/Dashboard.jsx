@@ -3,7 +3,7 @@ import { Card, Tag, Button, Empty } from 'antd';
 import { Link } from 'react-router-dom';
 import { Icon, TextButton, ContextHeader, ContentName, ContextButtonContainer } from '../../components';
 import './Dashboard.css';
-import TaskSummaryCard from './components/TaskSummaryCard';
+import TaskStatusContainer from './components/TaskStatusContainer';
 
 function Dashboard() {
   return (
@@ -14,11 +14,7 @@ function Dashboard() {
           <TextButton icon="filter">Configure Dashboard</TextButton>
         </ContextButtonContainer>
       </ContextHeader>
-      <div className="flex items-center justify-between pt-4">
-        <TaskSummaryCard status="total" taskCount={25} subtext="Total"></TaskSummaryCard>
-        <TaskSummaryCard status="unresolved" taskCount={10} subtext="Unresolved"></TaskSummaryCard>
-        <TaskSummaryCard status="dueToday" taskCount={5} subtext="Due Today"></TaskSummaryCard>
-      </div>
+      <TaskStatusContainer></TaskStatusContainer>
       <div className="flex items-center justify-between pt-4">
         <div className="flex-auto m-2">
           <Card className="shadow" title={`Tasks for the day | ${5} Overdue tasks`}>

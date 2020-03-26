@@ -11,7 +11,7 @@ function Card({ taskCount, subtext, status }) {
   const cardBorderColor = statusToColour[status];
 
   return (
-    <AntCard className="w-full shadow" bordered={false}>
+    <AntCard loading={false} className="w-full shadow" bordered={false}>
       <div className={`${cardBorderColor} border-l-2`}>
         <div className="flex flex-col items-start justify-between ml-2 py-2 px-4">
           <span className="text-3xl text-black tracking-wide">{taskCount}</span>

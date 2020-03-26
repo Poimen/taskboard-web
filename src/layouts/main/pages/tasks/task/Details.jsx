@@ -113,7 +113,7 @@ function Details() {
               </div>
             </div>
           </div>
-          <div className="pl-4 pr-2 w-1/4 ml-2 bg-task-sidebar border-l-2">
+          <div className="pl-4 pr-2 w-1/4 ml-4 bg-task-sidebar border-l-2">
             <table className="w-full text-left table-fixed">
               <thead>
               </thead>

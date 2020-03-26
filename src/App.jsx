@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, BrowserRouter, Switch, Redirect } from 'react-router-dom';
+import { Route, BrowserRouter, Switch, Redirect, useLocation } from 'react-router-dom';
 import './App.css';
 import PrivateRoute from 'components/auth/PrivateRoute';
 import Main from 'layouts/main/Main';
@@ -16,7 +16,7 @@ function App() {
   return (
     <BrowserRouter>
       {/* TODO fix this not to show Login momentarily on reload... */}
-      {isAuthenticated && <Redirect to="/dashboard"></Redirect>}
+      {/* {isAuthenticated && <Redirect to="/dashboard"></Redirect>} */}
       <Switch>
         {/* Check if we are logged in then switch the component?? */}
         <Route exact path='/' component={Login} />
