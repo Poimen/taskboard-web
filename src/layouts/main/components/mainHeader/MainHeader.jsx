@@ -38,19 +38,19 @@ function MainHeader() {
         <div className="flex items-center justify-between">
           <div className="flex items-center justify-start">
             <div className="text-2xl text-white leading-loose tracking-widest">
-              <span className="font-bold tracking-widest">TASK</span><span className="font-hairline">BOARD</span>
+              <span className="font-hairline">THE</span><span className="font-bold tracking-widest">TASKING</span><span className="font-hairline">APP</span>
             </div>
             <div className="mainheader--new-dropdown mx-4">
-              <Dropdown overlay={menu}>
+              {/* <Dropdown overlay={menu}>
                 <Button ghost className="flex items-center justify-between w-full px-1">
                   <span>Workspaces</span>
                   {DownArrow()}
                 </Button>
-              </Dropdown>
+              </Dropdown> */}
             </div>
           </div>
           <div className="flex items-center">
-            <div className="mainheader--new-dropdown mr-4">
+            {/* <div className="mainheader--new-dropdown mr-4">
               <Dropdown overlay={menu}>
                 <Button size="small" ghost>
                   <Icon type="plus" />
@@ -71,7 +71,7 @@ function MainHeader() {
                   <Icon type="mail" />
                 </div>
               </Badge>
-            </div>
+            </div> */}
             <div className="mr-5">
               <Badge count="3" style={{ fontSize: 14 }} dot={true}>
                 <div className="text-xl text-white">
