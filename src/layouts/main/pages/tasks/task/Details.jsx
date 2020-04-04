@@ -20,7 +20,7 @@ function Details() {
         <div className="h-full flex justify-center">
           <div className="flex flex-col w-3/4">
             <ContextHeader>
-              <ContentName title="Tasks" subTitle="My Tasks" iconType="bars" link="/tasks"></ContentName>
+              <ContentName title="Tasks" subTitle="My Tasks" iconType="bars" link="tasks"></ContentName>
               <ContextButtonContainer>
                 <Button.Group>
                   <Button>Add Subtask</Button>
