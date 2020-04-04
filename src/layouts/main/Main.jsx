@@ -6,7 +6,6 @@ import SideMenu from './components/sideMenu/SideMenu';
 import MainHeader from './components/mainHeader/MainHeader';
 import Dashboard from './pages/dashboard/Dashboard';
 import Tasks from './pages/tasks/Tasks';
-import TaskDetails from './pages/tasks/task/Details';
 import Clients from './pages/clients/Clients';
 import Companies from './pages/companies/Companies';
 import CompanyDetails from './pages/companies/company/Details';
@@ -26,8 +25,7 @@ export default function Main() {
           <Content>
             <Switch>
               <Route exact path='/dashboard' component={Dashboard} />
-              <Route exact path='/tasks' component={Tasks} />
-              <Route exact path='/tasks/:id' component={TaskDetails} />
+              <Route path='/tasks' component={Tasks} />
               <Route path='/client' component={Clients} />
               <Route exact path='/company' component={Companies} />
               <Route exact path='/company/:id' component={CompanyDetails} />

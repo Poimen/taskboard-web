@@ -125,7 +125,8 @@ function Details() {
                 <tr>
                   <td className="p-4 border-b border-gray-300 whitespace-no-wrap">Type:</td>
                   <td className="p-4 border-b border-gray-300 break-words">Query</td>
-                </tr>                <tr>
+                </tr>
+                <tr>
                   <td className="p-4 border-b border-gray-300 whitespace-no-wrap">Assinged to:</td>
                   <td className="p-4 border-b border-gray-300 break-words">Auguste Gusteau</td>
                 </tr>
