@@ -6,28 +6,14 @@ import Tasks from './Tasks';
 
 const { TabPane } = Tabs;
 
-function ClientDetails() {
+function ClientDetails({ match }) {
   function callback(key) {
     console.log(key);
   }
 
   return (
     <>
-      <div className="p-3 flex flex-row flex-auto mx-auto justify-between bg-white border-b-2 border-gray-300">
-        <div>
-          <Breadcrumb>
-            <Breadcrumb.Item>
-              <Icon className="text-blue-600" style={{ fontSize: 18 }} type="team"></Icon>
-              <span className="text-xl text-blue-600">Clients</span>
-            </Breadcrumb.Item>
-            <Breadcrumb.Item>
-              <span className="text-xl text-blue-600">Shaun Clark</span>
-            </Breadcrumb.Item>
-          </Breadcrumb>
-          {/* <span className="text-xs text-blue-600"><Icon type="left"></Icon> Back to Clients</span> */}
-        </div>
-      </div>
-      <div className="mx-4">
+      <div className="mx-4 bg-white pl-6 pr-6 pb-6 pt-4 my-4 mx-4 rounded shadow">
         <div>
           <div className="flex items-center p-4">
             <div>

@@ -5,7 +5,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 export function ContentName({ title, subTitle, iconType, iconSvg, link }) {
   const location = useLocation();
-  const linkTo = link || location;
+  const linkTo = `/${link}` || location;
 
   return (
     <div className="flex items-center">

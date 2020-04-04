@@ -20,7 +20,7 @@ function Workspaces() {
             {/* <span className="ml-2 text-lg font-bold">Workspaces</span> */}
           </div>
           <div className="flex text-black mt-4">
-            <Link to="/dashboard" className="flex flex-col m-2 w-1/4 h-64 shadow-md rounded-md bg-white hover:bg-blue-100">
+            <Link to="/dashboard" className="flex flex-col m-2 w-1/4 h-64 shadow-md rounded bg-white hover:bg-blue-100">
               <div className="flex flex-row items-start justify-between">
                 <div className="flex flex-col justify-between p-4">
                   <div className="font-semibold text-lg tracking-wide">

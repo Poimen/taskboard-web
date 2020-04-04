@@ -72,7 +72,7 @@ function Tasks() {
           <Button className="mr-2">Configure Tasks <Icon type="filter"></Icon></Button>
         </ContextButtonContainer>
       </ContextHeader>
-      <div className="bg-white pl-6 pr-6 pb-6 my-4 mx-4 rounded-md shadow">
+      <div className="bg-white pl-6 pr-6 pb-6 my-4 mx-4 rounded shadow">
         <Tabs className="pt-2" defaultActiveKey="1" animated={false} tabPosition='top' onChange={callback}>
           <TabPane tab={
             <div>

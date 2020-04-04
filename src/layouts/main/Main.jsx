@@ -8,7 +8,6 @@ import Dashboard from './pages/dashboard/Dashboard';
 import Tasks from './pages/tasks/Tasks';
 import TaskDetails from './pages/tasks/task/Details';
 import Clients from './pages/clients/Clients';
-import ClientDetails from './pages/clients/client/Details';
 import Companies from './pages/companies/Companies';
 import CompanyDetails from './pages/companies/company/Details';
 import Calendar from './pages/calendar/Calendar';
@@ -29,8 +28,7 @@ export default function Main() {
               <Route exact path='/dashboard' component={Dashboard} />
               <Route exact path='/tasks' component={Tasks} />
               <Route exact path='/tasks/:id' component={TaskDetails} />
-              <Route exact path='/client' component={Clients} />
-              <Route exact path='/client/:id' component={ClientDetails} />
+              <Route path='/client' component={Clients} />
               <Route exact path='/company' component={Companies} />
               <Route exact path='/company/:id' component={CompanyDetails} />
               <Route exact path='/vendor' component={Vendors} />
